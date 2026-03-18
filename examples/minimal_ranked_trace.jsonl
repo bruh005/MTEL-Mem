@@ -1,0 +1,6 @@
+{"benchmark":"example","system":"demo","query_id":"Q1","retrieved_id":"canon_47","rank":1,"score":0.91}
+{"benchmark":"example","system":"demo","query_id":"Q1","retrieved_id":"turn_47","rank":2,"score":0.84}
+{"benchmark":"example","system":"demo","query_id":"Q1","retrieved_id":"other_1","rank":3,"score":0.11}
+{"benchmark":"example","system":"demo","query_id":"Q2","retrieved_id":"other_2","rank":1,"score":0.55}
+{"benchmark":"example","system":"demo","query_id":"Q2","retrieved_id":"canon_88","rank":2,"score":0.50}
+{"benchmark":"example","system":"demo","query_id":"Q2","retrieved_id":"turn_88","rank":3,"score":0.42}

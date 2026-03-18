@@ -1,0 +1,216 @@
+{
+  "scalar_checks": [
+    {
+      "name": "locomo_bge_full.raw_ndcg",
+      "artifact": "../eval/results/target_sensitivity/20260314T044224Z_locomo_ollama_bge_m3_full/target_rescore.json",
+      "json_path": "targets.raw_turn.ndcg_at_k",
+      "expected": 0.23976290097033548
+    },
+    {
+      "name": "locomo_bge_full.source_ndcg",
+      "artifact": "../eval/results/target_sensitivity/20260314T044224Z_locomo_ollama_bge_m3_full/target_rescore.json",
+      "json_path": "targets.source_family.ndcg_at_k",
+      "expected": 0.3393537134682057
+    },
+    {
+      "name": "locomo_bge_full.canonical_ndcg",
+      "artifact": "../eval/results/target_sensitivity/20260314T044224Z_locomo_ollama_bge_m3_full/target_rescore.json",
+      "json_path": "targets.canonical.ndcg_at_k",
+      "expected": 0.3230902565548398
+    },
+    {
+      "name": "locomo_bge_shared.query_count",
+      "artifact": "../tex/tables/locomo_bge_shared_subset_stats.json",
+      "json_path": "shared_subset_queries",
+      "expected": 963.0
+    },
+    {
+      "name": "locomo_bge_shared.source_ndcg",
+      "artifact": "../tex/tables/locomo_bge_shared_subset_stats.json",
+      "json_path": "subset_metrics.source_family.ndcg_at_k",
+      "expected": 0.41091701338775405
+    },
+    {
+      "name": "locomo_bge_shared.canonical_ndcg",
+      "artifact": "../tex/tables/locomo_bge_shared_subset_stats.json",
+      "json_path": "subset_metrics.canonical.ndcg_at_k",
+      "expected": 0.32309025655484036
+    },
+    {
+      "name": "longmemeval_lexical_full.raw_ndcg",
+      "artifact": "../eval/results/target_sensitivity_longmemeval/20260313T172942Z_longmemeval_s_lexical_full/target_rescore.json",
+      "json_path": "targets.raw_turn.ndcg_at_k",
+      "expected": 0.15435622856453315
+    },
+    {
+      "name": "longmemeval_lexical_full.source_ndcg",
+      "artifact": "../eval/results/target_sensitivity_longmemeval/20260313T172942Z_longmemeval_s_lexical_full/target_rescore.json",
+      "json_path": "targets.source_family.ndcg_at_k",
+      "expected": 0.30692927774376266
+    },
+    {
+      "name": "longmemeval_lexical_full.canonical_ndcg",
+      "artifact": "../eval/results/target_sensitivity_longmemeval/20260313T172942Z_longmemeval_s_lexical_full/target_rescore.json",
+      "json_path": "targets.canonical.ndcg_at_k",
+      "expected": 0.45575156533609834
+    },
+    {
+      "name": "longmemeval_shared.lexical_raw_ndcg",
+      "artifact": "../tex/tables/longmemeval_shared_subset_stats.json",
+      "json_path": "subset_metrics.lexical.raw_turn.ndcg_at_k",
+      "expected": 0.18770213065283484
+    },
+    {
+      "name": "longmemeval_shared.lexical_source_ndcg",
+      "artifact": "../tex/tables/longmemeval_shared_subset_stats.json",
+      "json_path": "subset_metrics.lexical.source_family.ndcg_at_k",
+      "expected": 0.40369409786439486
+    },
+    {
+      "name": "longmemeval_shared.lexical_canonical_ndcg",
+      "artifact": "../tex/tables/longmemeval_shared_subset_stats.json",
+      "json_path": "subset_metrics.lexical.canonical.ndcg_at_k",
+      "expected": 0.4557515653360987
+    },
+    {
+      "name": "longmemeval_shared.allminilm_raw_ndcg",
+      "artifact": "../tex/tables/longmemeval_shared_subset_stats.json",
+      "json_path": "subset_metrics.ollama.raw_turn.ndcg_at_k",
+      "expected": 0.1999867224091532
+    },
+    {
+      "name": "longmemeval_shared.allminilm_source_ndcg",
+      "artifact": "../tex/tables/longmemeval_shared_subset_stats.json",
+      "json_path": "subset_metrics.ollama.source_family.ndcg_at_k",
+      "expected": 0.4559111843444751
+    },
+    {
+      "name": "longmemeval_shared.allminilm_canonical_ndcg",
+      "artifact": "../tex/tables/longmemeval_shared_subset_stats.json",
+      "json_path": "subset_metrics.ollama.canonical.ndcg_at_k",
+      "expected": 0.530916380703352
+    },
+    {
+      "name": "category.locomo_singlehop_raw_can_max",
+      "artifact": "../tex_protocal/tables/category_target_sensitivity.json",
+      "json_path": "datasets.LoCoMo.categories.Single-hop.raw_can_ndcg_change_rate_max",
+      "expected": 0.9323144104803494
+    },
+    {
+      "name": "category.longmemeval_single_session_assistant_src_can_max",
+      "artifact": "../tex_protocal/tables/category_target_sensitivity.json",
+      "json_path": "datasets.LongMemEval-S.categories.single-session-assistant.src_can_ndcg_change_rate_max",
+      "expected": 0.025
+    },
+    {
+      "name": "transfer.mem0.raw_ndcg",
+      "artifact": "../eval/results/target_sensitivity_mem0/20260315T072555Z_locomo_mem0_full_appendonly_overnight/target_rescore.json",
+      "json_path": "targets.raw_turn.ndcg_at_k",
+      "expected": 0.2748920715788433
+    },
+    {
+      "name": "transfer.mem0.source_ndcg",
+      "artifact": "../eval/results/target_sensitivity_mem0/20260315T072555Z_locomo_mem0_full_appendonly_overnight/target_rescore.json",
+      "json_path": "targets.source_family.ndcg_at_k",
+      "expected": 0.662543604120512
+    },
+    {
+      "name": "transfer.mem0.canonical_ndcg",
+      "artifact": "../eval/results/target_sensitivity_mem0/20260315T072555Z_locomo_mem0_full_appendonly_overnight/target_rescore.json",
+      "json_path": "targets.canonical.ndcg_at_k",
+      "expected": 0.6168968319731423
+    },
+    {
+      "name": "transfer.memoryos.raw_ndcg",
+      "artifact": "../eval/results/target_sensitivity_memoryos/20260315T210604Z_locomo10_full/target_rescore.json",
+      "json_path": "targets.raw_turn.ndcg_at_k",
+      "expected": 0.4339403952047801
+    },
+    {
+      "name": "transfer.memoryos.source_ndcg",
+      "artifact": "../eval/results/target_sensitivity_memoryos/20260315T210604Z_locomo10_full/target_rescore.json",
+      "json_path": "targets.source_family.ndcg_at_k",
+      "expected": 0.5794368817629286
+    },
+    {
+      "name": "transfer.memoryos.canonical_ndcg",
+      "artifact": "../eval/results/target_sensitivity_memoryos/20260315T210604Z_locomo10_full/target_rescore.json",
+      "json_path": "targets.canonical.ndcg_at_k",
+      "expected": 0.4091107653245528
+    }
+  ],
+  "density_winner_checks": [
+    {
+      "name": "lexical_f1_vs_f5",
+      "runs": {
+        "f1": "../eval/results/target_sensitivity/20260313T065540Z_lexical_full_facts1/target_rescore.shared_canonical_lexical_facts158.json",
+        "f5": "../eval/results/target_sensitivity/20260313T023254Z_lexical_full/target_rescore.shared_canonical_lexical_facts158.json"
+      },
+      "expected_winners": {
+        "raw_turn": "f1",
+        "source_family": "f5",
+        "canonical": "f1"
+      }
+    },
+    {
+      "name": "lexical_f1_vs_f8",
+      "runs": {
+        "f1": "../eval/results/target_sensitivity/20260313T065540Z_lexical_full_facts1/target_rescore.shared_canonical_lexical_facts158.json",
+        "f8": "../eval/results/target_sensitivity/20260313T072729Z_lexical_full_facts8/target_rescore.shared_canonical_lexical_facts158.json"
+      },
+      "expected_winners": {
+        "raw_turn": "f1",
+        "source_family": "f8",
+        "canonical": "f1"
+      }
+    },
+    {
+      "name": "lexical_f5_vs_f8",
+      "runs": {
+        "f5": "../eval/results/target_sensitivity/20260313T023254Z_lexical_full/target_rescore.shared_canonical_lexical_facts158.json",
+        "f8": "../eval/results/target_sensitivity/20260313T072729Z_lexical_full_facts8/target_rescore.shared_canonical_lexical_facts158.json"
+      },
+      "expected_winners": {
+        "raw_turn": "f5",
+        "source_family": "f8",
+        "canonical": "f8"
+      }
+    },
+    {
+      "name": "ollama_f1_vs_f5",
+      "runs": {
+        "f1": "../eval/results/target_sensitivity/20260313T080007Z_ollama_full_warm_facts1/target_rescore.shared_canonical_ollama_facts158.json",
+        "f5": "../eval/results/target_sensitivity/20260313T053200Z_ollama_full_warm/target_rescore.shared_canonical_ollama_facts158.json"
+      },
+      "expected_winners": {
+        "raw_turn": "f1",
+        "source_family": "f5",
+        "canonical": "f1"
+      }
+    },
+    {
+      "name": "ollama_f1_vs_f8",
+      "runs": {
+        "f1": "../eval/results/target_sensitivity/20260313T080007Z_ollama_full_warm_facts1/target_rescore.shared_canonical_ollama_facts158.json",
+        "f8": "../eval/results/target_sensitivity/20260313T085204Z_ollama_full_warm_facts8/target_rescore.shared_canonical_ollama_facts158.json"
+      },
+      "expected_winners": {
+        "raw_turn": "f1",
+        "source_family": "f8",
+        "canonical": "f1"
+      }
+    },
+    {
+      "name": "ollama_f5_vs_f8",
+      "runs": {
+        "f5": "../eval/results/target_sensitivity/20260313T053200Z_ollama_full_warm/target_rescore.shared_canonical_ollama_facts158.json",
+        "f8": "../eval/results/target_sensitivity/20260313T085204Z_ollama_full_warm_facts8/target_rescore.shared_canonical_ollama_facts158.json"
+      },
+      "expected_winners": {
+        "raw_turn": "f8",
+        "source_family": "f8",
+        "canonical": "f8"
+      }
+    }
+  ]
+}

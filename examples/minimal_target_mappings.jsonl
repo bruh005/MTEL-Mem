@@ -1,0 +1,2 @@
+{"benchmark":"example","query_id":"Q1","source_fixture_id":"S1","category":"temporal","query_text":"When did the user move to Austin?","reference_answer":"summer 2021","raw_ids":["turn_47"],"source_ids":["turn_47","obs_47_1","canon_47"],"canonical_ids":["canon_47"]}
+{"benchmark":"example","query_id":"Q2","source_fixture_id":"S2","category":"profile","query_text":"Where does the user live now?","reference_answer":"Austin","raw_ids":["turn_88"],"source_ids":["turn_88","canon_88"],"canonical_ids":["canon_88"]}

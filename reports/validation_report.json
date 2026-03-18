@@ -1,0 +1,404 @@
+{
+  "engineering": {
+    "schema_invariant_pass_rate": 1.0,
+    "paper_table_reproduction_error": 0.0,
+    "toy_case_metric_accuracy": 1.0
+  },
+  "scientific": {
+    "null_control_false_positive_rate": 0.0,
+    "positive_control_detection_rate": 1.0,
+    "real_run_decision_change_count": 5
+  },
+  "usability": {
+    "time_to_first_report_seconds": 0.00025350000942125916,
+    "custom_trace_integration_steps": 1,
+    "custom_trace_smoke_passed": true
+  },
+  "details": {
+    "schema": {
+      "query_count": 2,
+      "total_checks": 12,
+      "passed_checks": 12,
+      "failed_checks": 0,
+      "pass_rate": 1.0,
+      "failures": []
+    },
+    "trace": {
+      "query_count": 2,
+      "total_checks": 8,
+      "passed_checks": 8,
+      "failed_checks": 0,
+      "pass_rate": 1.0,
+      "failures": []
+    },
+    "example_score": {
+      "aggregate": {
+        "raw": {
+          "recall": 1.0,
+          "mrr": 0.41666666666666663,
+          "ndcg": 0.5654648767857288,
+          "queries": 2.0
+        },
+        "source": {
+          "recall": 1.0,
+          "mrr": 0.75,
+          "ndcg": 0.7293935203029462,
+          "queries": 2.0
+        },
+        "canonical": {
+          "recall": 1.0,
+          "mrr": 0.75,
+          "ndcg": 0.8154648767857288,
+          "queries": 2.0
+        }
+      },
+      "instability": {
+        "raw_vs_source": {
+          "shared_queries": 2.0,
+          "hit_flips": 0.0,
+          "top1_flips": 1.0,
+          "ndcg_changed": 2.0,
+          "change_rate": 1.0
+        },
+        "raw_vs_canonical": {
+          "shared_queries": 2.0,
+          "hit_flips": 0.0,
+          "top1_flips": 1.0,
+          "ndcg_changed": 2.0,
+          "change_rate": 1.0
+        },
+        "source_vs_canonical": {
+          "shared_queries": 2.0,
+          "hit_flips": 0.0,
+          "top1_flips": 0.0,
+          "ndcg_changed": 2.0,
+          "change_rate": 1.0
+        }
+      }
+    },
+    "toy": {
+      "case_count": 8,
+      "total_checks": 78,
+      "passed_checks": 78,
+      "accuracy": 1.0,
+      "failures": [],
+      "instability": {
+        "raw_vs_canonical": {
+          "shared_queries": 8.0,
+          "hit_flips": 5.0,
+          "top1_flips": 3.0,
+          "ndcg_changed": 6.0,
+          "change_rate": 0.75
+        },
+        "raw_vs_source": {
+          "shared_queries": 8.0,
+          "hit_flips": 3.0,
+          "top1_flips": 2.0,
+          "ndcg_changed": 6.0,
+          "change_rate": 0.75
+        }
+      }
+    },
+    "null_control": {
+      "winner_by_target": {
+        "raw": "system_a",
+        "source": "system_a",
+        "canonical": "system_a"
+      },
+      "instability": {
+        "raw_vs_source": {
+          "shared_queries": 3.0,
+          "hit_flips": 0.0,
+          "top1_flips": 0.0,
+          "ndcg_changed": 0.0,
+          "change_rate": 0.0
+        },
+        "raw_vs_canonical": {
+          "shared_queries": 3.0,
+          "hit_flips": 0.0,
+          "top1_flips": 0.0,
+          "ndcg_changed": 0.0,
+          "change_rate": 0.0
+        },
+        "source_vs_canonical": {
+          "shared_queries": 3.0,
+          "hit_flips": 0.0,
+          "top1_flips": 0.0,
+          "ndcg_changed": 0.0,
+          "change_rate": 0.0
+        }
+      },
+      "false_positive_rate": 0.0
+    },
+    "positive_control": {
+      "winner_by_target": {
+        "raw": "system_b",
+        "source": "system_b",
+        "canonical": "system_a"
+      },
+      "instability": {
+        "shared_queries": 2.0,
+        "hit_flips": 0.0,
+        "top1_flips": 2.0,
+        "ndcg_changed": 2.0,
+        "change_rate": 1.0
+      },
+      "detection_rate": 1.0
+    },
+    "paper_regression": {
+      "scalar_results": [
+        {
+          "name": "locomo_bge_full.raw_ndcg",
+          "expected": 0.23976290097033548,
+          "actual": 0.23976290097033548,
+          "abs_error": 0.0,
+          "within_tolerance": true
+        },
+        {
+          "name": "locomo_bge_full.source_ndcg",
+          "expected": 0.3393537134682057,
+          "actual": 0.3393537134682057,
+          "abs_error": 0.0,
+          "within_tolerance": true
+        },
+        {
+          "name": "locomo_bge_full.canonical_ndcg",
+          "expected": 0.3230902565548398,
+          "actual": 0.3230902565548398,
+          "abs_error": 0.0,
+          "within_tolerance": true
+        },
+        {
+          "name": "locomo_bge_shared.query_count",
+          "expected": 963.0,
+          "actual": 963.0,
+          "abs_error": 0.0,
+          "within_tolerance": true
+        },
+        {
+          "name": "locomo_bge_shared.source_ndcg",
+          "expected": 0.41091701338775405,
+          "actual": 0.41091701338775405,
+          "abs_error": 0.0,
+          "within_tolerance": true
+        },
+        {
+          "name": "locomo_bge_shared.canonical_ndcg",
+          "expected": 0.32309025655484036,
+          "actual": 0.32309025655484036,
+          "abs_error": 0.0,
+          "within_tolerance": true
+        },
+        {
+          "name": "longmemeval_lexical_full.raw_ndcg",
+          "expected": 0.15435622856453315,
+          "actual": 0.15435622856453315,
+          "abs_error": 0.0,
+          "within_tolerance": true
+        },
+        {
+          "name": "longmemeval_lexical_full.source_ndcg",
+          "expected": 0.30692927774376266,
+          "actual": 0.30692927774376266,
+          "abs_error": 0.0,
+          "within_tolerance": true
+        },
+        {
+          "name": "longmemeval_lexical_full.canonical_ndcg",
+          "expected": 0.45575156533609834,
+          "actual": 0.45575156533609834,
+          "abs_error": 0.0,
+          "within_tolerance": true
+        },
+        {
+          "name": "longmemeval_shared.lexical_raw_ndcg",
+          "expected": 0.18770213065283484,
+          "actual": 0.18770213065283484,
+          "abs_error": 0.0,
+          "within_tolerance": true
+        },
+        {
+          "name": "longmemeval_shared.lexical_source_ndcg",
+          "expected": 0.40369409786439486,
+          "actual": 0.40369409786439486,
+          "abs_error": 0.0,
+          "within_tolerance": true
+        },
+        {
+          "name": "longmemeval_shared.lexical_canonical_ndcg",
+          "expected": 0.4557515653360987,
+          "actual": 0.4557515653360987,
+          "abs_error": 0.0,
+          "within_tolerance": true
+        },
+        {
+          "name": "longmemeval_shared.allminilm_raw_ndcg",
+          "expected": 0.1999867224091532,
+          "actual": 0.1999867224091532,
+          "abs_error": 0.0,
+          "within_tolerance": true
+        },
+        {
+          "name": "longmemeval_shared.allminilm_source_ndcg",
+          "expected": 0.4559111843444751,
+          "actual": 0.4559111843444751,
+          "abs_error": 0.0,
+          "within_tolerance": true
+        },
+        {
+          "name": "longmemeval_shared.allminilm_canonical_ndcg",
+          "expected": 0.530916380703352,
+          "actual": 0.530916380703352,
+          "abs_error": 0.0,
+          "within_tolerance": true
+        },
+        {
+          "name": "category.locomo_singlehop_raw_can_max",
+          "expected": 0.9323144104803494,
+          "actual": 0.9323144104803494,
+          "abs_error": 0.0,
+          "within_tolerance": true
+        },
+        {
+          "name": "category.longmemeval_single_session_assistant_src_can_max",
+          "expected": 0.025,
+          "actual": 0.025,
+          "abs_error": 0.0,
+          "within_tolerance": true
+        },
+        {
+          "name": "transfer.mem0.raw_ndcg",
+          "expected": 0.2748920715788433,
+          "actual": 0.2748920715788433,
+          "abs_error": 0.0,
+          "within_tolerance": true
+        },
+        {
+          "name": "transfer.mem0.source_ndcg",
+          "expected": 0.662543604120512,
+          "actual": 0.662543604120512,
+          "abs_error": 0.0,
+          "within_tolerance": true
+        },
+        {
+          "name": "transfer.mem0.canonical_ndcg",
+          "expected": 0.6168968319731423,
+          "actual": 0.6168968319731423,
+          "abs_error": 0.0,
+          "within_tolerance": true
+        },
+        {
+          "name": "transfer.memoryos.raw_ndcg",
+          "expected": 0.4339403952047801,
+          "actual": 0.4339403952047801,
+          "abs_error": 0.0,
+          "within_tolerance": true
+        },
+        {
+          "name": "transfer.memoryos.source_ndcg",
+          "expected": 0.5794368817629286,
+          "actual": 0.5794368817629286,
+          "abs_error": 0.0,
+          "within_tolerance": true
+        },
+        {
+          "name": "transfer.memoryos.canonical_ndcg",
+          "expected": 0.4091107653245528,
+          "actual": 0.4091107653245528,
+          "abs_error": 0.0,
+          "within_tolerance": true
+        }
+      ],
+      "density_results": [
+        {
+          "name": "lexical_f1_vs_f5",
+          "expected_winners": {
+            "raw_turn": "f1",
+            "source_family": "f5",
+            "canonical": "f1"
+          },
+          "actual_winners": {
+            "raw_turn": "f1",
+            "source_family": "f5",
+            "canonical": "f1"
+          },
+          "passed": true
+        },
+        {
+          "name": "lexical_f1_vs_f8",
+          "expected_winners": {
+            "raw_turn": "f1",
+            "source_family": "f8",
+            "canonical": "f1"
+          },
+          "actual_winners": {
+            "raw_turn": "f1",
+            "source_family": "f8",
+            "canonical": "f1"
+          },
+          "passed": true
+        },
+        {
+          "name": "lexical_f5_vs_f8",
+          "expected_winners": {
+            "raw_turn": "f5",
+            "source_family": "f8",
+            "canonical": "f8"
+          },
+          "actual_winners": {
+            "raw_turn": "f5",
+            "source_family": "f8",
+            "canonical": "f8"
+          },
+          "passed": true
+        },
+        {
+          "name": "ollama_f1_vs_f5",
+          "expected_winners": {
+            "raw_turn": "f1",
+            "source_family": "f5",
+            "canonical": "f1"
+          },
+          "actual_winners": {
+            "raw_turn": "f1",
+            "source_family": "f5",
+            "canonical": "f1"
+          },
+          "passed": true
+        },
+        {
+          "name": "ollama_f1_vs_f8",
+          "expected_winners": {
+            "raw_turn": "f1",
+            "source_family": "f8",
+            "canonical": "f1"
+          },
+          "actual_winners": {
+            "raw_turn": "f1",
+            "source_family": "f8",
+            "canonical": "f1"
+          },
+          "passed": true
+        },
+        {
+          "name": "ollama_f5_vs_f8",
+          "expected_winners": {
+            "raw_turn": "f8",
+            "source_family": "f8",
+            "canonical": "f8"
+          },
+          "actual_winners": {
+            "raw_turn": "f8",
+            "source_family": "f8",
+            "canonical": "f8"
+          },
+          "passed": true
+        }
+      ],
+      "max_abs_error": 0.0,
+      "all_scalars_within_tolerance": true,
+      "all_density_checks_passed": true,
+      "real_run_decision_change_count": 5
+    }
+  }
+}
