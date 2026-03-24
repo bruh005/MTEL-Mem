@@ -1,35 +1,42 @@
 # MTEL-Mem
 
-`MTEL-Mem` is the resource layer for the upgraded paper.
+`MTEL-Mem` is the reusable multi-target evaluation layer for the upgraded paper.
 
-It sits on top of the existing store-aware evaluation assets already in this repository and gives them a cleaner identity:
+The repository is now self-contained for the built-in LoCoMo benchmark:
 
-- `TIAP` is the method.
-- `MTEL-Mem` is the reusable multi-target evaluation layer.
+- `locomo10.json` ships in `data/`
+- fixture/eval/stats JSON are generated locally with `mtel-mem init`
+- `eval/results` are not required for normal usage
+
+`LongMemEval-S` remains supported, but it is optional and downloaded on demand.
 
 ## Scope
 
 Current benchmark adapters:
 
-- `LoCoMo`
-- `LongMemEval-S`
+- `LoCoMo` (built in)
+- `LongMemEval-S` (optional download)
 
 Current layer features:
 
-- benchmark manifests that point to the existing benchmark JSON assets in `../eval/data/`
+- built-in and optional benchmark manifests
+- local fixture/eval generation for repository portability
 - a small core scoring engine for `raw`, `source`, and `canonical` target sets
 - query-level instability summaries
-- schema/invariant validation, null controls, positive controls, and paper-regression checks
-- a CLI entrypoint for manifest validation, BYO-trace scoring, and a validation scorecard
-- tests and example files for the generic input/output contract
+- schema/invariant validation, null controls, positive controls, and optional paper-regression checks
+- a CLI entrypoint for manifest validation, setup, BYO-trace scoring, and a validation scorecard
 
 ## Layout
 
 - `src/mtel_mem/`
+  - `bootstrap.py`: local data preparation helpers
   - `schemas.py`: shared data contracts
   - `adapters/`: benchmark manifest helpers
   - `core/`: scoring and instability logic
   - `cli.py`: command-line interface
+- `data/`
+  - `locomo10.json`
+  - generated fixture/eval JSON after setup
 - `manifests/`
   - `locomo.json`
   - `longmemeval_s.json`
@@ -37,41 +44,62 @@ Current layer features:
   - `minimal_target_mappings.jsonl`
   - `minimal_ranked_trace.jsonl`
 - `tests/`
-  - unit tests for metrics, the example pipeline, and manifest wiring
+  - unit tests for metrics, the example pipeline, manifest wiring, and portable validation behavior
 
 ## Quick Start
 
-Validate the repository-backed benchmark manifests:
+Install the package in editable mode:
 
 ```powershell
-python -m mtel_mem validate-manifest --manifest MTEL-Mem/manifests/locomo.json
-python -m mtel_mem validate-manifest --manifest MTEL-Mem/manifests/longmemeval_s.json
+pip install -e .
+```
+
+Prepare the built-in LoCoMo assets:
+
+```powershell
+mtel-mem init
+```
+
+If you also want LongMemEval-S:
+
+```powershell
+mtel-mem init --with-longmemeval-s
+```
+
+Validate the bundled manifests:
+
+```powershell
+mtel-mem validate-manifest --manifest manifests/locomo.json
+mtel-mem validate-manifest --manifest manifests/longmemeval_s.json
 ```
 
 Run the example scorer:
 
 ```powershell
-$env:PYTHONPATH = "MTEL-Mem/src"
-python -m mtel_mem score-example
+mtel-mem score-example
 ```
 
-Run a bring-your-own trace with one command:
+Run a bring-your-own trace:
 
 ```powershell
-$env:PYTHONPATH = "MTEL-Mem/src"
-python -m mtel_mem score --targets MTEL-Mem/examples/minimal_target_mappings.jsonl --trace MTEL-Mem/examples/minimal_ranked_trace.jsonl --out-json MTEL-Mem/reports/example_score.json
+mtel-mem score --targets examples/minimal_target_mappings.jsonl --trace examples/minimal_ranked_trace.jsonl --out-json reports/example_score.json
 ```
 
-Run the validation scorecard:
+Run the portable validation suite:
 
 ```powershell
-$env:PYTHONPATH = "MTEL-Mem/src"
-python -m mtel_mem validate-suite --out-json MTEL-Mem/reports/validation_report.json --out-md MTEL-Mem/reports/validation_report.md
+mtel-mem validate-suite --out-json reports/validation_report.json --out-md reports/validation_report.md
+```
+
+Include the paper-only regression checks only when the external artifacts are available:
+
+```powershell
+mtel-mem validate-suite --include-paper-regression
 ```
 
 Run the unit tests:
 
 ```powershell
-$env:PYTHONPATH = "MTEL-Mem/src"
-python -m unittest discover -s MTEL-Mem/tests -v
+$env:PYTHONPATH = "src"
+python -m unittest discover -s tests -v
 ```

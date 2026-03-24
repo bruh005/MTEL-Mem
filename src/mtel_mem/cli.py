@@ -4,6 +4,7 @@ import argparse
 import json
 from pathlib import Path
 
+from .bootstrap import ensure_benchmark_assets
 from .adapters.base import load_manifest, validate_manifest
 from .adapters.locomo import default_manifest_path as locomo_manifest_path
 from .adapters.longmemeval_s import default_manifest_path as longmemeval_s_manifest_path
@@ -27,6 +28,11 @@ def build_parser() -> argparse.ArgumentParser:
     validate_parser = subparsers.add_parser("validate-manifest", help="Validate one benchmark manifest")
     validate_parser.add_argument("--manifest", required=True, help="Path to manifest JSON")
     validate_parser.set_defaults(func=cmd_validate_manifest)
+
+    init_parser = subparsers.add_parser("init", help="Prepare bundled benchmark assets in the repository checkout")
+    init_parser.add_argument("--with-longmemeval-s", action="store_true", help="Download and prepare LongMemEval-S")
+    init_parser.add_argument("--force", action="store_true", help="Regenerate assets even if they already exist")
+    init_parser.set_defaults(func=cmd_init)
 
     score_generic = subparsers.add_parser("score", help="Score a bring-your-own target mapping + ranked trace pair")
     score_generic.add_argument("--targets", required=True, help="Query target mapping JSONL")
@@ -52,6 +58,11 @@ def build_parser() -> argparse.ArgumentParser:
     suite_parser.add_argument("--out-json", help="Optional JSON report path")
     suite_parser.add_argument("--out-md", help="Optional Markdown report path")
     suite_parser.add_argument("--tolerance", type=float, default=1e-9)
+    suite_parser.add_argument(
+        "--include-paper-regression",
+        action="store_true",
+        help="Include paper-only regression checks that require external result artifacts.",
+    )
     suite_parser.set_defaults(func=cmd_validate_suite)
 
     return parser
@@ -59,8 +70,10 @@ def build_parser() -> argparse.ArgumentParser:
 
 def cmd_list_benchmarks(_: argparse.Namespace) -> None:
     payload = {
-        "benchmarks": {
+        "built_in": {
             "locomo": str(locomo_manifest_path()),
+        },
+        "optional": {
             "longmemeval_s": str(longmemeval_s_manifest_path()),
         }
     }
@@ -70,6 +83,13 @@ def cmd_list_benchmarks(_: argparse.Namespace) -> None:
 def cmd_validate_manifest(args: argparse.Namespace) -> None:
     manifest = load_manifest(args.manifest)
     print(json.dumps(validate_manifest(manifest), indent=2))
+
+
+def cmd_init(args: argparse.Namespace) -> None:
+    payload = {"prepared": [ensure_benchmark_assets("locomo", force=args.force)]}
+    if args.with_longmemeval_s:
+        payload["prepared"].append(ensure_benchmark_assets("longmemeval_s", force=args.force, download=True))
+    print(json.dumps(payload, indent=2))
 
 
 def cmd_score(args: argparse.Namespace) -> None:
@@ -99,7 +119,10 @@ def cmd_score(args: argparse.Namespace) -> None:
 
 
 def cmd_validate_suite(args: argparse.Namespace) -> None:
-    report = build_validation_report(tolerance=args.tolerance)
+    report = build_validation_report(
+        tolerance=args.tolerance,
+        include_paper_regression=args.include_paper_regression,
+    )
     markdown = render_validation_markdown(report)
     if args.out_json:
         out_json = Path(args.out_json)

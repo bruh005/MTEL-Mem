@@ -21,3 +21,7 @@ venv/
 # Local environment files
 .env
 .env.*
+
+# Generated benchmark artifacts
+data/locomo10.paperlite*.json
+data/longmemeval/*.json

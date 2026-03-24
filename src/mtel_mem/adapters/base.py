@@ -5,6 +5,8 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
+from ..bootstrap import ensure_benchmark_assets
+
 
 @dataclass(frozen=True)
 class BenchmarkManifest:
@@ -18,6 +20,8 @@ class BenchmarkManifest:
     stats_json: Path
     trace_examples: tuple[Path, ...]
     expected_counts: dict[str, int]
+    bootstrap: str
+    optional: bool
 
 
 def _resolve_path(base: Path, raw: str) -> Path:
@@ -39,10 +43,16 @@ def load_manifest(path: str | Path) -> BenchmarkManifest:
         stats_json=_resolve_path(base, payload["stats_json"]),
         trace_examples=tuple(_resolve_path(base, item) for item in payload.get("trace_examples", [])),
         expected_counts={str(k): int(v) for k, v in payload.get("expected_counts", {}).items()},
+        bootstrap=str(payload.get("bootstrap", "")).strip(),
+        optional=bool(payload.get("optional", False)),
     )
 
 
 def validate_manifest(manifest: BenchmarkManifest) -> dict[str, Any]:
+    auto_prepare = None
+    if manifest.bootstrap:
+        auto_prepare = ensure_benchmark_assets(manifest.bootstrap, force=False, download=False)
+
     paths = {
         "source_json": manifest.source_json,
         "fixture_json": manifest.fixture_json,
@@ -59,19 +69,22 @@ def validate_manifest(manifest: BenchmarkManifest) -> dict[str, Any]:
         "fixture_rows": int(stats_payload.get("fixture_rows", -1)),
         "eval_rows": int(stats_payload.get("eval_rows", -1)),
     }
-    counts_match = all(
-        counts.get(key, -1) == expected
-        for key, expected in manifest.expected_counts.items()
-        if counts.get(key, -1) >= 0
-    )
+    counts_match = all(counts.get(key, -1) == expected for key, expected in manifest.expected_counts.items())
+    available = not missing and not trace_missing and counts_match
+    status = "ready" if available else ("optional-missing" if manifest.optional else "missing")
 
     return {
         "benchmark_name": manifest.benchmark_name,
         "display_name": manifest.display_name,
+        "optional": manifest.optional,
+        "available": available,
+        "status": status,
         "missing_files": missing,
         "missing_trace_examples": trace_missing,
         "counts": counts,
         "expected_counts": manifest.expected_counts,
         "counts_match": counts_match,
         "manifest_path": str(manifest.manifest_path),
+        "bootstrap": manifest.bootstrap,
+        "auto_prepare": auto_prepare,
     }

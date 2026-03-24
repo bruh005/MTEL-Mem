@@ -1,16 +1,13 @@
 {
   "benchmark_name": "locomo",
   "display_name": "LoCoMo",
-  "description": "Repository-backed LoCoMo paperlite adapter for MTEL-Mem.",
-  "source_json": "../../eval/data/locomo10.json",
-  "fixture_json": "../../eval/data/locomo10.paperlite.fixture.json",
-  "eval_json": "../../eval/data/locomo10.paperlite.eval.json",
-  "stats_json": "../../eval/data/locomo10.paperlite.stats.json",
-  "trace_examples": [
-    "../../eval/results/target_sensitivity/20260314T044224Z_locomo_ollama_bge_m3_full/trace.jsonl",
-    "../../eval/results/target_sensitivity_mem0/20260315T072555Z_locomo_mem0_full_appendonly_overnight/trace.jsonl",
-    "../../eval/results/target_sensitivity_memoryos/20260315T210604Z_locomo10_full/trace.jsonl"
-  ],
+  "description": "Built-in LoCoMo adapter. Source data ships with the repository and fixture/eval assets are generated locally.",
+  "source_json": "../data/locomo10.json",
+  "fixture_json": "../data/locomo10.paperlite.fixture.json",
+  "eval_json": "../data/locomo10.paperlite.eval.json",
+  "stats_json": "../data/locomo10.paperlite.stats.json",
+  "bootstrap": "locomo",
+  "optional": false,
   "expected_counts": {
     "fixture_rows": 5882,
     "eval_rows": 1977

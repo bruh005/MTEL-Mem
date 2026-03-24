@@ -1,15 +1,13 @@
 {
   "benchmark_name": "longmemeval_s",
   "display_name": "LongMemEval-S",
-  "description": "Repository-backed LongMemEval-S paperlite.noabs adapter for MTEL-Mem.",
-  "source_json": "../../eval/data/longmemeval/longmemeval_s_cleaned.json",
-  "fixture_json": "../../eval/data/longmemeval/longmemeval_s_cleaned.paperlite.noabs.fixture.json",
-  "eval_json": "../../eval/data/longmemeval/longmemeval_s_cleaned.paperlite.noabs.eval.json",
-  "stats_json": "../../eval/data/longmemeval/longmemeval_s_cleaned.paperlite.noabs.stats.json",
-  "trace_examples": [
-    "../../eval/results/target_sensitivity_longmemeval/20260313T172942Z_longmemeval_s_lexical_full/trace.jsonl",
-    "../../eval/results/target_sensitivity_longmemeval_mem0/20260315T091954Z_longmemeval_mem0_mini35_serverqdrant_charsplit_w3_detached/trace.jsonl"
-  ],
+  "description": "Optional LongMemEval-S adapter. The source snapshot is downloaded on demand and fixture/eval assets are generated locally.",
+  "source_json": "../data/longmemeval/longmemeval_s_cleaned.json",
+  "fixture_json": "../data/longmemeval/longmemeval_s_cleaned.paperlite.noabs.fixture.json",
+  "eval_json": "../data/longmemeval/longmemeval_s_cleaned.paperlite.noabs.eval.json",
+  "stats_json": "../data/longmemeval/longmemeval_s_cleaned.paperlite.noabs.stats.json",
+  "bootstrap": "longmemeval_s",
+  "optional": true,
   "expected_counts": {
     "fixture_rows": 231595,
     "eval_rows": 470

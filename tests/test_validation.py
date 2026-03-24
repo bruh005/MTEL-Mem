@@ -3,7 +3,6 @@ import unittest
 from mtel_mem.core.validation import (
     build_validation_report,
     run_null_control,
-    run_paper_regression,
     run_positive_control,
     run_toy_case_suite,
     validate_ranked_hits,
@@ -25,12 +24,6 @@ class ValidationTest(unittest.TestCase):
         report = run_positive_control()
         self.assertEqual(report["detection_rate"], 1.0)
 
-    def test_paper_regression_matches_expectations(self) -> None:
-        report = run_paper_regression()
-        self.assertTrue(report["all_scalars_within_tolerance"])
-        self.assertTrue(report["all_density_checks_passed"])
-        self.assertEqual(report["real_run_decision_change_count"], 5)
-
     def test_duplicate_ranks_fail_validation(self) -> None:
         ranked_hits = {
             "Q1": [
@@ -44,10 +37,12 @@ class ValidationTest(unittest.TestCase):
     def test_scorecard_metrics_are_positive(self) -> None:
         report = build_validation_report()
         self.assertEqual(report["engineering"]["schema_invariant_pass_rate"], 1.0)
+        self.assertIsNone(report["engineering"]["paper_table_reproduction_error"])
         self.assertEqual(report["engineering"]["toy_case_metric_accuracy"], 1.0)
         self.assertEqual(report["scientific"]["null_control_false_positive_rate"], 0.0)
         self.assertEqual(report["scientific"]["positive_control_detection_rate"], 1.0)
-        self.assertEqual(report["scientific"]["real_run_decision_change_count"], 5)
+        self.assertIsNone(report["scientific"]["real_run_decision_change_count"])
+        self.assertTrue(report["details"]["paper_regression"]["skipped"])
 
 
 if __name__ == "__main__":

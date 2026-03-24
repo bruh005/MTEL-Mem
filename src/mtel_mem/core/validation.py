@@ -420,10 +420,25 @@ def run_paper_regression(tolerance: float = 1e-9) -> dict[str, Any]:
         "all_scalars_within_tolerance": all(item["within_tolerance"] for item in scalar_results),
         "all_density_checks_passed": all(item["passed"] for item in density_results),
         "real_run_decision_change_count": decision_change_count,
+        "skipped": False,
+        "reason": "",
     }
 
 
-def build_validation_report(tolerance: float = 1e-9) -> dict[str, Any]:
+def skipped_paper_regression(reason: str) -> dict[str, Any]:
+    return {
+        "scalar_results": [],
+        "density_results": [],
+        "max_abs_error": None,
+        "all_scalars_within_tolerance": None,
+        "all_density_checks_passed": None,
+        "real_run_decision_change_count": None,
+        "skipped": True,
+        "reason": reason,
+    }
+
+
+def build_validation_report(tolerance: float = 1e-9, *, include_paper_regression: bool = False) -> dict[str, Any]:
     root = package_root()
     example_targets = root / "examples" / "minimal_target_mappings.jsonl"
     example_trace = root / "examples" / "minimal_ranked_trace.jsonl"
@@ -442,7 +457,13 @@ def build_validation_report(tolerance: float = 1e-9) -> dict[str, Any]:
     toy_report = run_toy_case_suite()
     null_report = run_null_control()
     positive_report = run_positive_control()
-    regression_report = run_paper_regression(tolerance=tolerance)
+    if include_paper_regression:
+        try:
+            regression_report = run_paper_regression(tolerance=tolerance)
+        except FileNotFoundError as exc:
+            regression_report = skipped_paper_regression(str(exc))
+    else:
+        regression_report = skipped_paper_regression("paper regression disabled by default")
 
     schema_total = schema_report["total_checks"] + trace_report["total_checks"]
     schema_passed = schema_report["passed_checks"] + trace_report["passed_checks"]
@@ -484,17 +505,29 @@ def build_validation_report(tolerance: float = 1e-9) -> dict[str, Any]:
 
 
 def render_validation_markdown(report: dict[str, Any]) -> str:
+    paper_error = report["engineering"]["paper_table_reproduction_error"]
+    if paper_error is None:
+        paper_error_line = "- Paper-table reproduction error: skipped"
+    else:
+        paper_error_line = f"- Paper-table reproduction error: {paper_error:.12f}"
+
+    decision_changes = report["scientific"]["real_run_decision_change_count"]
+    if decision_changes is None:
+        decision_change_line = "- Real-run decision-change count: skipped"
+    else:
+        decision_change_line = f"- Real-run decision-change count: {decision_changes}"
+
     lines = [
         "# MTEL-Mem Validation Report",
         "",
         "## Six-Number Scorecard",
         "",
         f"- Schema/invariant pass rate: {100.0 * report['engineering']['schema_invariant_pass_rate']:.1f}%",
-        f"- Paper-table reproduction error: {report['engineering']['paper_table_reproduction_error']:.12f}",
+        paper_error_line,
         f"- Toy-case metric accuracy: {100.0 * report['engineering']['toy_case_metric_accuracy']:.1f}%",
         f"- Null-control false-positive rate: {report['scientific']['null_control_false_positive_rate']:.3f}",
         f"- Positive-control detection rate: {100.0 * report['scientific']['positive_control_detection_rate']:.1f}%",
-        f"- Real-run decision-change count: {report['scientific']['real_run_decision_change_count']}",
+        decision_change_line,
         "",
         "## Usability",
         "",
