@@ -10,6 +10,7 @@ from .adapters.locomo import default_manifest_path as locomo_manifest_path
 from .adapters.longmemeval_s import default_manifest_path as longmemeval_s_manifest_path
 from .core.instability import compute_instability
 from .core.rescore import load_ranked_hits_jsonl, load_query_records_jsonl, score_paths
+from .integrations.premem_locomo import export_premem_locomo
 from .core.validation import (
     build_validation_report,
     render_validation_markdown,
@@ -64,6 +65,29 @@ def build_parser() -> argparse.ArgumentParser:
         help="Include paper-only regression checks that require external result artifacts.",
     )
     suite_parser.set_defaults(func=cmd_validate_suite)
+
+    premem_parser = subparsers.add_parser(
+        "export-premem-locomo",
+        help="Export a PREMem LoCoMo run into MTEL-Mem target/trace JSONL files",
+    )
+    premem_parser.add_argument("--premem-results", required=True, help="Path to PREMem results.jsonl")
+    premem_parser.add_argument("--qa-pkl", required=True, help="Path to PREMem dataset/processed/locomo/qa.pkl")
+    premem_parser.add_argument("--locomo-json", required=True, help="Path to raw locomo10.json")
+    premem_parser.add_argument("--raw-session-pool", required=True, help="Path to PREMem raw session_pool.pkl")
+    premem_parser.add_argument("--out-targets", required=True, help="Output MTEL-Mem target-mapping JSONL")
+    premem_parser.add_argument("--out-trace", required=True, help="Output MTEL-Mem ranked-trace JSONL")
+    premem_parser.add_argument("--system-name", default="premem", help="System label for exported traces")
+    premem_parser.add_argument("--benchmark-name", default="premem_locomo", help="Benchmark label for exported records")
+    premem_parser.add_argument(
+        "--canonical-lineage-json",
+        help="Optional explicit reason->raw lineage JSON for testing or precomputed exports",
+    )
+    premem_parser.add_argument("--raw-embeddings", help="Path to PREMem raw embeddings.pkl for lineage reconstruction")
+    premem_parser.add_argument(
+        "--reasoning-session-pool",
+        help="Path to PREMem reasoning session_pool.pkl for lineage reconstruction",
+    )
+    premem_parser.set_defaults(func=cmd_export_premem_locomo)
 
     return parser
 
@@ -133,6 +157,23 @@ def cmd_validate_suite(args: argparse.Namespace) -> None:
         out_md.parent.mkdir(parents=True, exist_ok=True)
         out_md.write_text(markdown + "\n", encoding="utf-8")
     print(json.dumps(report, indent=2))
+
+
+def cmd_export_premem_locomo(args: argparse.Namespace) -> None:
+    payload = export_premem_locomo(
+        premem_results_path=args.premem_results,
+        qa_pickle_path=args.qa_pkl,
+        locomo_json_path=args.locomo_json,
+        raw_session_pool_path=args.raw_session_pool,
+        out_targets_path=args.out_targets,
+        out_trace_path=args.out_trace,
+        system_name=args.system_name,
+        benchmark_name=args.benchmark_name,
+        canonical_lineage_json=args.canonical_lineage_json,
+        raw_embeddings_path=args.raw_embeddings,
+        reasoning_session_pool_path=args.reasoning_session_pool,
+    )
+    print(json.dumps(payload, indent=2))
 
 
 def main() -> None:
