@@ -1,0 +1,93 @@
+Target Sensitivity Rescore Summary
+==================================
+Trace JSONL          : /Users/vein/Documents/pali/research/results/target_sensitivity/20260313T080007Z_ollama_full_warm_facts1/trace.jsonl
+SQLite DB            : /Users/vein/Documents/pali/research/results/target_sensitivity/20260313T080007Z_ollama_full_warm_facts1/run.sqlite
+Source prefix        : eval_row_
+Requested top_k      : 60
+Observed rank depth  : min=60 max=60
+Preview only         : no
+Truncated hit rows   : 0
+
+Catalog Coverage
+----------------
+Indexes with any IDs : 5882
+Indexes with raw IDs : 5882
+Indexes with canon IDs: 1068
+
+Observed Returned Kinds
+-----------------------
+Kind counts          : {"event": 47933, "raw_turn": 44047}
+Cases with raw_turn  : 1503
+Cases with non-raw   : 1533
+
+Per-Target Metrics
+------------------
+raw_turn:
+  queries            = 1533
+  zero_target_cases  = 0
+  top1_hit_rate      = 0.001305
+  hit_rate_at_k      = 0.757991
+  recall_at_k        = 0.686530
+  micro_recall_at_k  = 0.584150
+  mrr                = 0.061871
+  ndcg_at_k          = 0.186051
+  total_hits/relevant = 1371/2347
+  multi_member_cases = 0
+  group_size_hist    = {"1": 2347}
+source_family:
+  queries            = 1533
+  zero_target_cases  = 0
+  top1_hit_rate      = 0.114155
+  hit_rate_at_k      = 0.812785
+  recall_at_k        = 0.736602
+  micro_recall_at_k  = 0.646783
+  mrr                = 0.193011
+  ndcg_at_k          = 0.289774
+  total_hits/relevant = 1518/2347
+  multi_member_cases = 453
+  group_size_hist    = {"1": 1818, "2": 529}
+canonical:
+  queries            = 453
+  zero_target_cases  = 1080
+  top1_hit_rate      = 0.381898
+  hit_rate_at_k      = 0.913907
+  recall_at_k        = 0.896026
+  micro_recall_at_k  = 0.875236
+  mrr                = 0.518449
+  ndcg_at_k          = 0.596039
+  total_hits/relevant = 463/529
+  multi_member_cases = 0
+  group_size_hist    = {"1": 529}
+
+Pairwise Changes
+---------------
+raw_turn_vs_source_family:
+  shared_queries     = 1533
+  hit_flip_count     = 84
+  top1_flip_count    = 173
+  recall_changed     = 130
+  mrr_changed        = 403
+  ndcg_changed       = 412
+  example q1: When did Caroline go to the LGBTQ support group?
+  example q3: What fields would Caroline be likely to pursue in her educaton?
+  example q5: What is Caroline's identity?
+raw_turn_vs_canonical:
+  shared_queries     = 453
+  hit_flip_count     = 95
+  top1_flip_count    = 173
+  recall_changed     = 183
+  mrr_changed        = 425
+  ndcg_changed       = 425
+  example q1: When did Caroline go to the LGBTQ support group?
+  example q3: What fields would Caroline be likely to pursue in her educaton?
+  example q5: What is Caroline's identity?
+source_family_vs_canonical:
+  shared_queries     = 453
+  hit_flip_count     = 11
+  top1_flip_count    = 0
+  recall_changed     = 114
+  mrr_changed        = 22
+  ndcg_changed       = 164
+  example q3: What fields would Caroline be likely to pursue in her educaton?
+  example q15: Would Caroline still want to pursue counseling as a career if she hadn't received support growing up?
+  example q16: What activities does Melanie partake in?

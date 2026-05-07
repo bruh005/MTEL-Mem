@@ -1,0 +1,93 @@
+Target Sensitivity Rescore Summary
+==================================
+Trace JSONL          : /Users/vein/Documents/pali/research/results/target_sensitivity/20260313T085204Z_ollama_full_warm_facts8/trace.shared_canonical_ollama_facts158.jsonl
+SQLite DB            : /Users/vein/Documents/pali/research/results/target_sensitivity/20260313T085204Z_ollama_full_warm_facts8/run.sqlite
+Source prefix        : eval_row_
+Requested top_k      : 60
+Observed rank depth  : min=60 max=60
+Preview only         : no
+Truncated hit rows   : 0
+
+Catalog Coverage
+----------------
+Indexes with any IDs : 5882
+Indexes with raw IDs : 5882
+Indexes with canon IDs: 2399
+
+Observed Returned Kinds
+-----------------------
+Kind counts          : {"event": 7885, "observation": 10873, "raw_turn": 8422}
+Cases with raw_turn  : 411
+Cases with non-raw   : 453
+
+Per-Target Metrics
+------------------
+raw_turn:
+  queries            = 453
+  zero_target_cases  = 0
+  top1_hit_rate      = 0.000000
+  hit_rate_at_k      = 0.662252
+  recall_at_k        = 0.565871
+  micro_recall_at_k  = 0.419822
+  mrr                = 0.086987
+  ndcg_at_k          = 0.188089
+  total_hits/relevant = 377/898
+  multi_member_cases = 0
+  group_size_hist    = {"1": 898}
+source_family:
+  queries            = 453
+  zero_target_cases  = 0
+  top1_hit_rate      = 0.441501
+  hit_rate_at_k      = 0.900662
+  recall_at_k        = 0.770455
+  micro_recall_at_k  = 0.641425
+  mrr                = 0.550770
+  ndcg_at_k          = 0.564032
+  total_hits/relevant = 576/898
+  multi_member_cases = 453
+  group_size_hist    = {"1": 209, "2": 344, "3": 167, "4": 132, "5": 41, "6": 5}
+canonical:
+  queries            = 453
+  zero_target_cases  = 0
+  top1_hit_rate      = 0.441501
+  hit_rate_at_k      = 0.891832
+  recall_at_k        = 0.823369
+  micro_recall_at_k  = 0.754717
+  mrr                = 0.549841
+  ndcg_at_k          = 0.593740
+  total_hits/relevant = 520/689
+  multi_member_cases = 288
+  group_size_hist    = {"1": 344, "2": 167, "3": 132, "4": 41, "5": 5}
+
+Pairwise Changes
+---------------
+raw_turn_vs_source_family:
+  shared_queries     = 453
+  hit_flip_count     = 108
+  top1_flip_count    = 200
+  recall_changed     = 141
+  mrr_changed        = 396
+  ndcg_changed       = 398
+  example q1: When did Caroline go to the LGBTQ support group?
+  example q3: What fields would Caroline be likely to pursue in her educaton?
+  example q5: What is Caroline's identity?
+raw_turn_vs_canonical:
+  shared_queries     = 453
+  hit_flip_count     = 112
+  top1_flip_count    = 200
+  recall_changed     = 175
+  mrr_changed        = 408
+  ndcg_changed       = 408
+  example q1: When did Caroline go to the LGBTQ support group?
+  example q3: What fields would Caroline be likely to pursue in her educaton?
+  example q5: What is Caroline's identity?
+source_family_vs_canonical:
+  shared_queries     = 453
+  hit_flip_count     = 4
+  top1_flip_count    = 0
+  recall_changed     = 88
+  mrr_changed        = 12
+  ndcg_changed       = 111
+  example q3: What fields would Caroline be likely to pursue in her educaton?
+  example q38: In what ways is Caroline participating in the LGBTQ community?
+  example q76: What items has Melanie bought?
