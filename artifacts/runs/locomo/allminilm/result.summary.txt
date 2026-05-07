@@ -1,0 +1,92 @@
+LOCOMO QA Metric Summary (Paper-aligned Lite, No LLM Judge)
+============================================================
+Vector backend   : sqlite
+Provider         : ollama
+Embed model      : mxbai-embed-large
+Importance scorer: heuristic
+OpenRouter embed : sentence-transformers/all-minilm-l12-v2:nitro
+OpenRouter score : openai/gpt-oss-120b:nitro
+Answer mode      : extractive
+Answer provider  : ollama
+Answer model     : (extractive)
+Extractive thr   : 0.42
+Temporal prefer  : on
+Kind routing     : on
+Open-domain sel  : on
+Open-domain qrw  : off (3)
+Open-domain hyde : off
+Open-domain prof : off
+Profile layer    : off (summary, openrouter)
+Profile model    : openai/gpt-oss-120b:nitro
+Profile stored   : 0 facets / 0 entities
+Profile links    : off
+Entity backend   : sqlite
+Multi-hop bridge : on
+Multi-hop graph  : off (hops=2, weight=0.25)
+Multi-hop decomp : off
+Multi-hop prov   : openrouter
+Multi-hop model  : openai/gpt-oss-120b:nitro
+Temporal raw_turn: on
+Temporal resolve : off
+Answer typing    : off
+Early rerank     : off
+Open-domain alt  : off
+Structured memory: on
+Parser profile   : on (heuristic, spans=off)
+Eval workers     : 50
+Store mode       : batch
+Store batch size : 64
+Store fallbacks  : 0
+Store batch t/o  : 90.0s
+Store single t/o : 45.0s
+Store audit total: 9182
+Store audit qv   : 783 (8.53%)
+Store audit noise: 2338 (25.46%)
+Store audit meta : 9182 (100.00%)
+Run stamp        : 1773379921635_58878_35fd7deb
+Fixture          : research/data/locomo10.paperlite.fixture.json
+Eval set         : research/data/locomo10.paperlite.eval.json
+Top K            : 60
+Query sample     : random (seed=1337)
+Eval success/fail: 1533/0
+Gen failures     : 0
+
+QA Metrics (overall)
+--------------------
+F1 generated     : 0.130887 (13.09)
+BLEU-1 generated : 0.105004 (10.50)
+EM generated     : 0.013699
+F1 no-stopwords  : 0.124994
+
+Retrieval Metrics
+-----------------
+Recall@60       : 0.740799
+nDCG@60         : 0.319967
+MRR              : 0.228652
+Top1 unique rate : 0.461187
+
+Retrieval Metrics by Top K
+--------------------------
+@5: Recall=0.241045 nDCG=0.190229 MRR=0.192357
+@10: Recall=0.358214 nDCG=0.229664 MRR=0.209654
+@25: Recall=0.581218 nDCG=0.285558 MRR=0.224039
+@40: Recall=0.685136 nDCG=0.308133 MRR=0.227532
+@60: Recall=0.740799 nDCG=0.319967 MRR=0.228652
+
+Answer Path Distribution
+------------------------
+extractive: count=1533 rate=1.000000
+
+Generated QA by Category
+------------------------
+Multi-hop: count=281 F1=0.041129 (4.11) BLEU-1=0.030566 (3.06)
+Temporal: count=320 F1=0.341341 (34.13) BLEU-1=0.293654 (29.37)
+Open-domain: count=89 F1=0.013366 (1.34) BLEU-1=0.010377 (1.04)
+Single-hop: count=841 F1=0.093548 (9.35) BLEU-1=0.068359 (6.84)
+Adversarial: count=2 F1=0.000000 (0.00) BLEU-1=0.000000 (0.00)
+
+Final score (avg F1/BLEU, paper scale): 11.79
+JSON result: research/results/target_sensitivity/20260313T053200Z_ollama_full_warm/result.json
+Summary    : research/results/target_sensitivity/20260313T053200Z_ollama_full_warm/result.summary.txt
+Progress   : research/results/target_sensitivity/20260313T053200Z_ollama_full_warm/result.summary.txt.progress.log
+Trace JSONL: research/results/target_sensitivity/20260313T053200Z_ollama_full_warm/trace.jsonl

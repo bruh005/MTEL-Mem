@@ -1,0 +1,93 @@
+LOCOMO QA Metric Summary (Paper-aligned Lite, No LLM Judge)
+============================================================
+Vector backend   : sqlite
+Provider         : ollama
+Embed model      : bge-m3
+Importance scorer: heuristic
+OpenRouter embed : sentence-transformers/all-minilm-l12-v2:nitro
+OpenRouter score : openai/gpt-oss-120b:nitro
+Answer mode      : extractive
+Answer provider  : ollama
+Answer model     : (extractive)
+Extractive thr   : 0.42
+Temporal prefer  : on
+Kind routing     : on
+Open-domain sel  : on
+Open-domain qrw  : off (3)
+Open-domain hyde : off
+Open-domain prof : off
+Profile layer    : off (summary, openrouter)
+Profile model    : openai/gpt-oss-120b:nitro
+Profile stored   : 0 facets / 0 entities
+Profile links    : off
+Entity backend   : sqlite
+Multi-hop bridge : on
+Multi-hop graph  : off (hops=2, weight=0.25)
+Multi-hop decomp : off
+Multi-hop prov   : openrouter
+Multi-hop model  : openai/gpt-oss-120b:nitro
+Temporal raw_turn: on
+Temporal resolve : off
+Answer typing    : off
+Early rerank     : off
+Open-domain alt  : off
+Structured memory: on
+Parser profile   : on (heuristic, spans=off)
+Eval workers     : 50
+Store mode       : batch_parallel_with_single_fallback
+Store batch size : 64
+Store workers    : 8
+Store fallbacks  : 37
+Store batch t/o  : 90.0s
+Store single t/o : 45.0s
+Store audit total: 9601
+Store audit qv   : 504 (5.25%)
+Store audit noise: 0 (0.00%)
+Store audit meta : 9601 (100.00%)
+Run stamp        : 1773463346406_31780_4d745a99
+Fixture          : C:/Users/sugam/Documents/research/papers/store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores/eval/data/locomo10.paperlite.fixture.json
+Eval set         : C:/Users/sugam/Documents/research/papers/store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores/eval/data/locomo10.paperlite.eval.json
+Top K            : 60
+Query sample     : random (seed=1337)
+Eval success/fail: 1510/23
+Gen failures     : 0
+
+QA Metrics (overall)
+--------------------
+F1 generated     : 0.131037 (13.10)
+BLEU-1 generated : 0.105179 (10.52)
+EM generated     : 0.012583
+F1 no-stopwords  : 0.124790
+
+Retrieval Metrics
+-----------------
+Recall@60       : 0.762986
+nDCG@60         : 0.339354
+MRR              : 0.243081
+Top1 unique rate : 0.475497
+
+Retrieval Metrics by Top K
+--------------------------
+@5: Recall=0.285910 nDCG=0.211218 MRR=0.205419
+@10: Recall=0.419582 nDCG=0.256357 MRR=0.225481
+@25: Recall=0.637112 nDCG=0.311923 MRR=0.239688
+@40: Recall=0.711314 nDCG=0.328402 MRR=0.242084
+@60: Recall=0.762986 nDCG=0.339354 MRR=0.243081
+
+Answer Path Distribution
+------------------------
+extractive: count=1510 rate=1.000000
+
+Generated QA by Category
+------------------------
+Multi-hop: count=281 F1=0.041082 (4.11) BLEU-1=0.031339 (3.13)
+Temporal: count=317 F1=0.341038 (34.10) BLEU-1=0.292840 (29.28)
+Open-domain: count=86 F1=0.024970 (2.50) BLEU-1=0.019030 (1.90)
+Single-hop: count=824 F1=0.092312 (9.23) BLEU-1=0.067412 (6.74)
+Adversarial: count=2 F1=0.000000 (0.00) BLEU-1=0.000000 (0.00)
+
+Final score (avg F1/BLEU, paper scale): 11.81
+JSON result: C:\Users\sugam\Documents\research\papers\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\eval\results\target_sensitivity\20260314T044224Z_locomo_ollama_bge_m3_full\result.json
+Summary    : C:\Users\sugam\Documents\research\papers\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\eval\results\target_sensitivity\20260314T044224Z_locomo_ollama_bge_m3_full\result.summary.txt
+Progress   : C:\Users\sugam\Documents\research\papers\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\eval\results\target_sensitivity\20260314T044224Z_locomo_ollama_bge_m3_full\result.summary.txt.progress.log
+Trace JSONL: C:\Users\sugam\Documents\research\papers\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\eval\results\target_sensitivity\20260314T044224Z_locomo_ollama_bge_m3_full\trace.jsonl

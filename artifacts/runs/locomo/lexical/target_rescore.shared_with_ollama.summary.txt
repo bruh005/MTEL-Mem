@@ -1,0 +1,93 @@
+Target Sensitivity Rescore Summary
+==================================
+Trace JSONL          : /Users/vein/Documents/pali/research/results/target_sensitivity/20260313T023254Z_lexical_full/trace.shared_with_ollama.jsonl
+SQLite DB            : /Users/vein/Documents/pali/research/results/target_sensitivity/20260313T023254Z_lexical_full/run.sqlite
+Source prefix        : eval_row_
+Requested top_k      : 60
+Observed rank depth  : min=60 max=60
+Preview only         : no
+Truncated hit rows   : 0
+
+Catalog Coverage
+----------------
+Indexes with any IDs : 5882
+Indexes with raw IDs : 5882
+Indexes with canon IDs: 2321
+
+Observed Returned Kinds
+-----------------------
+Kind counts          : {"event": 22485, "observation": 31000, "raw_turn": 31835}
+Cases with raw_turn  : 1338
+Cases with non-raw   : 1422
+
+Per-Target Metrics
+------------------
+raw_turn:
+  queries            = 1422
+  zero_target_cases  = 0
+  top1_hit_rate      = 0.013361
+  hit_rate_at_k      = 0.654712
+  recall_at_k        = 0.593093
+  micro_recall_at_k  = 0.466366
+  mrr                = 0.073016
+  ndcg_at_k          = 0.175195
+  total_hits/relevant = 1033/2215
+  multi_member_cases = 0
+  group_size_hist    = {"1": 2215}
+source_family:
+  queries            = 1422
+  zero_target_cases  = 0
+  top1_hit_rate      = 0.126582
+  hit_rate_at_k      = 0.775668
+  recall_at_k        = 0.688418
+  micro_recall_at_k  = 0.591874
+  mrr                = 0.206087
+  ndcg_at_k          = 0.289829
+  total_hits/relevant = 1311/2215
+  multi_member_cases = 843
+  group_size_hist    = {"1": 1083, "2": 751, "3": 234, "4": 119, "5": 25, "6": 3}
+canonical:
+  queries            = 843
+  zero_target_cases  = 579
+  top1_hit_rate      = 0.190985
+  hit_rate_at_k      = 0.767497
+  recall_at_k        = 0.709370
+  micro_recall_at_k  = 0.675795
+  mrr                = 0.274569
+  ndcg_at_k          = 0.353996
+  total_hits/relevant = 765/1132
+  multi_member_cases = 330
+  group_size_hist    = {"1": 751, "2": 234, "3": 119, "4": 25, "5": 3}
+
+Pairwise Changes
+---------------
+raw_turn_vs_source_family:
+  shared_queries     = 1422
+  hit_flip_count     = 172
+  top1_flip_count    = 161
+  recall_changed     = 217
+  mrr_changed        = 486
+  ndcg_changed       = 493
+  example q1: When did Caroline go to the LGBTQ support group?
+  example q5: What is Caroline's identity?
+  example q6: When did Melanie run a charity race?
+raw_turn_vs_canonical:
+  shared_queries     = 843
+  hit_flip_count     = 230
+  top1_flip_count    = 180
+  recall_changed     = 329
+  mrr_changed        = 705
+  ndcg_changed       = 705
+  example q1: When did Caroline go to the LGBTQ support group?
+  example q5: What is Caroline's identity?
+  example q6: When did Melanie run a charity race?
+source_family_vs_canonical:
+  shared_queries     = 843
+  hit_flip_count     = 58
+  top1_flip_count    = 19
+  recall_changed     = 205
+  mrr_changed        = 219
+  ndcg_changed       = 369
+  example q7: When is Melanie planning on going camping?
+  example q9: When did Caroline give a speech at a school?
+  example q10: When did Caroline meet up with her friends, family, and mentors?

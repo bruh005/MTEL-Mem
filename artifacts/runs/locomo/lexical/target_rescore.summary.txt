@@ -1,0 +1,93 @@
+Target Sensitivity Rescore Summary
+==================================
+Trace JSONL          : /Users/vein/Documents/pali/research/results/target_sensitivity/20260313T023254Z_lexical_full/trace.jsonl
+SQLite DB            : /Users/vein/Documents/pali/research/results/target_sensitivity/20260313T023254Z_lexical_full/run.sqlite
+Source prefix        : eval_row_
+Requested top_k      : 60
+Observed rank depth  : min=60 max=60
+Preview only         : no
+Truncated hit rows   : 0
+
+Catalog Coverage
+----------------
+Indexes with any IDs : 5882
+Indexes with raw IDs : 5882
+Indexes with canon IDs: 2321
+
+Observed Returned Kinds
+-----------------------
+Kind counts          : {"event": 24248, "observation": 33244, "raw_turn": 34488}
+Cases with raw_turn  : 1443
+Cases with non-raw   : 1533
+
+Per-Target Metrics
+------------------
+raw_turn:
+  queries            = 1533
+  zero_target_cases  = 0
+  top1_hit_rate      = 0.013046
+  hit_rate_at_k      = 0.658187
+  recall_at_k        = 0.598040
+  micro_recall_at_k  = 0.473796
+  mrr                = 0.073324
+  ndcg_at_k          = 0.176430
+  total_hits/relevant = 1112/2347
+  multi_member_cases = 0
+  group_size_hist    = {"1": 2347}
+source_family:
+  queries            = 1533
+  zero_target_cases  = 0
+  top1_hit_rate      = 0.125897
+  hit_rate_at_k      = 0.776256
+  recall_at_k        = 0.691790
+  micro_recall_at_k  = 0.597784
+  mrr                = 0.204513
+  ndcg_at_k          = 0.289784
+  total_hits/relevant = 1403/2347
+  multi_member_cases = 899
+  group_size_hist    = {"1": 1151, "2": 789, "3": 245, "4": 132, "5": 27, "6": 3}
+canonical:
+  queries            = 899
+  zero_target_cases  = 634
+  top1_hit_rate      = 0.192436
+  hit_rate_at_k      = 0.773081
+  recall_at_k        = 0.716350
+  micro_recall_at_k  = 0.681438
+  mrr                = 0.274985
+  ndcg_at_k          = 0.355644
+  total_hits/relevant = 815/1196
+  multi_member_cases = 356
+  group_size_hist    = {"1": 789, "2": 245, "3": 132, "4": 27, "5": 3}
+
+Pairwise Changes
+---------------
+raw_turn_vs_source_family:
+  shared_queries     = 1533
+  hit_flip_count     = 181
+  top1_flip_count    = 173
+  recall_changed     = 228
+  mrr_changed        = 517
+  ndcg_changed       = 526
+  example q1: When did Caroline go to the LGBTQ support group?
+  example q5: What is Caroline's identity?
+  example q6: When did Melanie run a charity race?
+raw_turn_vs_canonical:
+  shared_queries     = 899
+  hit_flip_count     = 244
+  top1_flip_count    = 193
+  recall_changed     = 347
+  mrr_changed        = 758
+  ndcg_changed       = 758
+  example q1: When did Caroline go to the LGBTQ support group?
+  example q5: What is Caroline's identity?
+  example q6: When did Melanie run a charity race?
+source_family_vs_canonical:
+  shared_queries     = 899
+  hit_flip_count     = 63
+  top1_flip_count    = 20
+  recall_changed     = 216
+  mrr_changed        = 241
+  ndcg_changed       = 397
+  example q7: When is Melanie planning on going camping?
+  example q9: When did Caroline give a speech at a school?
+  example q10: When did Caroline meet up with her friends, family, and mentors?

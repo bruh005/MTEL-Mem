@@ -1,0 +1,93 @@
+Target Sensitivity Rescore Summary
+==================================
+Trace JSONL          : C:\Users\sugam\Documents\research\papers\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\eval\results\target_sensitivity\20260314T062218Z_locomo_ollama_mxbai_full\trace.jsonl
+SQLite DB            : C:\Users\sugam\Documents\research\papers\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\eval\results\target_sensitivity\20260314T062218Z_locomo_ollama_mxbai_full\run.sqlite
+Source prefix        : eval_row_
+Requested top_k      : 60
+Observed rank depth  : min=60 max=60
+Preview only         : no
+Truncated hit rows   : 0
+
+Catalog Coverage
+----------------
+Indexes with any IDs : 5882
+Indexes with raw IDs : 5882
+Indexes with canon IDs: 2321
+
+Observed Returned Kinds
+-----------------------
+Kind counts          : {"event": 24985, "observation": 33503, "raw_turn": 33492}
+Cases with raw_turn  : 1436
+Cases with non-raw   : 1533
+
+Per-Target Metrics
+------------------
+raw_turn:
+  queries            = 1533
+  zero_target_cases  = 0
+  top1_hit_rate      = 0.012394
+  hit_rate_at_k      = 0.712981
+  recall_at_k        = 0.650414
+  micro_recall_at_k  = 0.527482
+  mrr                = 0.084993
+  ndcg_at_k          = 0.198171
+  total_hits/relevant = 1238/2347
+  multi_member_cases = 0
+  group_size_hist    = {"1": 2347}
+source_family:
+  queries            = 1533
+  zero_target_cases  = 0
+  top1_hit_rate      = 0.140248
+  hit_rate_at_k      = 0.818656
+  recall_at_k        = 0.741107
+  micro_recall_at_k  = 0.650192
+  mrr                = 0.228525
+  ndcg_at_k          = 0.319867
+  total_hits/relevant = 1526/2347
+  multi_member_cases = 899
+  group_size_hist    = {"1": 1151, "2": 789, "3": 245, "4": 132, "5": 27, "6": 3}
+canonical:
+  queries            = 899
+  zero_target_cases  = 634
+  top1_hit_rate      = 0.218020
+  hit_rate_at_k      = 0.813126
+  recall_at_k        = 0.763847
+  micro_recall_at_k  = 0.729933
+  mrr                = 0.302692
+  ndcg_at_k          = 0.386998
+  total_hits/relevant = 873/1196
+  multi_member_cases = 356
+  group_size_hist    = {"1": 789, "2": 245, "3": 132, "4": 27, "5": 3}
+
+Pairwise Changes
+---------------
+raw_turn_vs_source_family:
+  shared_queries     = 1533
+  hit_flip_count     = 162
+  top1_flip_count    = 196
+  recall_changed     = 219
+  mrr_changed        = 534
+  ndcg_changed       = 541
+  example q1: When did Caroline go to the LGBTQ support group?
+  example q3: What fields would Caroline be likely to pursue in her educaton?
+  example q5: What is Caroline's identity?
+raw_turn_vs_canonical:
+  shared_queries     = 899
+  hit_flip_count     = 226
+  top1_flip_count    = 214
+  recall_changed     = 345
+  mrr_changed        = 795
+  ndcg_changed       = 795
+  example q1: When did Caroline go to the LGBTQ support group?
+  example q3: What fields would Caroline be likely to pursue in her educaton?
+  example q5: What is Caroline's identity?
+source_family_vs_canonical:
+  shared_queries     = 899
+  hit_flip_count     = 64
+  top1_flip_count    = 18
+  recall_changed     = 222
+  mrr_changed        = 261
+  ndcg_changed       = 426
+  example q3: What fields would Caroline be likely to pursue in her educaton?
+  example q7: When is Melanie planning on going camping?
+  example q9: When did Caroline give a speech at a school?
