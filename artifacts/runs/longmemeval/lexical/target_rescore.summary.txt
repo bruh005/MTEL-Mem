@@ -1,0 +1,93 @@
+Target Sensitivity Rescore Summary
+==================================
+Trace JSONL          : C:\Users\sugam\Documents\research\papers\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\eval\results\target_sensitivity_longmemeval\20260313T172942Z_longmemeval_s_lexical_full\trace.jsonl
+SQLite DB            : C:\Users\sugam\Documents\research\papers\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\eval\results\target_sensitivity_longmemeval\20260313T172942Z_longmemeval_s_lexical_full\run.sqlite
+Source prefix        : eval_row_
+Requested top_k      : 60
+Observed rank depth  : min=60 max=60
+Preview only         : no
+Truncated hit rows   : 0
+
+Catalog Coverage
+----------------
+Indexes with any IDs : 231595
+Indexes with raw IDs : 231595
+Indexes with canon IDs: 117426
+
+Observed Returned Kinds
+-----------------------
+Kind counts          : {"observation": 18880, "raw_turn": 9320}
+Cases with raw_turn  : 401
+Cases with non-raw   : 470
+
+Per-Target Metrics
+------------------
+raw_turn:
+  queries            = 470
+  zero_target_cases  = 0
+  top1_hit_rate      = 0.000000
+  hit_rate_at_k      = 0.597872
+  recall_at_k        = 0.489965
+  micro_recall_at_k  = 0.468397
+  mrr                = 0.082207
+  ndcg_at_k          = 0.154356
+  total_hits/relevant = 415/886
+  multi_member_cases = 0
+  group_size_hist    = {"1": 886}
+source_family:
+  queries            = 470
+  zero_target_cases  = 0
+  top1_hit_rate      = 0.240426
+  hit_rate_at_k      = 0.704255
+  recall_at_k        = 0.571879
+  micro_recall_at_k  = 0.549661
+  mrr                = 0.300868
+  ndcg_at_k          = 0.306929
+  total_hits/relevant = 487/886
+  multi_member_cases = 332
+  group_size_hist    = {"1": 414, "2": 472}
+canonical:
+  queries            = 332
+  zero_target_cases  = 138
+  top1_hit_rate      = 0.340361
+  hit_rate_at_k      = 0.780120
+  recall_at_k        = 0.710693
+  micro_recall_at_k  = 0.686441
+  mrr                = 0.421005
+  ndcg_at_k          = 0.455752
+  total_hits/relevant = 324/472
+  multi_member_cases = 0
+  group_size_hist    = {"1": 472}
+
+Pairwise Changes
+---------------
+raw_turn_vs_source_family:
+  shared_queries     = 470
+  hit_flip_count     = 50
+  top1_flip_count    = 113
+  recall_changed     = 60
+  mrr_changed        = 259
+  ndcg_changed       = 259
+  example q1: What degree did I graduate with?
+  example q2: How long is my daily commute to work?
+  example q4: What play did I attend at the local community theater?
+raw_turn_vs_canonical:
+  shared_queries     = 332
+  hit_flip_count     = 68
+  top1_flip_count    = 113
+  recall_changed     = 153
+  mrr_changed        = 277
+  ndcg_changed       = 277
+  example q1: What degree did I graduate with?
+  example q2: How long is my daily commute to work?
+  example q4: What play did I attend at the local community theater?
+source_family_vs_canonical:
+  shared_queries     = 332
+  hit_flip_count     = 18
+  top1_flip_count    = 0
+  recall_changed     = 126
+  mrr_changed        = 18
+  ndcg_changed       = 158
+  example q1: What degree did I graduate with?
+  example q12: How much did I spend on a designer handbag?
+  example q34: How long did it take to move to the new apartment?

@@ -1,0 +1,1410 @@
+{
+  "generated_at_utc": "2026-03-13T19:50:20.265488+00:00",
+  "trace_jsonl": "C:\\Users\\sugam\\Documents\\research\\papers\\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\\eval\\results\\target_sensitivity_longmemeval\\20260313T185031Z_longmemeval_s_ollama_full_guarded_w8_np16\\trace.jsonl",
+  "requested_top_k": 60,
+  "observed_ranking_depth_min": 60,
+  "observed_ranking_depth_max": 60,
+  "observed_ranking_depth_constant": true,
+  "preview_only": false,
+  "truncated_hit_rows": 0,
+  "returned_kind_counts_observed": {
+    "observation": 20228,
+    "raw_turn": 7972
+  },
+  "cases_with_observed_raw_turn": 378,
+  "cases_with_observed_non_raw": 470,
+  "targets": {
+    "raw_turn": {
+      "queries": 470,
+      "zero_target_cases": 0,
+      "top1_hit_rate": 0.0,
+      "hit_rate_at_k": 0.597872340425532,
+      "recall_at_k": 0.47482269503546093,
+      "mrr": 0.09183791864050136,
+      "ndcg_at_k": 0.15717493720091932,
+      "micro_recall_at_k": 0.4345372460496614,
+      "total_hits": 385,
+      "total_relevant": 886,
+      "multi_member_cases": 0,
+      "group_size_histogram": {
+        "1": 886
+      }
+    },
+    "source_family": {
+      "queries": 470,
+      "zero_target_cases": 0,
+      "top1_hit_rate": 0.274468085106383,
+      "hit_rate_at_k": 0.7468085106382979,
+      "recall_at_k": 0.5962765957446808,
+      "mrr": 0.3426449665274346,
+      "ndcg_at_k": 0.33795562095097675,
+      "micro_recall_at_k": 0.5711060948081265,
+      "total_hits": 506,
+      "total_relevant": 886,
+      "multi_member_cases": 332,
+      "group_size_histogram": {
+        "1": 413,
+        "2": 473
+      }
+    },
+    "canonical": {
+      "queries": 332,
+      "zero_target_cases": 138,
+      "top1_hit_rate": 0.3885542168674699,
+      "hit_rate_at_k": 0.9066265060240963,
+      "recall_at_k": 0.8572791164658635,
+      "mrr": 0.48196553799357494,
+      "ndcg_at_k": 0.5309163807033515,
+      "micro_recall_at_k": 0.8456659619450317,
+      "total_hits": 400,
+      "total_relevant": 473,
+      "multi_member_cases": 0,
+      "group_size_histogram": {
+        "1": 473
+      }
+    }
+  },
+  "pairwise": {
+    "raw_turn_vs_source_family": {
+      "shared_queries": 470,
+      "hit_flip_count": 70,
+      "top1_flip_count": 129,
+      "recall_changed_count": 87,
+      "mrr_changed_count": 301,
+      "ndcg_changed_count": 301,
+      "examples": [
+        {
+          "query_index": 1,
+          "query": "What degree did I graduate with?",
+          "left_mode": "raw_turn",
+          "right_mode": "source_family",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 0.0,
+            "hits": 0.0,
+            "relevant": 2.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "ndcg": 0.0
+          },
+          "right_metrics": {
+            "top1": 1.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 2.0,
+            "recall": 0.5,
+            "mrr": 1.0,
+            "ndcg": 0.6131471927654584
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1
+            ],
+            "source_family": [
+              2,
+              1
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 2,
+          "query": "How long is my daily commute to work?",
+          "left_mode": "raw_turn",
+          "right_mode": "source_family",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.018518518518518517,
+            "ndcg": 0.1729696904450771
+          },
+          "right_metrics": {
+            "top1": 1.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 1.0
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              2
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 4,
+          "query": "What play did I attend at the local community theater?",
+          "left_mode": "raw_turn",
+          "right_mode": "source_family",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 0.0,
+            "hits": 0.0,
+            "relevant": 1.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "ndcg": 0.0
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.3333333333333333,
+            "ndcg": 0.5
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              2
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 9,
+          "query": "When did I volunteer at the local animal shelter's fundraising dinner?",
+          "left_mode": "raw_turn",
+          "right_mode": "source_family",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.022727272727272728,
+            "ndcg": 0.18208790046993825
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.023255813953488372,
+            "ndcg": 0.18316925091363362
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              2
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 11,
+          "query": "What was my previous occupation?",
+          "left_mode": "raw_turn",
+          "right_mode": "source_family",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.022222222222222223,
+            "ndcg": 0.1810425967800402
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.02631578947368421,
+            "ndcg": 0.18920035951687003
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              2
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 12,
+          "query": "How much did I spend on a designer handbag?",
+          "left_mode": "raw_turn",
+          "right_mode": "source_family",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 0.0,
+            "hits": 0.0,
+            "relevant": 1.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "ndcg": 0.0
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.037037037037037035,
+            "ndcg": 0.20801459767650948
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              2
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 16,
+          "query": "How long did it take me to assemble the IKEA bookshelf?",
+          "left_mode": "raw_turn",
+          "right_mode": "source_family",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.022222222222222223,
+            "ndcg": 0.1810425967800402
+          },
+          "right_metrics": {
+            "top1": 1.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 1.0
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              2
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 20,
+          "query": "What was my previous stance on spirituality?",
+          "left_mode": "raw_turn",
+          "right_mode": "source_family",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 0.0,
+            "hits": 0.0,
+            "relevant": 1.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "ndcg": 0.0
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.5,
+            "ndcg": 0.6309297535714575
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              2
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 21,
+          "query": "What brand are my favorite running shoes?",
+          "left_mode": "raw_turn",
+          "right_mode": "source_family",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 0.0,
+            "hits": 0.0,
+            "relevant": 1.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "ndcg": 0.0
+          },
+          "right_metrics": {
+            "top1": 1.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 1.0
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              2
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 27,
+          "query": "What is the name of my cat?",
+          "left_mode": "raw_turn",
+          "right_mode": "source_family",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 0.0,
+            "hits": 0.0,
+            "relevant": 1.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "ndcg": 0.0
+          },
+          "right_metrics": {
+            "top1": 1.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 1.0
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              2
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 33,
+          "query": "Where did I complete my Bachelor's degree in Computer Science?",
+          "left_mode": "raw_turn",
+          "right_mode": "source_family",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 0.0,
+            "hits": 0.0,
+            "relevant": 1.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "ndcg": 0.0
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.3333333333333333,
+            "ndcg": 0.5
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              2
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 35,
+          "query": "What type of cocktail recipe did I try last weekend?",
+          "left_mode": "raw_turn",
+          "right_mode": "source_family",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.16666666666666666,
+            "ndcg": 0.3562071871080222
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.2,
+            "ndcg": 0.38685280723454163
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              2
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        }
+      ]
+    },
+    "raw_turn_vs_canonical": {
+      "shared_queries": 332,
+      "hit_flip_count": 78,
+      "top1_flip_count": 129,
+      "recall_changed_count": 176,
+      "mrr_changed_count": 309,
+      "ndcg_changed_count": 309,
+      "examples": [
+        {
+          "query_index": 1,
+          "query": "What degree did I graduate with?",
+          "left_mode": "raw_turn",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 0.0,
+            "hits": 0.0,
+            "relevant": 2.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "ndcg": 0.0
+          },
+          "right_metrics": {
+            "top1": 1.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 1.0
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1
+            ],
+            "source_family": [
+              2,
+              1
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 2,
+          "query": "How long is my daily commute to work?",
+          "left_mode": "raw_turn",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.018518518518518517,
+            "ndcg": 0.1729696904450771
+          },
+          "right_metrics": {
+            "top1": 1.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 1.0
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              2
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 4,
+          "query": "What play did I attend at the local community theater?",
+          "left_mode": "raw_turn",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 0.0,
+            "hits": 0.0,
+            "relevant": 1.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "ndcg": 0.0
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.3333333333333333,
+            "ndcg": 0.5
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              2
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 9,
+          "query": "When did I volunteer at the local animal shelter's fundraising dinner?",
+          "left_mode": "raw_turn",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.022727272727272728,
+            "ndcg": 0.18208790046993825
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.023255813953488372,
+            "ndcg": 0.18316925091363362
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              2
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 11,
+          "query": "What was my previous occupation?",
+          "left_mode": "raw_turn",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.022222222222222223,
+            "ndcg": 0.1810425967800402
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.02631578947368421,
+            "ndcg": 0.18920035951687003
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              2
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 12,
+          "query": "How much did I spend on a designer handbag?",
+          "left_mode": "raw_turn",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 0.0,
+            "hits": 0.0,
+            "relevant": 1.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "ndcg": 0.0
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.037037037037037035,
+            "ndcg": 0.20801459767650948
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              2
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 16,
+          "query": "How long did it take me to assemble the IKEA bookshelf?",
+          "left_mode": "raw_turn",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.022222222222222223,
+            "ndcg": 0.1810425967800402
+          },
+          "right_metrics": {
+            "top1": 1.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 1.0
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              2
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 20,
+          "query": "What was my previous stance on spirituality?",
+          "left_mode": "raw_turn",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 0.0,
+            "hits": 0.0,
+            "relevant": 1.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "ndcg": 0.0
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.5,
+            "ndcg": 0.6309297535714575
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              2
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 21,
+          "query": "What brand are my favorite running shoes?",
+          "left_mode": "raw_turn",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 0.0,
+            "hits": 0.0,
+            "relevant": 1.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "ndcg": 0.0
+          },
+          "right_metrics": {
+            "top1": 1.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 1.0
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              2
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 27,
+          "query": "What is the name of my cat?",
+          "left_mode": "raw_turn",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 0.0,
+            "hits": 0.0,
+            "relevant": 1.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "ndcg": 0.0
+          },
+          "right_metrics": {
+            "top1": 1.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 1.0
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              2
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 33,
+          "query": "Where did I complete my Bachelor's degree in Computer Science?",
+          "left_mode": "raw_turn",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 0.0,
+            "hits": 0.0,
+            "relevant": 1.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "ndcg": 0.0
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.3333333333333333,
+            "ndcg": 0.5
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              2
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 35,
+          "query": "What type of cocktail recipe did I try last weekend?",
+          "left_mode": "raw_turn",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.16666666666666666,
+            "ndcg": 0.3562071871080222
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.2,
+            "ndcg": 0.38685280723454163
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              2
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        }
+      ]
+    },
+    "source_family_vs_canonical": {
+      "shared_queries": 332,
+      "hit_flip_count": 8,
+      "top1_flip_count": 0,
+      "recall_changed_count": 126,
+      "mrr_changed_count": 8,
+      "ndcg_changed_count": 158,
+      "examples": [
+        {
+          "query_index": 1,
+          "query": "What degree did I graduate with?",
+          "left_mode": "source_family",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 1.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 2.0,
+            "recall": 0.5,
+            "mrr": 1.0,
+            "ndcg": 0.6131471927654584
+          },
+          "right_metrics": {
+            "top1": 1.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 1.0
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1
+            ],
+            "source_family": [
+              2,
+              1
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 45,
+          "query": "How long did I wait for the decision on my asylum application?",
+          "left_mode": "source_family",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.017857142857142856,
+            "ndcg": 0.17144160057391347
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 0.0,
+            "hits": 0.0,
+            "relevant": 1.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "ndcg": 0.0
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              2
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 53,
+          "query": "How many skeins of worsted weight yarn did I find in my stash?",
+          "left_mode": "source_family",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 1.0,
+            "hit_at_k": 1.0,
+            "hits": 2.0,
+            "relevant": 2.0,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 0.7196909249470093
+          },
+          "right_metrics": {
+            "top1": 1.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 1.0
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1
+            ],
+            "source_family": [
+              1,
+              2
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 59,
+          "query": "How long did Alex marinate the BBQ ribs in special sauce?",
+          "left_mode": "source_family",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.021739130434782608,
+            "ndcg": 0.18003132665669264
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 0.0,
+            "hits": 0.0,
+            "relevant": 1.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "ndcg": 0.0
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              2
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 65,
+          "query": "How many items of clothing do I need to pick up or return from a store?",
+          "left_mode": "source_family",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 1.0,
+            "hit_at_k": 1.0,
+            "hits": 3.0,
+            "relevant": 3.0,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 0.8448066193421195
+          },
+          "right_metrics": {
+            "top1": 1.0,
+            "hit_at_k": 1.0,
+            "hits": 2.0,
+            "relevant": 2.0,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 1.0
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1,
+              1
+            ],
+            "source_family": [
+              2,
+              1,
+              2
+            ],
+            "canonical": [
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 67,
+          "query": "How many model kits have I worked on or bought?",
+          "left_mode": "source_family",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 2.0,
+            "relevant": 5.0,
+            "recall": 0.4,
+            "mrr": 0.05263157894736842,
+            "ndcg": 0.1451401658081076
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 2.0,
+            "relevant": 2.0,
+            "recall": 1.0,
+            "mrr": 0.05263157894736842,
+            "ndcg": 0.2623901148749458
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "source_family": [
+              1,
+              1,
+              2,
+              2,
+              1
+            ],
+            "canonical": [
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 68,
+          "query": "How many days did I spend on camping trips in the United States this year?",
+          "left_mode": "source_family",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 2.0,
+            "recall": 0.5,
+            "mrr": 0.1111111111111111,
+            "ndcg": 0.18457569677956817
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.1111111111111111,
+            "ndcg": 0.3010299956639812
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1
+            ],
+            "source_family": [
+              2,
+              1
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 69,
+          "query": "How many weeks did it take me to watch all the Marvel Cinematic Universe movies and the main Star Wars films?",
+          "left_mode": "source_family",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 1.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 2.0,
+            "recall": 0.5,
+            "mrr": 1.0,
+            "ndcg": 0.6131471927654584
+          },
+          "right_metrics": {
+            "top1": 1.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 1.0
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1
+            ],
+            "source_family": [
+              2,
+              1
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 70,
+          "query": "How many plants did I acquire in the last month?",
+          "left_mode": "source_family",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 2.0,
+            "recall": 0.5,
+            "mrr": 0.14285714285714285,
+            "ndcg": 0.20438239758848611
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.14285714285714285,
+            "ndcg": 0.3333333333333333
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1
+            ],
+            "source_family": [
+              2,
+              1
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 71,
+          "query": "How much total money have I spent on bike-related expenses since the start of the year?",
+          "left_mode": "source_family",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 4.0,
+            "recall": 0.25,
+            "mrr": 0.058823529411764705,
+            "ndcg": 0.09361800268759637
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 2.0,
+            "recall": 0.5,
+            "mrr": 0.058823529411764705,
+            "ndcg": 0.14704034066641014
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "source_family": [
+              2,
+              1,
+              2,
+              1
+            ],
+            "canonical": [
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 72,
+          "query": "How many hours in total did I spend driving to my three road trip destinations combined?",
+          "left_mode": "source_family",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 2.0,
+            "relevant": 3.0,
+            "recall": 0.6666666666666666,
+            "mrr": 0.5,
+            "ndcg": 0.37520845110962364
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.5,
+            "ndcg": 0.6309297535714575
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1,
+              1
+            ],
+            "source_family": [
+              1,
+              1,
+              2
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 73,
+          "query": "How many different doctors did I visit?",
+          "left_mode": "source_family",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 3.0,
+            "relevant": 5.0,
+            "recall": 0.6,
+            "mrr": 0.03333333333333333,
+            "ndcg": 0.19762849965682844
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 3.0,
+            "relevant": 3.0,
+            "recall": 1.0,
+            "mrr": 0.03333333333333333,
+            "ndcg": 0.2734485033995226
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "source_family": [
+              1,
+              2,
+              2,
+              1,
+              2
+            ],
+            "canonical": [
+              1,
+              1,
+              1
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "db": "C:\\Users\\sugam\\Documents\\research\\papers\\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\\eval\\results\\target_sensitivity_longmemeval\\20260313T185031Z_longmemeval_s_ollama_full_guarded_w8_np16\\run.sqlite",
+  "source_prefix": "eval_row_"
+}

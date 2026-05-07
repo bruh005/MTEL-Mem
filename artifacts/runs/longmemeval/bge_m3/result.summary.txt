@@ -1,0 +1,94 @@
+LOCOMO QA Metric Summary (Paper-aligned Lite, No LLM Judge)
+============================================================
+Vector backend   : sqlite
+Provider         : ollama
+Embed model      : bge-m3
+Importance scorer: heuristic
+OpenRouter embed : sentence-transformers/all-minilm-l12-v2:nitro
+OpenRouter score : openai/gpt-oss-120b:nitro
+Answer mode      : extractive
+Answer provider  : ollama
+Answer model     : (extractive)
+Extractive thr   : 0.42
+Temporal prefer  : on
+Kind routing     : on
+Open-domain sel  : on
+Open-domain qrw  : off (3)
+Open-domain hyde : off
+Open-domain prof : off
+Profile layer    : off (summary, openrouter)
+Profile model    : openai/gpt-oss-120b:nitro
+Profile stored   : 0 facets / 0 entities
+Profile links    : off
+Entity backend   : sqlite
+Multi-hop bridge : on
+Multi-hop graph  : off (hops=2, weight=0.25)
+Multi-hop decomp : off
+Multi-hop prov   : openrouter
+Multi-hop model  : openai/gpt-oss-120b:nitro
+Temporal raw_turn: on
+Temporal resolve : off
+Answer typing    : off
+Early rerank     : off
+Open-domain alt  : off
+Structured memory: on
+Parser profile   : on (heuristic, spans=off)
+Eval workers     : 50
+Store mode       : batch_parallel_with_single_fallback
+Store batch size : 64
+Store workers    : 8
+Store fallbacks  : 2406
+Store batch t/o  : 90.0s
+Store single t/o : 45.0s
+Store audit total: 408630
+Store audit qv   : 22009 (5.39%)
+Store audit noise: 205 (0.05%)
+Store audit meta : 408630 (100.00%)
+Run stamp        : 1773452253430_37608_eaee9fa5
+Fixture          : C:/Users/sugam/Documents/research/papers/store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores/eval/data/longmemeval/longmemeval_s_cleaned.paperlite.noabs.fixture.json
+Eval set         : C:/Users/sugam/Documents/research/papers/store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores/eval/data/longmemeval/longmemeval_s_cleaned.paperlite.noabs.eval.json
+Top K            : 60
+Query sample     : random (seed=1337)
+Eval success/fail: 439/31
+Gen failures     : 0
+
+QA Metrics (overall)
+--------------------
+F1 generated     : 0.052845 (5.28)
+BLEU-1 generated : 0.036432 (3.64)
+EM generated     : 0.000000
+F1 no-stopwords  : 0.046464
+
+Retrieval Metrics
+-----------------
+Recall@60       : 0.617502
+nDCG@60         : 0.332973
+MRR              : 0.326287
+Top1 unique rate : 1.000000
+
+Retrieval Metrics by Top K
+--------------------------
+@5: Recall=0.261617 nDCG=0.243174 MRR=0.307631
+@10: Recall=0.314009 nDCG=0.262389 MRR=0.315940
+@25: Recall=0.389636 nDCG=0.284740 MRR=0.321701
+@40: Recall=0.445710 nDCG=0.298022 MRR=0.323399
+@60: Recall=0.617502 nDCG=0.332973 MRR=0.326287
+
+Answer Path Distribution
+------------------------
+extractive: count=439 rate=1.000000
+
+Generated QA by Category
+------------------------
+Unknown Category (knowledge-update): count=68 F1=0.044271 (4.43) BLEU-1=0.029325 (2.93)
+Unknown Category (multi-session): count=104 F1=0.015323 (1.53) BLEU-1=0.009792 (0.98)
+Unknown Category (single-session-assistant): count=53 F1=0.102335 (10.23) BLEU-1=0.077904 (7.79)
+Unknown Category (single-session-preference): count=30 F1=0.057872 (5.79) BLEU-1=0.008995 (0.90)
+Unknown Category (single-session-user): count=63 F1=0.060865 (6.09) BLEU-1=0.037299 (3.73)
+Unknown Category (temporal-reasoning): count=121 F1=0.062813 (6.28) BLEU-1=0.051510 (5.15)
+
+Final score (avg F1/BLEU, paper scale): 4.46
+JSON result: C:\Users\sugam\Documents\research\papers\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\eval\results\target_sensitivity_longmemeval\20260314T013728Z_longmemeval_s_ollama_bge_m3_full\result.json
+Summary    : C:\Users\sugam\Documents\research\papers\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\eval\results\target_sensitivity_longmemeval\20260314T013728Z_longmemeval_s_ollama_bge_m3_full\result.summary.txt
+Progress   : C:\Users\sugam\Documents\research\papers\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\eval\results\target_sensitivity_longmemeval\20260314T013728Z_longmemeval_s_ollama_bge_m3_full\result.summary.txt.progress.log
+Trace JSONL: C:\Users\sugam\Documents\research\papers\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\eval\results\target_sensitivity_longmemeval\20260314T013728Z_longmemeval_s_ollama_bge_m3_full\trace.jsonl
