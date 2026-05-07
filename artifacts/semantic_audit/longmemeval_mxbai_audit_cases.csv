@@ -1,0 +1,1 @@
+run_label,query_index,tenant_id,query,reference_answer,audit_target,raw_ndcg,target_ndcg,credited_rank,credited_memory_id,credited_kind,credited_content,credited_query_view_text,credited_source,raw_support_rank,raw_support_memory_id,raw_support_content,expected_fixture_indexes,candidate_answers
