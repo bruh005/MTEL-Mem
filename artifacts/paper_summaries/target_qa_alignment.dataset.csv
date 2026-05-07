@@ -1,0 +1,13 @@
+scope,dataset,qa_metric,target,target_prefix,n_runs,spearman_rho,spearman_ci_lo,spearman_ci_hi,valid_bootstrap_samples,qa_winner,target_winner,winner_match
+dataset,LoCoMo,qa_f1_generated,Raw,raw,8,0.7619047619047619,0.18518518518518517,1.0,4000,ollama / mxbai-embed-large [F=5],ollama / bge-m3 [F=5],False
+dataset,LoCoMo,qa_f1_generated,Source,source,8,0.7380952380952381,0.10256410256410256,0.9753086419753086,4000,ollama / mxbai-embed-large [F=5],ollama / bge-m3 [F=5],False
+dataset,LoCoMo,qa_f1_generated,Canonical,canonical,8,-0.16666666666666666,-0.8356164383561644,0.8285888501742161,4000,ollama / mxbai-embed-large [F=5],ollama / all-minilm [F=1],False
+dataset,LoCoMo,qa_em_generated,Raw,raw,8,0.6874400625963308,-0.09799078929868854,0.936827867116333,3997,ollama / all-minilm [F=5],ollama / bge-m3 [F=5],False
+dataset,LoCoMo,qa_em_generated,Source,source,8,0.8224729320348958,0.11250879009260237,1.0,3999,ollama / all-minilm [F=5],ollama / bge-m3 [F=5],False
+dataset,LoCoMo,qa_em_generated,Canonical,canonical,8,-0.2823414542806359,-0.8164965809277261,0.8108848540793833,3998,ollama / all-minilm [F=5],ollama / all-minilm [F=1],False
+dataset,LongMemEval-S,qa_f1_generated,Raw,raw,4,-0.19999999999999996,-1.0000000000000002,1.0000000000000002,3948,ollama / mxbai-embed-large [F=5],ollama / all-minilm [F=5],False
+dataset,LongMemEval-S,qa_f1_generated,Source,source,4,0.9999999999999998,0.9999999999999998,1.0000000000000002,3932,ollama / mxbai-embed-large [F=5],ollama / mxbai-embed-large [F=5],True
+dataset,LongMemEval-S,qa_f1_generated,Canonical,canonical,4,0.7999999999999998,-1.0000000000000002,1.0000000000000002,3937,ollama / mxbai-embed-large [F=5],ollama / mxbai-embed-large [F=5],True
+dataset,LongMemEval-S,qa_em_generated,Raw,raw,4,,nan,nan,0,lexical / all-minilm [F=5],ollama / all-minilm [F=5],False
+dataset,LongMemEval-S,qa_em_generated,Source,source,4,,nan,nan,0,lexical / all-minilm [F=5],ollama / mxbai-embed-large [F=5],False
+dataset,LongMemEval-S,qa_em_generated,Canonical,canonical,4,,nan,nan,0,lexical / all-minilm [F=5],ollama / mxbai-embed-large [F=5],False

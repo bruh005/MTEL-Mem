@@ -1,0 +1,146 @@
+{
+  "shared_subset_queries": 332,
+  "subset_metrics": {
+    "lexical": {
+      "raw_turn": {
+        "queries": 332,
+        "recall_at_k": 0.5405120481927711,
+        "mrr": 0.11266177028779029,
+        "ndcg_at_k": 0.18770213065283484,
+        "hit_rate_at_k": 0.6837349397590361
+      },
+      "source_family": {
+        "queries": 332,
+        "recall_at_k": 0.6564759036144578,
+        "mrr": 0.42221256391893985,
+        "ndcg_at_k": 0.40369409786439486,
+        "hit_rate_at_k": 0.8343373493975904
+      },
+      "canonical": {
+        "queries": 332,
+        "recall_at_k": 0.7106927710843373,
+        "mrr": 0.4210050036631194,
+        "ndcg_at_k": 0.4557515653360987,
+        "hit_rate_at_k": 0.7801204819277109
+      }
+    },
+    "ollama": {
+      "raw_turn": {
+        "queries": 332,
+        "recall_at_k": 0.5542168674698795,
+        "mrr": 0.12738888376335955,
+        "ndcg_at_k": 0.1999867224091532,
+        "hit_rate_at_k": 0.7198795180722891
+      },
+      "source_family": {
+        "queries": 332,
+        "recall_at_k": 0.7261546184738955,
+        "mrr": 0.482447053964741,
+        "ndcg_at_k": 0.4559111843444751,
+        "hit_rate_at_k": 0.9307228915662651
+      },
+      "canonical": {
+        "queries": 332,
+        "recall_at_k": 0.8572791164658635,
+        "mrr": 0.48196553799357494,
+        "ndcg_at_k": 0.530916380703352,
+        "hit_rate_at_k": 0.9066265060240963
+      }
+    }
+  },
+  "pairwise_on_shared_subset": {
+    "lexical": {
+      "raw_turn_vs_source_family": {
+        "shared_queries": 332,
+        "hit_flip": 50,
+        "top1_flip": 113,
+        "ndcg_changed": 259
+      },
+      "raw_turn_vs_canonical": {
+        "shared_queries": 332,
+        "hit_flip": 68,
+        "top1_flip": 113,
+        "ndcg_changed": 277
+      },
+      "source_family_vs_canonical": {
+        "shared_queries": 332,
+        "hit_flip": 18,
+        "top1_flip": 0,
+        "ndcg_changed": 158
+      }
+    },
+    "ollama": {
+      "raw_turn_vs_source_family": {
+        "shared_queries": 332,
+        "hit_flip": 70,
+        "top1_flip": 129,
+        "ndcg_changed": 301
+      },
+      "raw_turn_vs_canonical": {
+        "shared_queries": 332,
+        "hit_flip": 78,
+        "top1_flip": 129,
+        "ndcg_changed": 309
+      },
+      "source_family_vs_canonical": {
+        "shared_queries": 332,
+        "hit_flip": 8,
+        "top1_flip": 0,
+        "ndcg_changed": 158
+      }
+    }
+  },
+  "bootstrap_ndcg_within_provider": {
+    "lexical": {
+      "source_minus_raw": {
+        "delta": 0.21602965552057782,
+        "ci_low": 0.18839984271546065,
+        "ci_high": 0.24501383962380932
+      },
+      "canonical_minus_raw": {
+        "delta": 0.26811645869912015,
+        "ci_low": 0.2347219071901993,
+        "ci_high": 0.3008762807095082
+      },
+      "canonical_minus_source": {
+        "delta": 0.05208680317854239,
+        "ci_low": 0.038072626055838575,
+        "ci_high": 0.06698269454153942
+      }
+    },
+    "ollama": {
+      "source_minus_raw": {
+        "delta": 0.2559370176950968,
+        "ci_low": 0.22802279421925895,
+        "ci_high": 0.2846454388850696
+      },
+      "canonical_minus_raw": {
+        "delta": 0.3309365589533223,
+        "ci_low": 0.2994906206297163,
+        "ci_high": 0.3640931707736156
+      },
+      "canonical_minus_source": {
+        "delta": 0.07499954125822551,
+        "ci_low": 0.060927691246682215,
+        "ci_high": 0.08955800338948523
+      }
+    }
+  },
+  "bootstrap_ndcg_provider_diff": {
+    "raw_turn": {
+      "delta_ollama_minus_lexical": 0.012284591756318339,
+      "ci_low": 0.0014112316346132966,
+      "ci_high": 0.023624212207684618
+    },
+    "source_family": {
+      "delta_ollama_minus_lexical": 0.052217086480080235,
+      "ci_low": 0.034912787344500665,
+      "ci_high": 0.06945717252129183
+    },
+    "canonical": {
+      "delta_ollama_minus_lexical": 0.0751648153672533,
+      "ci_low": 0.05501901908051147,
+      "ci_high": 0.09473904563944043
+    }
+  }
+}

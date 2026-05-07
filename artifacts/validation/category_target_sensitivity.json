@@ -1,0 +1,155 @@
+{
+  "datasets": {
+    "LoCoMo": {
+      "categories": {
+        "Adversarial": {
+          "runs_present": 4,
+          "queries_min": 2,
+          "queries_max": 2,
+          "canonical_coverage_rate_min": 0.0,
+          "canonical_coverage_rate_max": 0.0,
+          "raw_can_ndcg_change_rate_min": null,
+          "raw_can_ndcg_change_rate_max": null,
+          "raw_can_top1_flip_rate_min": null,
+          "raw_can_top1_flip_rate_max": null,
+          "src_can_ndcg_change_rate_min": null,
+          "src_can_ndcg_change_rate_max": null
+        },
+        "Multi-hop": {
+          "runs_present": 4,
+          "queries_min": 281,
+          "queries_max": 281,
+          "canonical_coverage_rate_min": 0.8469750889679716,
+          "canonical_coverage_rate_max": 0.8825622775800712,
+          "raw_can_ndcg_change_rate_min": 0.8361344537815126,
+          "raw_can_ndcg_change_rate_max": 0.8823529411764706,
+          "raw_can_top1_flip_rate_min": 0.15126050420168066,
+          "raw_can_top1_flip_rate_max": 0.16806722689075632,
+          "src_can_ndcg_change_rate_min": 0.5966386554621849,
+          "src_can_ndcg_change_rate_max": 0.6428571428571429
+        },
+        "Open-domain": {
+          "runs_present": 4,
+          "queries_min": 86,
+          "queries_max": 89,
+          "canonical_coverage_rate_min": 0.6741573033707865,
+          "canonical_coverage_rate_max": 0.7441860465116279,
+          "raw_can_ndcg_change_rate_min": 0.6166666666666667,
+          "raw_can_ndcg_change_rate_max": 0.71875,
+          "raw_can_top1_flip_rate_min": 0.06666666666666667,
+          "raw_can_top1_flip_rate_max": 0.08333333333333333,
+          "src_can_ndcg_change_rate_min": 0.296875,
+          "src_can_ndcg_change_rate_max": 0.35
+        },
+        "Single-hop": {
+          "runs_present": 4,
+          "queries_min": 824,
+          "queries_max": 841,
+          "canonical_coverage_rate_min": 0.5089179548156956,
+          "canonical_coverage_rate_max": 0.5558252427184466,
+          "raw_can_ndcg_change_rate_min": 0.8761682242990654,
+          "raw_can_ndcg_change_rate_max": 0.9323144104803494,
+          "raw_can_top1_flip_rate_min": 0.2314410480349345,
+          "raw_can_top1_flip_rate_max": 0.2757009345794392,
+          "src_can_ndcg_change_rate_min": 0.36682242990654207,
+          "src_can_ndcg_change_rate_max": 0.5327510917030568
+        },
+        "Temporal": {
+          "runs_present": 4,
+          "queries_min": 317,
+          "queries_max": 320,
+          "canonical_coverage_rate_min": 0.540625,
+          "canonical_coverage_rate_max": 0.6088328075709779,
+          "raw_can_ndcg_change_rate_min": 0.8497109826589595,
+          "raw_can_ndcg_change_rate_max": 0.8670520231213873,
+          "raw_can_top1_flip_rate_min": 0.2658959537572254,
+          "raw_can_top1_flip_rate_max": 0.3316062176165803,
+          "src_can_ndcg_change_rate_min": 0.45664739884393063,
+          "src_can_ndcg_change_rate_max": 0.5751295336787565
+        }
+      }
+    },
+    "LongMemEval-S": {
+      "categories": {
+        "knowledge-update": {
+          "runs_present": 3,
+          "queries_min": 68,
+          "queries_max": 72,
+          "canonical_coverage_rate_min": 0.75,
+          "canonical_coverage_rate_max": 0.7638888888888888,
+          "raw_can_ndcg_change_rate_min": 0.8909090909090909,
+          "raw_can_ndcg_change_rate_max": 0.9454545454545454,
+          "raw_can_top1_flip_rate_min": 0.45098039215686275,
+          "raw_can_top1_flip_rate_max": 0.4909090909090909,
+          "src_can_ndcg_change_rate_min": 0.6666666666666666,
+          "src_can_ndcg_change_rate_max": 0.6909090909090909
+        },
+        "multi-session": {
+          "runs_present": 3,
+          "queries_min": 104,
+          "queries_max": 121,
+          "canonical_coverage_rate_min": 0.8429752066115702,
+          "canonical_coverage_rate_max": 0.8653846153846154,
+          "raw_can_ndcg_change_rate_min": 0.8627450980392157,
+          "raw_can_ndcg_change_rate_max": 0.9666666666666667,
+          "raw_can_top1_flip_rate_min": 0.28431372549019607,
+          "raw_can_top1_flip_rate_max": 0.37254901960784315,
+          "src_can_ndcg_change_rate_min": 0.6470588235294118,
+          "src_can_ndcg_change_rate_max": 0.6666666666666666
+        },
+        "single-session-assistant": {
+          "runs_present": 3,
+          "queries_min": 53,
+          "queries_max": 56,
+          "canonical_coverage_rate_min": 0.6415094339622641,
+          "canonical_coverage_rate_max": 0.7142857142857143,
+          "raw_can_ndcg_change_rate_min": 0.875,
+          "raw_can_ndcg_change_rate_max": 0.975,
+          "raw_can_top1_flip_rate_min": 0.475,
+          "raw_can_top1_flip_rate_max": 0.55,
+          "src_can_ndcg_change_rate_min": 0.0,
+          "src_can_ndcg_change_rate_max": 0.025
+        },
+        "single-session-preference": {
+          "runs_present": 3,
+          "queries_min": 30,
+          "queries_max": 30,
+          "canonical_coverage_rate_min": 0.5666666666666667,
+          "canonical_coverage_rate_max": 0.5666666666666667,
+          "raw_can_ndcg_change_rate_min": 0.9411764705882353,
+          "raw_can_ndcg_change_rate_max": 1.0,
+          "raw_can_top1_flip_rate_min": 0.11764705882352941,
+          "raw_can_top1_flip_rate_max": 0.23529411764705882,
+          "src_can_ndcg_change_rate_min": 0.29411764705882354,
+          "src_can_ndcg_change_rate_max": 0.35294117647058826
+        },
+        "single-session-user": {
+          "runs_present": 3,
+          "queries_min": 63,
+          "queries_max": 64,
+          "canonical_coverage_rate_min": 0.5238095238095238,
+          "canonical_coverage_rate_max": 0.546875,
+          "raw_can_ndcg_change_rate_min": 0.7714285714285715,
+          "raw_can_ndcg_change_rate_max": 0.8285714285714286,
+          "raw_can_top1_flip_rate_min": 0.37142857142857144,
+          "raw_can_top1_flip_rate_max": 0.3939393939393939,
+          "src_can_ndcg_change_rate_min": 0.11428571428571428,
+          "src_can_ndcg_change_rate_max": 0.2
+        },
+        "temporal-reasoning": {
+          "runs_present": 3,
+          "queries_min": 121,
+          "queries_max": 127,
+          "canonical_coverage_rate_min": 0.6115702479338843,
+          "canonical_coverage_rate_max": 0.6535433070866141,
+          "raw_can_ndcg_change_rate_min": 0.7469879518072289,
+          "raw_can_ndcg_change_rate_max": 0.9324324324324325,
+          "raw_can_top1_flip_rate_min": 0.27710843373493976,
+          "raw_can_top1_flip_rate_max": 0.32432432432432434,
+          "src_can_ndcg_change_rate_min": 0.4819277108433735,
+          "src_can_ndcg_change_rate_max": 0.5421686746987951
+        }
+      }
+    }
+  }
+}

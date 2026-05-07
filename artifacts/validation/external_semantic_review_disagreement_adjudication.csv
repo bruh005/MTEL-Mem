@@ -1,0 +1,15 @@
+review_id,dataset,query_index,internal_label,reviewer_label,adjudicated_label,decision,note
+ER002,LoCoMo,15,partial,does_not_support,partial,keep_internal,Counterfactual career intent is indirectly supported by the support-shaped-journey evidence but not fully resolved.
+ER003,LoCoMo,39,partial,does_not_support,partial,keep_internal,Retrieved text confirms one beach trip in 2023 but not the total count of two.
+ER004,LoCoMo,41,partial,does_not_support,partial,keep_internal,Camping/outdoors evidence is directionally relevant to national-park preference but not explicit.
+ER005,LoCoMo,144,supports,partial,supports,keep_internal,Retrieved text directly states children were scared and also describes them as tough/resilient.
+ER006,LoCoMo,389,does_not_support,partial,partial,change_to_reviewer,Retrieved text gives key allergy criterion (fur) but omits explicit pet recommendations.
+ER013,LoCoMo,944,partial,does_not_support,partial,keep_internal,Last-night temporal cue is relevant but does not provide the exact date range.
+ER016,LoCoMo,1288,supports,partial,supports,keep_internal,Favorite spot by the beach is sufficient evidence for beach-proximate living preference.
+ER017,LoCoMo,1410,supports,does_not_support,partial,soften_internal,San Francisco is explicit but anchoring to the precise August window is indirect.
+ER026,LongMemEval-S,102,partial,does_not_support,partial,keep_internal,One charity amount is relevant evidence but does not satisfy the total-across-events request.
+ER027,LongMemEval-S,133,partial,supports,partial,keep_internal,Retrieved memory provides user preference context but does not itself provide a cocktail suggestion.
+ER028,LongMemEval-S,141,partial,does_not_support,partial,keep_internal,Retrieved memory contributes personal context for advice but does not answer attend/not-attend directly.
+ER029,LongMemEval-S,173,partial,does_not_support,partial,keep_internal,Cooking hobby is present but second hobby (photography) is missing.
+ER030,LongMemEval-S,178,partial,does_not_support,partial,keep_internal,Renovation cost is present but property price needed for percentage is missing.
+ER034,LongMemEval-S,354,partial,does_not_support,partial,keep_internal,Regular short-story writing is relevant but exact total of seven is absent.

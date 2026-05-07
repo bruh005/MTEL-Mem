@@ -1,0 +1,25 @@
+run_label,query_index,label,note
+longmemeval_allminilm,1,supports,Credited observation directly states the degree.
+longmemeval_allminilm,33,supports,Credited observation directly states UCLA undergrad.
+longmemeval_allminilm,75,does_not_support,Names one citrus ingredient but not the total count across recipes.
+longmemeval_allminilm,102,partial,Provides one charity-event amount but not the total across all events.
+longmemeval_allminilm,113,partial,Provides one rare-item category count but not the total rare items.
+longmemeval_allminilm,131,partial,Provides basil and mint preference but not the full dinner recommendation with homegrown ingredients.
+longmemeval_allminilm,153,partial,Provides train fare but not the taxi-vs-train price difference.
+longmemeval_allminilm,187,does_not_support,Concerns a future road trip rather than the total distance across four past trips.
+longmemeval_allminilm,243,does_not_support,General sports-hunt preference does not answer the ordered January events.
+longmemeval_allminilm,332,does_not_support,Lists older streaming services and omits the most recent one.
+longmemeval_allminilm,368,does_not_support,Shoe-cleaning mention does not answer wear count.
+longmemeval_allminilm,417,does_not_support,General dinosaur-book text does not answer the plesiosaur color.
+locomo_bge,3,does_not_support,Broad education/career statement does not preserve the specific psychology-counseling fields.
+locomo_bge,79,supports,Adoption-family motivation supports the inference that moving back soon is unlikely.
+locomo_bge,232,supports,Directly states Gina offers help making content and managing promotion.
+locomo_bge,397,does_not_support,Allergy statement alone does not support the asthma inference.
+locomo_bge,588,does_not_support,Book-collection mention omits the book titles asked for.
+locomo_bge,629,supports,Directly states the UK trip timing.
+locomo_bge,790,does_not_support,Dog-park suggestion does not answer the hats question.
+locomo_bge,873,supports,Directly states that Buddy likes checking out new hiking trails.
+locomo_bge,979,partial,Preserves one project component but not the full football-simulator framing.
+locomo_bge,1272,partial,States Evan's injury but omits the son's injury.
+locomo_bge,1400,supports,Directly links the goal to building a fan base.
+locomo_bge,1530,supports,Directly states the fancy gala in Boston.

@@ -1,0 +1,45 @@
+Target-vs-QA Alignment Summary
+==============================
+Input native full rows : 12
+Retrieval metric       : ndcg
+Bootstrap samples      : 4000
+
+Dataset-level alignment
+-----------------------
+LoCoMo:
+  QA metric: qa_f1_generated
+    Raw: rho=0.762 [0.185, 1.000] winner_match=False (qa=ollama / mxbai-embed-large [F=5] ; target=ollama / bge-m3 [F=5])
+    Source: rho=0.738 [0.103, 0.975] winner_match=False (qa=ollama / mxbai-embed-large [F=5] ; target=ollama / bge-m3 [F=5])
+    Canonical: rho=-0.167 [-0.836, 0.829] winner_match=False (qa=ollama / mxbai-embed-large [F=5] ; target=ollama / all-minilm [F=1])
+  QA metric: qa_em_generated
+    Raw: rho=0.687 [-0.098, 0.937] winner_match=False (qa=ollama / all-minilm [F=5] ; target=ollama / bge-m3 [F=5])
+    Source: rho=0.822 [0.113, 1.000] winner_match=False (qa=ollama / all-minilm [F=5] ; target=ollama / bge-m3 [F=5])
+    Canonical: rho=-0.282 [-0.816, 0.811] winner_match=False (qa=ollama / all-minilm [F=5] ; target=ollama / all-minilm [F=1])
+LongMemEval-S:
+  QA metric: qa_f1_generated
+    Raw: rho=-0.200 [-1.000, 1.000] winner_match=False (qa=ollama / mxbai-embed-large [F=5] ; target=ollama / all-minilm [F=5])
+    Source: rho=1.000 [1.000, 1.000] winner_match=True (qa=ollama / mxbai-embed-large [F=5] ; target=ollama / mxbai-embed-large [F=5])
+    Canonical: rho=0.800 [-1.000, 1.000] winner_match=True (qa=ollama / mxbai-embed-large [F=5] ; target=ollama / mxbai-embed-large [F=5])
+  QA metric: qa_em_generated
+    Raw: rho=NA [NA, NA] winner_match=False (qa=lexical / all-minilm [F=5] ; target=ollama / all-minilm [F=5])
+    Source: rho=NA [NA, NA] winner_match=False (qa=lexical / all-minilm [F=5] ; target=ollama / mxbai-embed-large [F=5])
+    Canonical: rho=NA [NA, NA] winner_match=False (qa=lexical / all-minilm [F=5] ; target=ollama / mxbai-embed-large [F=5])
+
+Density-family winner alignment
+------------------------------
+LoCoMo / lexical / all-minilm / qa_f1_generated:
+  Raw: winner_match=False (qa=lexical / all-minilm [F=5] ; target=lexical / all-minilm [F=8])
+  Source: winner_match=False (qa=lexical / all-minilm [F=5] ; target=lexical / all-minilm [F=8])
+  Canonical: winner_match=False (qa=lexical / all-minilm [F=5] ; target=lexical / all-minilm [F=1])
+LoCoMo / lexical / all-minilm / qa_em_generated:
+  Raw: winner_match=False (qa=lexical / all-minilm [F=5] ; target=lexical / all-minilm [F=8])
+  Source: winner_match=False (qa=lexical / all-minilm [F=5] ; target=lexical / all-minilm [F=8])
+  Canonical: winner_match=False (qa=lexical / all-minilm [F=5] ; target=lexical / all-minilm [F=1])
+LoCoMo / ollama / all-minilm / qa_f1_generated:
+  Raw: winner_match=False (qa=ollama / all-minilm [F=5] ; target=ollama / all-minilm [F=8])
+  Source: winner_match=False (qa=ollama / all-minilm [F=5] ; target=ollama / all-minilm [F=8])
+  Canonical: winner_match=False (qa=ollama / all-minilm [F=5] ; target=ollama / all-minilm [F=1])
+LoCoMo / ollama / all-minilm / qa_em_generated:
+  Raw: winner_match=False (qa=ollama / all-minilm [F=5] ; target=ollama / all-minilm [F=8])
+  Source: winner_match=False (qa=ollama / all-minilm [F=5] ; target=ollama / all-minilm [F=8])
+  Canonical: winner_match=False (qa=ollama / all-minilm [F=5] ; target=ollama / all-minilm [F=1])

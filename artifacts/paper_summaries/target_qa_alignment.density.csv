@@ -1,0 +1,13 @@
+scope,dataset,system_label,qa_metric,target,target_prefix,n_runs,qa_best_parser_max_facts,target_best_parser_max_facts,winner_match,qa_winner,target_winner
+density_family,LoCoMo,lexical / all-minilm,qa_f1_generated,Raw,raw,3,5,8,False,lexical / all-minilm [F=5],lexical / all-minilm [F=8]
+density_family,LoCoMo,lexical / all-minilm,qa_f1_generated,Source,source,3,5,8,False,lexical / all-minilm [F=5],lexical / all-minilm [F=8]
+density_family,LoCoMo,lexical / all-minilm,qa_f1_generated,Canonical,canonical,3,5,1,False,lexical / all-minilm [F=5],lexical / all-minilm [F=1]
+density_family,LoCoMo,lexical / all-minilm,qa_em_generated,Raw,raw,3,5,8,False,lexical / all-minilm [F=5],lexical / all-minilm [F=8]
+density_family,LoCoMo,lexical / all-minilm,qa_em_generated,Source,source,3,5,8,False,lexical / all-minilm [F=5],lexical / all-minilm [F=8]
+density_family,LoCoMo,lexical / all-minilm,qa_em_generated,Canonical,canonical,3,5,1,False,lexical / all-minilm [F=5],lexical / all-minilm [F=1]
+density_family,LoCoMo,ollama / all-minilm,qa_f1_generated,Raw,raw,3,5,8,False,ollama / all-minilm [F=5],ollama / all-minilm [F=8]
+density_family,LoCoMo,ollama / all-minilm,qa_f1_generated,Source,source,3,5,8,False,ollama / all-minilm [F=5],ollama / all-minilm [F=8]
+density_family,LoCoMo,ollama / all-minilm,qa_f1_generated,Canonical,canonical,3,5,1,False,ollama / all-minilm [F=5],ollama / all-minilm [F=1]
+density_family,LoCoMo,ollama / all-minilm,qa_em_generated,Raw,raw,3,5,8,False,ollama / all-minilm [F=5],ollama / all-minilm [F=8]
+density_family,LoCoMo,ollama / all-minilm,qa_em_generated,Source,source,3,5,8,False,ollama / all-minilm [F=5],ollama / all-minilm [F=8]
+density_family,LoCoMo,ollama / all-minilm,qa_em_generated,Canonical,canonical,3,5,1,False,ollama / all-minilm [F=5],ollama / all-minilm [F=1]

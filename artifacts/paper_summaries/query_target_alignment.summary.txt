@@ -1,0 +1,33 @@
+Query-Level Target-vs-Answer Alignment Summary
+==============================================
+Input native full rows    : 12
+Positive F1 threshold     : > 0.0
+Strong F1 threshold       : >= 0.5
+
+Dataset target summaries
+------------------------
+LoCoMo:
+  Canonical: runs=8 avg_rho(ndcg,f1)=0.151 avg_hit_f1_lift=0.047 avg_top1_f1_lift=0.056 avg_hit_strong_lift=0.045 wins(hit/top1/rho)=0/3/2
+  Raw: runs=8 avg_rho(ndcg,f1)=0.275 avg_hit_f1_lift=0.100 avg_top1_f1_lift=0.053 avg_hit_strong_lift=0.082 wins(hit/top1/rho)=8/5/6
+  Source: runs=8 avg_rho(ndcg,f1)=0.200 avg_hit_f1_lift=0.080 avg_top1_f1_lift=0.056 avg_hit_strong_lift=0.061 wins(hit/top1/rho)=0/0/0
+LongMemEval-S:
+  Canonical: runs=4 avg_rho(ndcg,f1)=0.074 avg_hit_f1_lift=0.037 avg_top1_f1_lift=0.010 avg_hit_strong_lift=0.003 wins(hit/top1/rho)=3/0/0
+  Raw: runs=4 avg_rho(ndcg,f1)=0.059 avg_hit_f1_lift=0.019 avg_top1_f1_lift=NA avg_hit_strong_lift=0.003 wins(hit/top1/rho)=0/0/0
+  Source: runs=4 avg_rho(ndcg,f1)=0.135 avg_hit_f1_lift=0.030 avg_top1_f1_lift=0.015 avg_hit_strong_lift=-0.010 wins(hit/top1/rho)=1/4/4
+
+Pairwise disagreement summaries
+------------------------------
+LoCoMo:
+  Raw vs Canonical / Hit@K: lhs_only=507 rhs_only=1142 avg_f1(lhs_only)=0.123 avg_f1(rhs_only)=0.046 rhs-lhs_f1=-0.077 rhs-lhs_strong=-0.050
+  Raw vs Canonical / Top1: lhs_only=146 rhs_only=1443 avg_f1(lhs_only)=0.210 avg_f1(rhs_only)=0.171 rhs-lhs_f1=-0.035 rhs-lhs_strong=-0.102
+  Raw vs Source / Hit@K: lhs_only=0 rhs_only=1142 avg_f1(lhs_only)=NA avg_f1(rhs_only)=0.046 rhs-lhs_f1=NA rhs-lhs_strong=NA
+  Raw vs Source / Top1: lhs_only=0 rhs_only=1443 avg_f1(lhs_only)=NA avg_f1(rhs_only)=0.171 rhs-lhs_f1=NA rhs-lhs_strong=NA
+  Source vs Canonical / Hit@K: lhs_only=507 rhs_only=0 avg_f1(lhs_only)=0.123 avg_f1(rhs_only)=NA rhs-lhs_f1=NA rhs-lhs_strong=NA
+  Source vs Canonical / Top1: lhs_only=146 rhs_only=0 avg_f1(lhs_only)=0.210 avg_f1(rhs_only)=NA rhs-lhs_f1=NA rhs-lhs_strong=NA
+LongMemEval-S:
+  Raw vs Canonical / Hit@K: lhs_only=32 rhs_only=312 avg_f1(lhs_only)=0.030 avg_f1(rhs_only)=0.065 rhs-lhs_f1=0.035 rhs-lhs_strong=0.004
+  Raw vs Canonical / Top1: lhs_only=0 rhs_only=506 avg_f1(lhs_only)=NA avg_f1(rhs_only)=0.066 rhs-lhs_f1=NA rhs-lhs_strong=NA
+  Raw vs Source / Hit@K: lhs_only=0 rhs_only=312 avg_f1(lhs_only)=NA avg_f1(rhs_only)=0.065 rhs-lhs_f1=NA rhs-lhs_strong=NA
+  Raw vs Source / Top1: lhs_only=0 rhs_only=506 avg_f1(lhs_only)=NA avg_f1(rhs_only)=0.066 rhs-lhs_f1=NA rhs-lhs_strong=NA
+  Source vs Canonical / Hit@K: lhs_only=32 rhs_only=0 avg_f1(lhs_only)=0.030 avg_f1(rhs_only)=NA rhs-lhs_f1=NA rhs-lhs_strong=NA
+  Source vs Canonical / Top1: lhs_only=0 rhs_only=0 avg_f1(lhs_only)=NA avg_f1(rhs_only)=NA rhs-lhs_f1=NA rhs-lhs_strong=NA

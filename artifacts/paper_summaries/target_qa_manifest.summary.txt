@@ -1,0 +1,19 @@
+Target-QA Manifest Summary
+==========================
+Total rows           : 58
+With target rescore  : 50
+With QA metrics      : 27
+Full native primary  : 14
+Full transfer runs   : 4
+
+Rows by analysis tier
+---------------------
+exploratory: 6
+mini: 34
+native_full_primary: 14
+transfer_full: 4
+
+Rows by dataset
+---------------
+LoCoMo: 30
+LongMemEval-S: 28

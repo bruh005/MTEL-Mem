@@ -1,0 +1,224 @@
+{
+  "LoCoMo": [
+    {
+      "provider": "Lexical",
+      "source": "C:\\Users\\sugam\\Documents\\research\\papers\\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\\eval\\results\\target_sensitivity\\20260313T023254Z_lexical_full\\target_rescore.json",
+      "metrics": {
+        "raw_turn": {
+          "queries": 1533.0,
+          "ndcg_at_60": 0.1764301317686248
+        },
+        "source_family": {
+          "queries": 1533.0,
+          "ndcg_at_60": 0.28978416795952355
+        },
+        "canonical": {
+          "queries": 899.0,
+          "ndcg_at_60": 0.3556443255693346
+        }
+      }
+    },
+    {
+      "provider": "all-MiniLM",
+      "source": "C:\\Users\\sugam\\Documents\\research\\papers\\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\\eval\\results\\target_sensitivity\\20260313T053200Z_ollama_full_warm\\target_rescore.json",
+      "metrics": {
+        "raw_turn": {
+          "queries": 1533.0,
+          "ndcg_at_60": 0.19797959771765886
+        },
+        "source_family": {
+          "queries": 1533.0,
+          "ndcg_at_60": 0.31996713213474565
+        },
+        "canonical": {
+          "queries": 899.0,
+          "ndcg_at_60": 0.3874720787036303
+        }
+      }
+    },
+    {
+      "provider": "BGE-M3",
+      "source": "C:\\Users\\sugam\\Documents\\research\\papers\\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\\eval\\results\\target_sensitivity\\20260314T044224Z_locomo_ollama_bge_m3_full\\target_rescore.json",
+      "metrics": {
+        "raw_turn": {
+          "queries": 1510.0,
+          "ndcg_at_60": 0.23976290097033548
+        },
+        "source_family": {
+          "queries": 1510.0,
+          "ndcg_at_60": 0.3393537134682057
+        },
+        "canonical": {
+          "queries": 963.0,
+          "ndcg_at_60": 0.3230902565548398
+        }
+      }
+    },
+    {
+      "provider": "mxbai-embed-large",
+      "source": "C:\\Users\\sugam\\Documents\\research\\papers\\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\\eval\\results\\target_sensitivity\\20260314T062218Z_locomo_ollama_mxbai_full\\target_rescore.json",
+      "metrics": {
+        "raw_turn": {
+          "queries": 1533.0,
+          "ndcg_at_60": 0.1981713069884268
+        },
+        "source_family": {
+          "queries": 1533.0,
+          "ndcg_at_60": 0.319867100941507
+        },
+        "canonical": {
+          "queries": 899.0,
+          "ndcg_at_60": 0.38699849196106956
+        }
+      }
+    }
+  ],
+  "LongMemEval-S": [
+    {
+      "provider": "Lexical",
+      "source": "C:\\Users\\sugam\\Documents\\research\\papers\\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\\eval\\results\\target_sensitivity_longmemeval\\20260313T172942Z_longmemeval_s_lexical_full\\target_rescore.json",
+      "metrics": {
+        "raw_turn": {
+          "queries": 470.0,
+          "ndcg_at_60": 0.15435622856453315
+        },
+        "source_family": {
+          "queries": 470.0,
+          "ndcg_at_60": 0.30692927774376266
+        },
+        "canonical": {
+          "queries": 332.0,
+          "ndcg_at_60": 0.45575156533609834
+        }
+      }
+    },
+    {
+      "provider": "all-MiniLM",
+      "source": "C:\\Users\\sugam\\Documents\\research\\papers\\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\\eval\\results\\target_sensitivity_longmemeval\\20260313T185031Z_longmemeval_s_ollama_full_guarded_w8_np16\\target_rescore.json",
+      "metrics": {
+        "raw_turn": {
+          "queries": 470.0,
+          "ndcg_at_60": 0.15717493720091932
+        },
+        "source_family": {
+          "queries": 470.0,
+          "ndcg_at_60": 0.33795562095097675
+        },
+        "canonical": {
+          "queries": 332.0,
+          "ndcg_at_60": 0.5309163807033515
+        }
+      }
+    },
+    {
+      "provider": "BGE-M3",
+      "source": "C:\\Users\\sugam\\Documents\\research\\papers\\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\\eval\\results\\target_sensitivity_longmemeval\\20260314T013728Z_longmemeval_s_ollama_bge_m3_full\\target_rescore.json",
+      "metrics": {
+        "raw_turn": {
+          "queries": 439.0,
+          "ndcg_at_60": 0.15519951282645775
+        },
+        "source_family": {
+          "queries": 439.0,
+          "ndcg_at_60": 0.3329734772490522
+        },
+        "canonical": {
+          "queries": 299.0,
+          "ndcg_at_60": 0.5325859267325865
+        }
+      }
+    },
+    {
+      "provider": "mxbai-embed-large",
+      "source": "C:\\Users\\sugam\\Documents\\research\\papers\\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\\eval\\results\\target_sensitivity_longmemeval\\20260314T201109Z_longmemeval_s_ollama_mxbai_full\\target_rescore.resume_full.json",
+      "metrics": {
+        "raw_turn": {
+          "queries": 470.0,
+          "ndcg_at_60": 0.13377191454171503
+        },
+        "source_family": {
+          "queries": 470.0,
+          "ndcg_at_60": 0.36117898636870216
+        },
+        "canonical": {
+          "queries": 332.0,
+          "ndcg_at_60": 0.6014896920850208
+        }
+      }
+    }
+  ],
+  "External transfer": [
+    {
+      "provider": "LoCoMo Mem0",
+      "source": "C:\\Users\\sugam\\Documents\\research\\papers\\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\\eval\\results\\target_sensitivity_mem0\\20260315T072555Z_locomo_mem0_full_appendonly_overnight\\target_rescore.json",
+      "metrics": {
+        "raw_turn": {
+          "queries": 1977.0,
+          "ndcg_at_60": 0.2748920715788433
+        },
+        "source_family": {
+          "queries": 1977.0,
+          "ndcg_at_60": 0.662543604120512
+        },
+        "canonical": {
+          "queries": 1977.0,
+          "ndcg_at_60": 0.6168968319731423
+        }
+      }
+    },
+    {
+      "provider": "LME-S Mem0 slice",
+      "source": "C:\\Users\\sugam\\Documents\\research\\papers\\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\\eval\\results\\target_sensitivity_longmemeval_mem0\\20260315T091954Z_longmemeval_mem0_mini35_serverqdrant_charsplit_w3_detached\\target_rescore.json",
+      "metrics": {
+        "raw_turn": {
+          "queries": 35.0,
+          "ndcg_at_60": 0.6187835144970784
+        },
+        "source_family": {
+          "queries": 35.0,
+          "ndcg_at_60": 0.7467727817826971
+        },
+        "canonical": {
+          "queries": 35.0,
+          "ndcg_at_60": 0.4384549978480144
+        }
+      }
+    },
+    {
+      "provider": "LoCoMo MemoryOS",
+      "source": "C:\\Users\\sugam\\Documents\\research\\papers\\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\\eval\\results\\target_sensitivity_memoryos\\20260315T210604Z_locomo10_full\\target_rescore.json",
+      "metrics": {
+        "raw_turn": {
+          "queries": 1977.0,
+          "ndcg_at_60": 0.4339403952047801
+        },
+        "source_family": {
+          "queries": 1977.0,
+          "ndcg_at_60": 0.5794368817629286
+        },
+        "canonical": {
+          "queries": 1977.0,
+          "ndcg_at_60": 0.4091107653245528
+        }
+      }
+    },
+    {
+      "provider": "LME-S MemoryOS slice",
+      "source": "C:\\Users\\sugam\\Documents\\research\\papers\\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\\eval\\results\\target_sensitivity_longmemeval_memoryos\\20260315T215224Z_longmemeval_mini35_retry4\\target_rescore.json",
+      "metrics": {
+        "raw_turn": {
+          "queries": 35.0,
+          "ndcg_at_60": 0.6602161207277917
+        },
+        "source_family": {
+          "queries": 35.0,
+          "ndcg_at_60": 0.7750042850762547
+        },
+        "canonical": {
+          "queries": 35.0,
+          "ndcg_at_60": 0.5346926264251758
+        }
+      }
+    }
+  ]
+}

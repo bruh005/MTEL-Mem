@@ -1,0 +1,410 @@
+[
+  {
+    "dataset": "LoCoMo",
+    "provider": "Lexical",
+    "run_dir": "C:\\Users\\sugam\\Documents\\research\\papers\\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\\eval\\results\\target_sensitivity\\20260313T023254Z_lexical_full",
+    "shared_subset_queries": 899,
+    "subset_metrics": {
+      "raw_turn": {
+        "queries": 899,
+        "recall_at_k": 0.5581332251354326,
+        "mrr": 0.09360508663838596,
+        "ndcg_at_k": 0.18756416028826922,
+        "hit_rate_at_k": 0.6418242491657397
+      },
+      "source_family": {
+        "queries": 899,
+        "recall_at_k": 0.7179980272796681,
+        "mrr": 0.31731259936326106,
+        "ndcg_at_k": 0.38085864024449706,
+        "hit_rate_at_k": 0.8431590656284761
+      },
+      "canonical": {
+        "queries": 899,
+        "recall_at_k": 0.7163500076737007,
+        "mrr": 0.2749851992474468,
+        "ndcg_at_k": 0.35564432556933495,
+        "hit_rate_at_k": 0.7730812013348165
+      }
+    },
+    "bootstrap_ndcg_within_provider": {
+      "source_minus_raw": {
+        "delta": 0.19329447995622787,
+        "ci_low": 0.17653096427766968,
+        "ci_high": 0.20991863888783652
+      },
+      "canonical_minus_raw": {
+        "delta": 0.1680801652810658,
+        "ci_low": 0.1465434661446166,
+        "ci_high": 0.18945063505928028
+      },
+      "canonical_minus_source": {
+        "delta": -0.02521431467516208,
+        "ci_low": -0.03600816341442165,
+        "ci_high": -0.015395733968521034
+      },
+      "source_minus_canonical": {
+        "delta": 0.02521431467516208,
+        "ci_low": 0.015245185468589967,
+        "ci_high": 0.03566722127927546
+      }
+    }
+  },
+  {
+    "dataset": "LoCoMo",
+    "provider": "all-MiniLM",
+    "run_dir": "C:\\Users\\sugam\\Documents\\research\\papers\\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\\eval\\results\\target_sensitivity\\20260313T053200Z_ollama_full_warm",
+    "shared_subset_queries": 899,
+    "subset_metrics": {
+      "raw_turn": {
+        "queries": 899,
+        "recall_at_k": 0.614437042537839,
+        "mrr": 0.1070208351816553,
+        "ndcg_at_k": 0.21180331744748895,
+        "hit_rate_at_k": 0.7030033370411568
+      },
+      "source_family": {
+        "queries": 899,
+        "recall_at_k": 0.7692746539763521,
+        "mrr": 0.3521841865228671,
+        "ndcg_at_k": 0.41981988058585845,
+        "hit_rate_at_k": 0.8832035595105673
+      },
+      "canonical": {
+        "queries": 899,
+        "recall_at_k": 0.7621416279925735,
+        "mrr": 0.3033786926329813,
+        "ndcg_at_k": 0.3874720787036307,
+        "hit_rate_at_k": 0.8120133481646273
+      }
+    },
+    "bootstrap_ndcg_within_provider": {
+      "source_minus_raw": {
+        "delta": 0.2080165631383695,
+        "ci_low": 0.19118068058371704,
+        "ci_high": 0.22493626820876986
+      },
+      "canonical_minus_raw": {
+        "delta": 0.17566876125614173,
+        "ci_low": 0.15359090111833626,
+        "ci_high": 0.1977574993981604
+      },
+      "canonical_minus_source": {
+        "delta": -0.03234780188222778,
+        "ci_low": -0.043384637028982015,
+        "ci_high": -0.02212662187284167
+      },
+      "source_minus_canonical": {
+        "delta": 0.03234780188222778,
+        "ci_low": 0.022094314254398735,
+        "ci_high": 0.04316956704105599
+      }
+    }
+  },
+  {
+    "dataset": "LoCoMo",
+    "provider": "BGE-M3",
+    "run_dir": "C:\\Users\\sugam\\Documents\\research\\papers\\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\\eval\\results\\target_sensitivity\\20260314T044224Z_locomo_ollama_bge_m3_full",
+    "shared_subset_queries": 963,
+    "subset_metrics": {
+      "raw_turn": {
+        "queries": 963,
+        "recall_at_k": 0.6502644192087011,
+        "mrr": 0.14803998395468707,
+        "ndcg_at_k": 0.25475696471508114,
+        "hit_rate_at_k": 0.7445482866043613
+      },
+      "source_family": {
+        "queries": 963,
+        "recall_at_k": 0.7801928661481337,
+        "mrr": 0.33372769275192204,
+        "ndcg_at_k": 0.41091701338775405,
+        "hit_rate_at_k": 0.8836967808930426
+      },
+      "canonical": {
+        "queries": 963,
+        "recall_at_k": 0.7042674182861097,
+        "mrr": 0.24251695792106243,
+        "ndcg_at_k": 0.32309025655484036,
+        "hit_rate_at_k": 0.7538940809968847
+      }
+    },
+    "bootstrap_ndcg_within_provider": {
+      "source_minus_raw": {
+        "delta": 0.15616004867267297,
+        "ci_low": 0.14205928593791384,
+        "ci_high": 0.1709235795358095
+      },
+      "canonical_minus_raw": {
+        "delta": 0.06833329183975927,
+        "ci_low": 0.04460586509534639,
+        "ci_high": 0.09092090399978117
+      },
+      "canonical_minus_source": {
+        "delta": -0.08782675683291369,
+        "ci_low": -0.10080142533312948,
+        "ci_high": -0.07505270584244436
+      },
+      "source_minus_canonical": {
+        "delta": 0.08782675683291369,
+        "ci_low": 0.07528362154544624,
+        "ci_high": 0.10099068089536532
+      }
+    }
+  },
+  {
+    "dataset": "LoCoMo",
+    "provider": "mxbai-embed-large",
+    "run_dir": "C:\\Users\\sugam\\Documents\\research\\papers\\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\\eval\\results\\target_sensitivity\\20260314T062218Z_locomo_ollama_mxbai_full",
+    "shared_subset_queries": 899,
+    "subset_metrics": {
+      "raw_turn": {
+        "queries": 899,
+        "recall_at_k": 0.6154257954731993,
+        "mrr": 0.10701702370326394,
+        "ndcg_at_k": 0.21202795304329666,
+        "hit_rate_at_k": 0.7041156840934372
+      },
+      "source_family": {
+        "queries": 899,
+        "recall_at_k": 0.7700780157363324,
+        "mrr": 0.3517723419631375,
+        "ndcg_at_k": 0.41954703216462264,
+        "hit_rate_at_k": 0.8843159065628476
+      },
+      "canonical": {
+        "queries": 899,
+        "recall_at_k": 0.7638472268060701,
+        "mrr": 0.302692133269412,
+        "ndcg_at_k": 0.3869984919610697,
+        "hit_rate_at_k": 0.8131256952169077
+      }
+    },
+    "bootstrap_ndcg_within_provider": {
+      "source_minus_raw": {
+        "delta": 0.20751907912132597,
+        "ci_low": 0.19147465479666856,
+        "ci_high": 0.22474068193728045
+      },
+      "canonical_minus_raw": {
+        "delta": 0.17497053891777303,
+        "ci_low": 0.1519395803028897,
+        "ci_high": 0.1979248367089077
+      },
+      "canonical_minus_source": {
+        "delta": -0.032548540203552925,
+        "ci_low": -0.04346159032199967,
+        "ci_high": -0.022473756685070036
+      },
+      "source_minus_canonical": {
+        "delta": 0.032548540203552925,
+        "ci_low": 0.022120801192594807,
+        "ci_high": 0.04318531893676106
+      }
+    }
+  },
+  {
+    "dataset": "LongMemEval-S",
+    "provider": "Lexical",
+    "run_dir": "C:\\Users\\sugam\\Documents\\research\\papers\\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\\eval\\results\\target_sensitivity_longmemeval\\20260313T172942Z_longmemeval_s_lexical_full",
+    "shared_subset_queries": 332,
+    "subset_metrics": {
+      "raw_turn": {
+        "queries": 332,
+        "recall_at_k": 0.5405120481927711,
+        "mrr": 0.11266177028779029,
+        "ndcg_at_k": 0.18770213065283484,
+        "hit_rate_at_k": 0.6837349397590361
+      },
+      "source_family": {
+        "queries": 332,
+        "recall_at_k": 0.6564759036144578,
+        "mrr": 0.42221256391893985,
+        "ndcg_at_k": 0.40369409786439486,
+        "hit_rate_at_k": 0.8343373493975904
+      },
+      "canonical": {
+        "queries": 332,
+        "recall_at_k": 0.7106927710843373,
+        "mrr": 0.4210050036631194,
+        "ndcg_at_k": 0.4557515653360987,
+        "hit_rate_at_k": 0.7801204819277109
+      }
+    },
+    "bootstrap_ndcg_within_provider": {
+      "source_minus_raw": {
+        "delta": 0.21599196721156008,
+        "ci_low": 0.18896407892356618,
+        "ci_high": 0.24460817054819242
+      },
+      "canonical_minus_raw": {
+        "delta": 0.2680494346832639,
+        "ci_low": 0.23597328226683473,
+        "ci_high": 0.30277564522096845
+      },
+      "canonical_minus_source": {
+        "delta": 0.05205746747170383,
+        "ci_low": 0.037793964909243596,
+        "ci_high": 0.06630066152988968
+      },
+      "source_minus_canonical": {
+        "delta": -0.05205746747170383,
+        "ci_low": -0.06645533161642111,
+        "ci_high": -0.03737999828745347
+      }
+    }
+  },
+  {
+    "dataset": "LongMemEval-S",
+    "provider": "all-MiniLM",
+    "run_dir": "C:\\Users\\sugam\\Documents\\research\\papers\\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\\eval\\results\\target_sensitivity_longmemeval\\20260313T185031Z_longmemeval_s_ollama_full_guarded_w8_np16",
+    "shared_subset_queries": 332,
+    "subset_metrics": {
+      "raw_turn": {
+        "queries": 332,
+        "recall_at_k": 0.5542168674698795,
+        "mrr": 0.12738888376335955,
+        "ndcg_at_k": 0.1999867224091532,
+        "hit_rate_at_k": 0.7198795180722891
+      },
+      "source_family": {
+        "queries": 332,
+        "recall_at_k": 0.7261546184738955,
+        "mrr": 0.482447053964741,
+        "ndcg_at_k": 0.4559111843444751,
+        "hit_rate_at_k": 0.9307228915662651
+      },
+      "canonical": {
+        "queries": 332,
+        "recall_at_k": 0.8572791164658635,
+        "mrr": 0.48196553799357494,
+        "ndcg_at_k": 0.530916380703352,
+        "hit_rate_at_k": 0.9066265060240963
+      }
+    },
+    "bootstrap_ndcg_within_provider": {
+      "source_minus_raw": {
+        "delta": 0.255924461935322,
+        "ci_low": 0.22815731817289667,
+        "ci_high": 0.2852478496360889
+      },
+      "canonical_minus_raw": {
+        "delta": 0.33092965829419885,
+        "ci_low": 0.2988786269670188,
+        "ci_high": 0.36428124925947614
+      },
+      "canonical_minus_source": {
+        "delta": 0.07500519635887688,
+        "ci_low": 0.06127271250919951,
+        "ci_high": 0.08904204320685788
+      },
+      "source_minus_canonical": {
+        "delta": -0.07500519635887688,
+        "ci_low": -0.08948640674625087,
+        "ci_high": -0.06151466495529097
+      }
+    }
+  },
+  {
+    "dataset": "LongMemEval-S",
+    "provider": "BGE-M3",
+    "run_dir": "C:\\Users\\sugam\\Documents\\research\\papers\\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\\eval\\results\\target_sensitivity_longmemeval\\20260314T013728Z_longmemeval_s_ollama_bge_m3_full",
+    "shared_subset_queries": 299,
+    "subset_metrics": {
+      "raw_turn": {
+        "queries": 299,
+        "recall_at_k": 0.5780379041248606,
+        "mrr": 0.1160579644353454,
+        "ndcg_at_k": 0.19659933122074066,
+        "hit_rate_at_k": 0.7324414715719063
+      },
+      "source_family": {
+        "queries": 299,
+        "recall_at_k": 0.7449832775919732,
+        "mrr": 0.4753304670601313,
+        "ndcg_at_k": 0.4576119411923754,
+        "hit_rate_at_k": 0.939799331103679
+      },
+      "canonical": {
+        "queries": 299,
+        "recall_at_k": 0.881716833890747,
+        "mrr": 0.47495642501998986,
+        "ndcg_at_k": 0.5325859267325866,
+        "hit_rate_at_k": 0.9230769230769231
+      }
+    },
+    "bootstrap_ndcg_within_provider": {
+      "source_minus_raw": {
+        "delta": 0.2610126099716348,
+        "ci_low": 0.23135303080707822,
+        "ci_high": 0.29076190805255586
+      },
+      "canonical_minus_raw": {
+        "delta": 0.33598659551184595,
+        "ci_low": 0.3016729884242418,
+        "ci_high": 0.3705273498351893
+      },
+      "canonical_minus_source": {
+        "delta": 0.07497398554021113,
+        "ci_low": 0.061123193757028474,
+        "ci_high": 0.0896630150491251
+      },
+      "source_minus_canonical": {
+        "delta": -0.07497398554021113,
+        "ci_low": -0.09029581858449476,
+        "ci_high": -0.060735004984005206
+      }
+    }
+  },
+  {
+    "dataset": "LongMemEval-S",
+    "provider": "mxbai-embed-large",
+    "run_dir": "C:\\Users\\sugam\\Documents\\research\\papers\\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\\eval\\results\\target_sensitivity_longmemeval\\20260314T201109Z_longmemeval_s_ollama_mxbai_full",
+    "shared_subset_queries": 332,
+    "subset_metrics": {
+      "raw_turn": {
+        "queries": 332,
+        "recall_at_k": 0.42038152610441765,
+        "mrr": 0.13505070831241942,
+        "ndcg_at_k": 0.18151833728352096,
+        "hit_rate_at_k": 0.5481927710843374
+      },
+      "source_family": {
+        "queries": 332,
+        "recall_at_k": 0.7103413654618473,
+        "mrr": 0.5548928142140628,
+        "ndcg_at_k": 0.5034500353518463,
+        "hit_rate_at_k": 0.9397590361445783
+      },
+      "canonical": {
+        "queries": 332,
+        "recall_at_k": 0.9062248995983936,
+        "mrr": 0.5548300632100468,
+        "ndcg_at_k": 0.6014896920850211,
+        "hit_rate_at_k": 0.9367469879518072
+      }
+    },
+    "bootstrap_ndcg_within_provider": {
+      "source_minus_raw": {
+        "delta": 0.3219316980683253,
+        "ci_low": 0.2900960635696283,
+        "ci_high": 0.3552998106975728
+      },
+      "canonical_minus_raw": {
+        "delta": 0.4199713548015003,
+        "ci_low": 0.3823355939719821,
+        "ci_high": 0.4567905850233186
+      },
+      "canonical_minus_source": {
+        "delta": 0.0980396567331749,
+        "ci_low": 0.08330208977647267,
+        "ci_high": 0.11345653626592092
+      },
+      "source_minus_canonical": {
+        "delta": -0.0980396567331749,
+        "ci_low": -0.11335238834009988,
+        "ci_high": -0.08353123607882446
+      }
+    }
+  }
+]

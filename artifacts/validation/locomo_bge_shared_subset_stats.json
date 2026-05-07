@@ -1,0 +1,27 @@
+{
+  "run_dir": "C:\\Users\\sugam\\Documents\\research\\papers\\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\\eval\\results\\target_sensitivity\\20260314T044224Z_locomo_ollama_bge_m3_full",
+  "top_k": 60,
+  "bootstrap_samples": 1000,
+  "rng_seed": 1337,
+  "shared_subset_queries": 963,
+  "subset_metrics": {
+    "source_family": {
+      "ndcg_at_k": 0.41091701338775405
+    },
+    "canonical": {
+      "ndcg_at_k": 0.32309025655484036
+    }
+  },
+  "bootstrap_ndcg_within_provider": {
+    "canonical_minus_source": {
+      "mean": -0.08782675683291369,
+      "ci_low": -0.10081252616017251,
+      "ci_high": -0.0744250330054293
+    },
+    "source_minus_canonical": {
+      "mean": 0.08782675683291369,
+      "ci_low": 0.07456547055722856,
+      "ci_high": 0.10116426998449617
+    }
+  }
+}
