@@ -1,105 +1,89 @@
 # MTEL-Mem
 
-`MTEL-Mem` is the reusable multi-target evaluation layer for the upgraded paper.
+Multi-target evaluation layer for transformed conversational memory stores. Rescores saved retrieval traces under Raw, Source, and Canonical target sets without rerunning retrieval.
 
-The repository is now self-contained for the built-in LoCoMo benchmark:
+## What This Repo Contains
 
-- `locomo10.json` ships in `data/`
-- fixture/eval/stats JSON are generated locally with `mtel-mem init`
-- `eval/results` are not required for normal usage
+**Scoring engine** (`src/mtel_mem/`): loads a ranked trace and a target mapping, computes nDCG/MRR/Recall under each target, and reports query-level instability.
 
-`LongMemEval-S` remains supported, but it is optional and downloaded on demand.
+**Benchmark adapters**: LoCoMo (built in) and LongMemEval-S (optional download).
 
-## Scope
-
-Current benchmark adapters:
-
-- `LoCoMo` (built in)
-- `LongMemEval-S` (optional download)
-
-Current layer features:
-
-- built-in and optional benchmark manifests
-- local fixture/eval generation for repository portability
-- a small core scoring engine for `raw`, `source`, and `canonical` target sets
-- query-level instability summaries
-- schema/invariant validation, null controls, positive controls, and optional paper-regression checks
-- a CLI entrypoint for manifest validation, setup, BYO-trace scoring, and a validation scorecard
-
-## Layout
-
-- `src/mtel_mem/`
-  - `bootstrap.py`: local data preparation helpers
-  - `schemas.py`: shared data contracts
-  - `adapters/`: benchmark manifest helpers
-  - `core/`: scoring and instability logic
-  - `cli.py`: command-line interface
-- `data/`
-  - `locomo10.json`
-  - generated fixture/eval JSON after setup
-- `manifests/`
-  - `locomo.json`
-  - `longmemeval_s.json`
-- `examples/`
-  - `minimal_target_mappings.jsonl`
-  - `minimal_ranked_trace.jsonl`
-- `tests/`
-  - unit tests for metrics, the example pipeline, manifest wiring, and portable validation behavior
+**Paper artifacts** (`artifacts/`): gzipped traces, rescoring outputs, semantic audit labels, and validation data for every result in the paper. See [`artifacts/README.md`](artifacts/README.md) for the full layout.
 
 ## Quick Start
 
-Install the package in editable mode:
-
-```powershell
+```bash
 pip install -e .
-```
-
-Prepare the built-in LoCoMo assets:
-
-```powershell
 mtel-mem init
 ```
 
-If you also want LongMemEval-S:
+To also prepare LongMemEval-S:
 
-```powershell
+```bash
 mtel-mem init --with-longmemeval-s
 ```
 
-Validate the bundled manifests:
+## Usage
 
-```powershell
-mtel-mem validate-manifest --manifest manifests/locomo.json
-mtel-mem validate-manifest --manifest manifests/longmemeval_s.json
-```
+Score the bundled example:
 
-Run the example scorer:
-
-```powershell
+```bash
 mtel-mem score-example
 ```
 
-Run a bring-your-own trace:
+Score your own trace:
 
-```powershell
-mtel-mem score --targets examples/minimal_target_mappings.jsonl --trace examples/minimal_ranked_trace.jsonl --out-json reports/example_score.json
+```bash
+mtel-mem score \
+  --targets examples/minimal_target_mappings.jsonl \
+  --trace examples/minimal_ranked_trace.jsonl \
+  --out-json reports/score.json
 ```
 
-Run the portable validation suite:
+Validate manifests:
 
-```powershell
-mtel-mem validate-suite --out-json reports/validation_report.json --out-md reports/validation_report.md
+```bash
+mtel-mem validate-manifest --manifest manifests/locomo.json
 ```
 
-Include the paper-only regression checks only when the external artifacts are available:
+Run the validation suite:
 
-```powershell
-mtel-mem validate-suite --include-paper-regression
+```bash
+mtel-mem validate-suite --out-json reports/validation_report.json
 ```
 
-Run the unit tests:
+## Reproducing Paper Results
 
-```powershell
-$env:PYTHONPATH = "src"
-python -m unittest discover -s tests -v
+Every number in the paper can be verified from the bundled artifacts. Traces are stored as gzipped JSONL; decompress before scoring:
+
+```bash
+gzip -dk artifacts/runs/locomo/lexical/trace.jsonl.gz
+mtel-mem score \
+  --targets examples/minimal_target_mappings.jsonl \
+  --trace artifacts/runs/locomo/lexical/trace.jsonl \
+  --out-json report.json
+```
+
+41 pinned scalar and density-winner checks are defined in `validation_expectations.json` and verified against the bundled rescoring outputs.
+
+## Tests
+
+```bash
+pip install -e .
+pytest tests/ -v
+```
+
+## Layout
+
+```
+src/mtel_mem/
+  adapters/       benchmark manifest helpers (LoCoMo, LongMemEval-S)
+  core/           rescore, metrics, instability, validation
+  cli.py          command-line interface
+  schemas.py      shared data contracts
+artifacts/        paper traces, rescores, semantic audit labels (see artifacts/README.md)
+data/             LoCoMo benchmark data
+manifests/        benchmark manifest definitions
+examples/         minimal trace and target mapping for smoke tests
+tests/            unit tests
 ```
