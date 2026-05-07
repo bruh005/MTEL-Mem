@@ -1,0 +1,1429 @@
+{
+  "generated_at_utc": "2026-03-15T08:04:12.461807+00:00",
+  "trace_jsonl": "C:\\Users\\sugam\\Documents\\research\\papers\\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\\eval\\results\\target_sensitivity_mem0\\20260315T072555Z_locomo_mem0_full_appendonly_overnight\\trace.jsonl",
+  "requested_top_k": 60,
+  "observed_ranking_depth_min": 60,
+  "observed_ranking_depth_max": 60,
+  "observed_ranking_depth_constant": true,
+  "preview_only": false,
+  "truncated_hit_rows": 0,
+  "returned_kind_counts_observed": {
+    "observation": 68398,
+    "raw_turn": 50222
+  },
+  "cases_with_observed_raw_turn": 1972,
+  "cases_with_observed_non_raw": 1974,
+  "targets": {
+    "raw_turn": {
+      "queries": 1977,
+      "zero_target_cases": 0,
+      "top1_hit_rate": 0.03894790085988872,
+      "hit_rate_at_k": 0.7749114820435002,
+      "recall_at_k": 0.7231065706000757,
+      "mrr": 0.15765988321522412,
+      "ndcg_at_k": 0.2748920715788433,
+      "micro_recall_at_k": 0.64349376114082,
+      "total_hits": 1805,
+      "total_relevant": 2805,
+      "multi_member_cases": 0,
+      "group_size_histogram": {
+        "1": 2805
+      }
+    },
+    "source_family": {
+      "queries": 1977,
+      "zero_target_cases": 0,
+      "top1_hit_rate": 0.511380880121396,
+      "hit_rate_at_k": 0.9590288315629742,
+      "recall_at_k": 0.9454258916152345,
+      "mrr": 0.6202129593145491,
+      "ndcg_at_k": 0.662543604120512,
+      "micro_recall_at_k": 0.9294117647058824,
+      "total_hits": 2607,
+      "total_relevant": 2805,
+      "multi_member_cases": 1977,
+      "group_size_histogram": {
+        "2": 1,
+        "3": 15,
+        "4": 52,
+        "5": 173,
+        "6": 481,
+        "7": 577,
+        "8": 608,
+        "9": 467,
+        "10": 287,
+        "11": 67,
+        "12": 33,
+        "13": 11,
+        "14": 33
+      }
+    },
+    "canonical": {
+      "queries": 1977,
+      "zero_target_cases": 0,
+      "top1_hit_rate": 0.47243297926150735,
+      "hit_rate_at_k": 0.919069296914517,
+      "recall_at_k": 0.9014910122880496,
+      "mrr": 0.5768049678394517,
+      "ndcg_at_k": 0.6168968319731423,
+      "micro_recall_at_k": 0.8909090909090909,
+      "total_hits": 2499,
+      "total_relevant": 2805,
+      "multi_member_cases": 1977,
+      "group_size_histogram": {
+        "1": 1,
+        "2": 15,
+        "3": 52,
+        "4": 173,
+        "5": 481,
+        "6": 577,
+        "7": 608,
+        "8": 467,
+        "9": 287,
+        "10": 67,
+        "11": 33,
+        "12": 11,
+        "13": 33
+      }
+    }
+  },
+  "pairwise": {
+    "raw_turn_vs_source_family": {
+      "shared_queries": 1977,
+      "hit_flip_count": 364,
+      "top1_flip_count": 934,
+      "recall_changed_count": 545,
+      "mrr_changed_count": 1613,
+      "ndcg_changed_count": 1627,
+      "examples": [
+        {
+          "query_index": 1,
+          "query": "When did Caroline go to the LGBTQ support group?",
+          "left_mode": "raw_turn",
+          "right_mode": "source_family",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.5,
+            "ndcg": 0.6309297535714575
+          },
+          "right_metrics": {
+            "top1": 1.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 1.0
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              6
+            ],
+            "canonical": [
+              5
+            ]
+          }
+        },
+        {
+          "query_index": 2,
+          "query": "When did Melanie paint a sunrise?",
+          "left_mode": "raw_turn",
+          "right_mode": "source_family",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 0.0,
+            "hits": 0.0,
+            "relevant": 1.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "ndcg": 0.0
+          },
+          "right_metrics": {
+            "top1": 1.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 1.0
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              6
+            ],
+            "canonical": [
+              5
+            ]
+          }
+        },
+        {
+          "query_index": 3,
+          "query": "What fields would Caroline be likely to pursue in her educaton?",
+          "left_mode": "raw_turn",
+          "right_mode": "source_family",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 2.0,
+            "relevant": 2.0,
+            "recall": 1.0,
+            "mrr": 0.16666666666666666,
+            "ndcg": 0.3459510034377522
+          },
+          "right_metrics": {
+            "top1": 1.0,
+            "hit_at_k": 1.0,
+            "hits": 2.0,
+            "relevant": 2.0,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 0.6131471927654584
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1
+            ],
+            "source_family": [
+              6,
+              6
+            ],
+            "canonical": [
+              5,
+              5
+            ]
+          }
+        },
+        {
+          "query_index": 4,
+          "query": "What did Caroline research?",
+          "left_mode": "raw_turn",
+          "right_mode": "source_family",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 0.0,
+            "hits": 0.0,
+            "relevant": 1.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "ndcg": 0.0
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.125,
+            "ndcg": 0.31546487678572877
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              7
+            ],
+            "canonical": [
+              6
+            ]
+          }
+        },
+        {
+          "query_index": 6,
+          "query": "When did Melanie run a charity race?",
+          "left_mode": "raw_turn",
+          "right_mode": "source_family",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.2,
+            "ndcg": 0.38685280723454163
+          },
+          "right_metrics": {
+            "top1": 1.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 1.0
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              7
+            ],
+            "canonical": [
+              6
+            ]
+          }
+        },
+        {
+          "query_index": 8,
+          "query": "What is Caroline's relationship status?",
+          "left_mode": "raw_turn",
+          "right_mode": "source_family",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 2.0,
+            "recall": 0.5,
+            "mrr": 0.03571428571428571,
+            "ndcg": 0.12621440746277704
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 2.0,
+            "relevant": 2.0,
+            "recall": 1.0,
+            "mrr": 0.25,
+            "ndcg": 0.38360669955106547
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1
+            ],
+            "source_family": [
+              7,
+              13
+            ],
+            "canonical": [
+              6,
+              12
+            ]
+          }
+        },
+        {
+          "query_index": 9,
+          "query": "When did Caroline give a speech at a school?",
+          "left_mode": "raw_turn",
+          "right_mode": "source_family",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.043478260869565216,
+            "ndcg": 0.21810429198553155
+          },
+          "right_metrics": {
+            "top1": 1.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 1.0
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              13
+            ],
+            "canonical": [
+              12
+            ]
+          }
+        },
+        {
+          "query_index": 10,
+          "query": "When did Caroline meet up with her friends, family, and mentors?",
+          "left_mode": "raw_turn",
+          "right_mode": "source_family",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.02564102564102564,
+            "ndcg": 0.18790182470910757
+          },
+          "right_metrics": {
+            "top1": 1.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 1.0
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              13
+            ],
+            "canonical": [
+              12
+            ]
+          }
+        },
+        {
+          "query_index": 11,
+          "query": "How long has Caroline had her current group of friends for?",
+          "left_mode": "raw_turn",
+          "right_mode": "source_family",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.125,
+            "ndcg": 0.31546487678572877
+          },
+          "right_metrics": {
+            "top1": 1.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 1.0
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              13
+            ],
+            "canonical": [
+              12
+            ]
+          }
+        },
+        {
+          "query_index": 12,
+          "query": "Where did Caroline move from 4 years ago?",
+          "left_mode": "raw_turn",
+          "right_mode": "source_family",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 2.0,
+            "recall": 0.5,
+            "mrr": 0.0196078431372549,
+            "ndcg": 0.10756138527597747
+          },
+          "right_metrics": {
+            "top1": 1.0,
+            "hit_at_k": 1.0,
+            "hits": 2.0,
+            "relevant": 2.0,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 0.7241529527521089
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1
+            ],
+            "source_family": [
+              13,
+              8
+            ],
+            "canonical": [
+              12,
+              7
+            ]
+          }
+        },
+        {
+          "query_index": 13,
+          "query": "How long ago was Caroline's 18th birthday?",
+          "left_mode": "raw_turn",
+          "right_mode": "source_family",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.023809523809523808,
+            "ndcg": 0.18428883314870617
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.5,
+            "ndcg": 0.6309297535714575
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              8
+            ],
+            "canonical": [
+              7
+            ]
+          }
+        },
+        {
+          "query_index": 14,
+          "query": "What career path has Caroline decided to persue?",
+          "left_mode": "raw_turn",
+          "right_mode": "source_family",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 2.0,
+            "recall": 0.5,
+            "mrr": 0.03333333333333333,
+            "ndcg": 0.12376320080008647
+          },
+          "right_metrics": {
+            "top1": 1.0,
+            "hit_at_k": 1.0,
+            "hits": 2.0,
+            "relevant": 2.0,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 0.8503449055347546
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1
+            ],
+            "source_family": [
+              6,
+              8
+            ],
+            "canonical": [
+              5,
+              7
+            ]
+          }
+        }
+      ]
+    },
+    "raw_turn_vs_canonical": {
+      "shared_queries": 1977,
+      "hit_flip_count": 443,
+      "top1_flip_count": 1011,
+      "recall_changed_count": 636,
+      "mrr_changed_count": 1896,
+      "ndcg_changed_count": 1896,
+      "examples": [
+        {
+          "query_index": 1,
+          "query": "When did Caroline go to the LGBTQ support group?",
+          "left_mode": "raw_turn",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.5,
+            "ndcg": 0.6309297535714575
+          },
+          "right_metrics": {
+            "top1": 1.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 1.0
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              6
+            ],
+            "canonical": [
+              5
+            ]
+          }
+        },
+        {
+          "query_index": 2,
+          "query": "When did Melanie paint a sunrise?",
+          "left_mode": "raw_turn",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 0.0,
+            "hits": 0.0,
+            "relevant": 1.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "ndcg": 0.0
+          },
+          "right_metrics": {
+            "top1": 1.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 1.0
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              6
+            ],
+            "canonical": [
+              5
+            ]
+          }
+        },
+        {
+          "query_index": 3,
+          "query": "What fields would Caroline be likely to pursue in her educaton?",
+          "left_mode": "raw_turn",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 2.0,
+            "relevant": 2.0,
+            "recall": 1.0,
+            "mrr": 0.16666666666666666,
+            "ndcg": 0.3459510034377522
+          },
+          "right_metrics": {
+            "top1": 1.0,
+            "hit_at_k": 1.0,
+            "hits": 2.0,
+            "relevant": 2.0,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 0.6131471927654584
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1
+            ],
+            "source_family": [
+              6,
+              6
+            ],
+            "canonical": [
+              5,
+              5
+            ]
+          }
+        },
+        {
+          "query_index": 4,
+          "query": "What did Caroline research?",
+          "left_mode": "raw_turn",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 0.0,
+            "hits": 0.0,
+            "relevant": 1.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "ndcg": 0.0
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.125,
+            "ndcg": 0.31546487678572877
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              7
+            ],
+            "canonical": [
+              6
+            ]
+          }
+        },
+        {
+          "query_index": 6,
+          "query": "When did Melanie run a charity race?",
+          "left_mode": "raw_turn",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.2,
+            "ndcg": 0.38685280723454163
+          },
+          "right_metrics": {
+            "top1": 1.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 1.0
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              7
+            ],
+            "canonical": [
+              6
+            ]
+          }
+        },
+        {
+          "query_index": 7,
+          "query": "When is Melanie planning on going camping?",
+          "left_mode": "raw_turn",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.09090909090909091,
+            "ndcg": 0.27894294565112987
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 0.0,
+            "hits": 0.0,
+            "relevant": 1.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "ndcg": 0.0
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              7
+            ],
+            "canonical": [
+              6
+            ]
+          }
+        },
+        {
+          "query_index": 8,
+          "query": "What is Caroline's relationship status?",
+          "left_mode": "raw_turn",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 2.0,
+            "recall": 0.5,
+            "mrr": 0.03571428571428571,
+            "ndcg": 0.12621440746277704
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 2.0,
+            "relevant": 2.0,
+            "recall": 1.0,
+            "mrr": 0.25,
+            "ndcg": 0.38360669955106547
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1
+            ],
+            "source_family": [
+              7,
+              13
+            ],
+            "canonical": [
+              6,
+              12
+            ]
+          }
+        },
+        {
+          "query_index": 9,
+          "query": "When did Caroline give a speech at a school?",
+          "left_mode": "raw_turn",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.043478260869565216,
+            "ndcg": 0.21810429198553155
+          },
+          "right_metrics": {
+            "top1": 1.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 1.0
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              13
+            ],
+            "canonical": [
+              12
+            ]
+          }
+        },
+        {
+          "query_index": 10,
+          "query": "When did Caroline meet up with her friends, family, and mentors?",
+          "left_mode": "raw_turn",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.02564102564102564,
+            "ndcg": 0.18790182470910757
+          },
+          "right_metrics": {
+            "top1": 1.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 1.0
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              13
+            ],
+            "canonical": [
+              12
+            ]
+          }
+        },
+        {
+          "query_index": 11,
+          "query": "How long has Caroline had her current group of friends for?",
+          "left_mode": "raw_turn",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.125,
+            "ndcg": 0.31546487678572877
+          },
+          "right_metrics": {
+            "top1": 1.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 1.0
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              13
+            ],
+            "canonical": [
+              12
+            ]
+          }
+        },
+        {
+          "query_index": 12,
+          "query": "Where did Caroline move from 4 years ago?",
+          "left_mode": "raw_turn",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 2.0,
+            "recall": 0.5,
+            "mrr": 0.0196078431372549,
+            "ndcg": 0.10756138527597747
+          },
+          "right_metrics": {
+            "top1": 1.0,
+            "hit_at_k": 1.0,
+            "hits": 2.0,
+            "relevant": 2.0,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 0.7241529527521089
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1
+            ],
+            "source_family": [
+              13,
+              8
+            ],
+            "canonical": [
+              12,
+              7
+            ]
+          }
+        },
+        {
+          "query_index": 13,
+          "query": "How long ago was Caroline's 18th birthday?",
+          "left_mode": "raw_turn",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.023809523809523808,
+            "ndcg": 0.18428883314870617
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.5,
+            "ndcg": 0.6309297535714575
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              8
+            ],
+            "canonical": [
+              7
+            ]
+          }
+        }
+      ]
+    },
+    "source_family_vs_canonical": {
+      "shared_queries": 1977,
+      "hit_flip_count": 79,
+      "top1_flip_count": 77,
+      "recall_changed_count": 104,
+      "mrr_changed_count": 283,
+      "ndcg_changed_count": 324,
+      "examples": [
+        {
+          "query_index": 7,
+          "query": "When is Melanie planning on going camping?",
+          "left_mode": "source_family",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.09090909090909091,
+            "ndcg": 0.27894294565112987
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 0.0,
+            "hits": 0.0,
+            "relevant": 1.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "ndcg": 0.0
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              7
+            ],
+            "canonical": [
+              6
+            ]
+          }
+        },
+        {
+          "query_index": 19,
+          "query": "Where has Melanie camped?",
+          "left_mode": "source_family",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 3.0,
+            "relevant": 3.0,
+            "recall": 1.0,
+            "mrr": 0.5,
+            "ndcg": 0.5214304229112113
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 2.0,
+            "relevant": 3.0,
+            "recall": 0.6666666666666666,
+            "mrr": 0.5,
+            "ndcg": 0.4046627840668988
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1,
+              1
+            ],
+            "source_family": [
+              8,
+              9,
+              9
+            ],
+            "canonical": [
+              7,
+              8,
+              8
+            ]
+          }
+        },
+        {
+          "query_index": 24,
+          "query": "What books has Melanie read?",
+          "left_mode": "source_family",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 2.0,
+            "relevant": 2.0,
+            "recall": 1.0,
+            "mrr": 0.1,
+            "ndcg": 0.3092733480703432
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 2.0,
+            "relevant": 2.0,
+            "recall": 1.0,
+            "mrr": 0.041666666666666664,
+            "ndcg": 0.24647946326035747
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1
+            ],
+            "source_family": [
+              9,
+              9
+            ],
+            "canonical": [
+              8,
+              8
+            ]
+          }
+        },
+        {
+          "query_index": 27,
+          "query": "When did Melanie read the book \"nothing is impossible\"?",
+          "left_mode": "source_family",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.5,
+            "ndcg": 0.6309297535714575
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 0.0,
+            "hits": 0.0,
+            "relevant": 1.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "ndcg": 0.0
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              9
+            ],
+            "canonical": [
+              8
+            ]
+          }
+        },
+        {
+          "query_index": 39,
+          "query": "How many times has Melanie gone to the beach in 2023?",
+          "left_mode": "source_family",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 2.0,
+            "relevant": 2.0,
+            "recall": 1.0,
+            "mrr": 0.5,
+            "ndcg": 0.5243472785485389
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 2.0,
+            "recall": 0.5,
+            "mrr": 0.06666666666666667,
+            "ndcg": 0.1532867981913646
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1
+            ],
+            "source_family": [
+              9,
+              7
+            ],
+            "canonical": [
+              8,
+              6
+            ]
+          }
+        },
+        {
+          "query_index": 47,
+          "query": "When did Caroline and Melanie go to a pride fesetival together?",
+          "left_mode": "source_family",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.25,
+            "ndcg": 0.43067655807339306
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.07142857142857142,
+            "ndcg": 0.2559580248098155
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              9
+            ],
+            "canonical": [
+              8
+            ]
+          }
+        },
+        {
+          "query_index": 59,
+          "query": "What musical artists/bands has Melanie seen?",
+          "left_mode": "source_family",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 2.0,
+            "relevant": 2.0,
+            "recall": 1.0,
+            "mrr": 0.058823529411764705,
+            "ndcg": 0.27907440195270555
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 2.0,
+            "recall": 0.5,
+            "mrr": 0.05,
+            "ndcg": 0.1395953738647505
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1
+            ],
+            "source_family": [
+              6,
+              6
+            ],
+            "canonical": [
+              5,
+              5
+            ]
+          }
+        },
+        {
+          "query_index": 60,
+          "query": "When did Melanie go to the park?",
+          "left_mode": "source_family",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 1.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 1.0
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 0.0,
+            "hits": 0.0,
+            "relevant": 1.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "ndcg": 0.0
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              6
+            ],
+            "canonical": [
+              5
+            ]
+          }
+        },
+        {
+          "query_index": 63,
+          "query": "What are some changes Caroline has faced during her transition journey?",
+          "left_mode": "source_family",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 2.0,
+            "relevant": 2.0,
+            "recall": 1.0,
+            "mrr": 0.5,
+            "ndcg": 0.526448181099292
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 2.0,
+            "relevant": 2.0,
+            "recall": 1.0,
+            "mrr": 0.5,
+            "ndcg": 0.5073740202434932
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1
+            ],
+            "source_family": [
+              6,
+              12
+            ],
+            "canonical": [
+              5,
+              11
+            ]
+          }
+        },
+        {
+          "query_index": 69,
+          "query": "What book did Melanie read from Caroline's suggestion?",
+          "left_mode": "source_family",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 2.0,
+            "relevant": 2.0,
+            "recall": 1.0,
+            "mrr": 0.08333333333333333,
+            "ndcg": 0.289458966565316
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 2.0,
+            "recall": 0.5,
+            "mrr": 0.08333333333333333,
+            "ndcg": 0.16569576576522954
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1
+            ],
+            "source_family": [
+              9,
+              10
+            ],
+            "canonical": [
+              8,
+              9
+            ]
+          }
+        },
+        {
+          "query_index": 75,
+          "query": "Would Melanie go on another roadtrip soon?",
+          "left_mode": "source_family",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 1.0,
+            "hit_at_k": 1.0,
+            "hits": 2.0,
+            "relevant": 2.0,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 0.8065735963827293
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 2.0,
+            "relevant": 2.0,
+            "recall": 1.0,
+            "mrr": 0.125,
+            "ndcg": 0.19342640361727081
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1
+            ],
+            "source_family": [
+              7,
+              7
+            ],
+            "canonical": [
+              6,
+              6
+            ]
+          }
+        },
+        {
+          "query_index": 78,
+          "query": "When did Melanie buy the figurines?",
+          "left_mode": "source_family",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.07692307692307693,
+            "ndcg": 0.26264953503719357
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 0.0,
+            "hits": 0.0,
+            "relevant": 1.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "ndcg": 0.0
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              6
+            ],
+            "canonical": [
+              5
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "db": "C:\\Users\\sugam\\Documents\\research\\papers\\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\\eval\\results\\target_sensitivity_mem0\\20260315T072555Z_locomo_mem0_full_appendonly_overnight\\run.sqlite",
+  "source_prefix": "eval_row_"
+}

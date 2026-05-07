@@ -1,0 +1,93 @@
+Target Sensitivity Rescore Summary
+==================================
+Trace JSONL          : C:\Users\sugam\Documents\research\papers\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\eval\results\target_sensitivity_beam\20260322T_beam100k_lexical_full\trace.shared_canonical_beam100k_lex_vs_ollama.jsonl
+SQLite DB            : C:\Users\sugam\Documents\research\papers\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\eval\results\target_sensitivity_beam\20260322T_beam100k_lexical_full\run.sqlite
+Source prefix        : eval_row_
+Requested top_k      : 60
+Observed rank depth  : min=60 max=60
+Preview only         : no
+Truncated hit rows   : 0
+
+Catalog Coverage
+----------------
+Indexes with any IDs : 5732
+Indexes with raw IDs : 5732
+Indexes with canon IDs: 3103
+
+Observed Returned Kinds
+-----------------------
+Kind counts          : {"observation": 8832, "raw_turn": 5868}
+Cases with raw_turn  : 229
+Cases with non-raw   : 245
+
+Per-Target Metrics
+------------------
+raw_turn:
+  queries            = 245
+  zero_target_cases  = 0
+  top1_hit_rate      = 0.000000
+  hit_rate_at_k      = 0.677551
+  recall_at_k        = 0.371260
+  micro_recall_at_k  = 0.261251
+  mrr                = 0.099088
+  ndcg_at_k          = 0.142752
+  total_hits/relevant = 238/911
+  multi_member_cases = 0
+  group_size_hist    = {"1": 911}
+source_family:
+  queries            = 245
+  zero_target_cases  = 0
+  top1_hit_rate      = 0.232653
+  hit_rate_at_k      = 0.800000
+  recall_at_k        = 0.480512
+  micro_recall_at_k  = 0.309550
+  mrr                = 0.303127
+  ndcg_at_k          = 0.279726
+  total_hits/relevant = 282/911
+  multi_member_cases = 245
+  group_size_hist    = {"1": 359, "2": 552}
+canonical:
+  queries            = 245
+  zero_target_cases  = 0
+  top1_hit_rate      = 0.232653
+  hit_rate_at_k      = 0.783673
+  recall_at_k        = 0.627632
+  micro_recall_at_k  = 0.478261
+  mrr                = 0.302789
+  ndcg_at_k          = 0.346279
+  total_hits/relevant = 264/552
+  multi_member_cases = 0
+  group_size_hist    = {"1": 552}
+
+Pairwise Changes
+---------------
+raw_turn_vs_source_family:
+  shared_queries     = 245
+  hit_flip_count     = 30
+  top1_flip_count    = 57
+  recall_changed     = 38
+  mrr_changed        = 192
+  ndcg_changed       = 192
+  example q1: Have I worked with Flask routes and handled HTTP requests in this project?
+  example q3: Can you list the order in which I brought up different aspects of developing my personal budget tracker throughout our conversations, in order? Mention ONLY and ONLY three items.
+  example q4: Can you walk me through the order in which I brought up different aspects of my app development and deployment across our conversations? Mention ONLY and ONLY five items.
+raw_turn_vs_canonical:
+  shared_queries     = 245
+  hit_flip_count     = 34
+  top1_flip_count    = 57
+  recall_changed     = 144
+  mrr_changed        = 196
+  ndcg_changed       = 196
+  example q1: Have I worked with Flask routes and handled HTTP requests in this project?
+  example q3: Can you list the order in which I brought up different aspects of developing my personal budget tracker throughout our conversations, in order? Mention ONLY and ONLY three items.
+  example q4: Can you walk me through the order in which I brought up different aspects of my app development and deployment across our conversations? Mention ONLY and ONLY five items.
+source_family_vs_canonical:
+  shared_queries     = 245
+  hit_flip_count     = 4
+  top1_flip_count    = 0
+  recall_changed     = 119
+  mrr_changed        = 4
+  ndcg_changed       = 127
+  example q1: Have I worked with Flask routes and handled HTTP requests in this project?
+  example q3: Can you list the order in which I brought up different aspects of developing my personal budget tracker throughout our conversations, in order? Mention ONLY and ONLY three items.
+  example q4: Can you walk me through the order in which I brought up different aspects of my app development and deployment across our conversations? Mention ONLY and ONLY five items.

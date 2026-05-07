@@ -1,0 +1,18 @@
+Shared Canonical-Covered Subset Analysis
+=======================================
+Group label          : beam100k
+Runs analyzed        : 1
+Shared subset queries: 246
+
+Runs
+----
+20260322T_beam100k_lexical_full:
+  run_dir            = C:\Users\sugam\Documents\research\papers\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\eval\results\target_sensitivity_beam\20260322T_beam100k_lexical_full
+  subset_trace       = C:\Users\sugam\Documents\research\papers\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\eval\results\target_sensitivity_beam\20260322T_beam100k_lexical_full\trace.shared_canonical_beam100k.jsonl
+  kept_queries       = 246
+  raw_turn: queries=246 zero_targets=0 recall=0.373816 mrr=0.098764 ndcg=0.143040
+  source_family: queries=246 zero_targets=0 recall=0.482624 mrr=0.305959 ndcg=0.281516
+  canonical: queries=246 zero_targets=0 recall=0.629146 mrr=0.305623 ndcg=0.348936
+
+Pairwise nDCG Order
+-------------------

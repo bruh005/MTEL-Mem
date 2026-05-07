@@ -1,0 +1,37 @@
+Mem0 Target Sensitivity Run Summary
+==================================
+Run dir              : C:\Users\sugam\Documents\research\papers\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\eval\results\target_sensitivity_mem0\20260315T072555Z_locomo_mem0_full_appendonly_overnight
+Dataset              : locomo_mem0
+Fixture rows         : 5882
+Raw jobs / Infer jobs : 5882 / 506
+Ingested jobs ok      : 6388
+Ingest jobs failed    : 0
+Ingest jobs skipped   : 0
+Infer chunk size      : 16
+Raw batch size        : 64
+Eval rows requested   : 1977
+Eval rows completed   : 1977
+Eval rows failed      : 0
+Top-k / Trace top-k   : 60 / 60
+Infer facts           : True
+Infer mode            : append_only
+Catalog memories      : 8746
+Index map indexes     : 5882
+Returned IDs mapped   : 118620/118620 (100.0%)
+Returned kind counts  : {"observation": 68398, "raw_turn": 50222}
+Timings (s)           : ingest=2042.5 query=252.3 rescore=0.4 total=2295.4
+Qdrant reset attempted: True
+Qdrant reset performed: True
+Qdrant reset error    : 
+Collection override   : mem0_locomo_full_appendonly_overnight
+
+Artifacts
+---------
+result.json           : C:\Users\sugam\Documents\research\papers\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\eval\results\target_sensitivity_mem0\20260315T072555Z_locomo_mem0_full_appendonly_overnight\result.json
+result.summary.txt    : C:\Users\sugam\Documents\research\papers\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\eval\results\target_sensitivity_mem0\20260315T072555Z_locomo_mem0_full_appendonly_overnight\result.summary.txt
+trace.jsonl           : C:\Users\sugam\Documents\research\papers\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\eval\results\target_sensitivity_mem0\20260315T072555Z_locomo_mem0_full_appendonly_overnight\trace.jsonl
+run.sqlite            : C:\Users\sugam\Documents\research\papers\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\eval\results\target_sensitivity_mem0\20260315T072555Z_locomo_mem0_full_appendonly_overnight\run.sqlite
+index_map.json        : C:\Users\sugam\Documents\research\papers\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\eval\results\target_sensitivity_mem0\20260315T072555Z_locomo_mem0_full_appendonly_overnight\index_map.json
+target_rescore.json   : C:\Users\sugam\Documents\research\papers\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\eval\results\target_sensitivity_mem0\20260315T072555Z_locomo_mem0_full_appendonly_overnight\target_rescore.json
+target_summary.txt    : C:\Users\sugam\Documents\research\papers\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\eval\results\target_sensitivity_mem0\20260315T072555Z_locomo_mem0_full_appendonly_overnight\target_rescore.summary.txt
+effective config      : C:\Users\sugam\Documents\research\papers\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\eval\results\target_sensitivity_mem0\20260315T072555Z_locomo_mem0_full_appendonly_overnight\mem0_config.effective.yaml

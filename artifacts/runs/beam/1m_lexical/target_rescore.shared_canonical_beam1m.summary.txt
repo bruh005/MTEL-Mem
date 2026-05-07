@@ -1,0 +1,93 @@
+Target Sensitivity Rescore Summary
+==================================
+Trace JSONL          : C:\Users\sugam\Documents\research\papers\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\eval\results\target_sensitivity_beam\20260323T024056Z_beam1m_lexical_full\trace.shared_canonical_beam1m.jsonl
+SQLite DB            : C:\Users\sugam\Documents\research\papers\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\eval\results\target_sensitivity_beam\20260323T024056Z_beam1m_lexical_full\run.sqlite
+Source prefix        : eval_row_
+Requested top_k      : 60
+Observed rank depth  : min=60 max=60
+Preview only         : no
+Truncated hit rows   : 0
+
+Catalog Coverage
+----------------
+Indexes with any IDs : 74630
+Indexes with raw IDs : 74630
+Indexes with canon IDs: 32000
+
+Observed Returned Kinds
+-----------------------
+Kind counts          : {"observation": 14122, "raw_turn": 10358}
+Cases with raw_turn  : 363
+Cases with non-raw   : 408
+
+Per-Target Metrics
+------------------
+raw_turn:
+  queries            = 408
+  zero_target_cases  = 0
+  top1_hit_rate      = 0.000000
+  hit_rate_at_k      = 0.438725
+  recall_at_k        = 0.157142
+  micro_recall_at_k  = 0.059730
+  mrr                = 0.068201
+  ndcg_at_k          = 0.070589
+  total_hits/relevant = 283/4738
+  multi_member_cases = 0
+  group_size_hist    = {"1": 4738}
+source_family:
+  queries            = 408
+  zero_target_cases  = 0
+  top1_hit_rate      = 0.132353
+  hit_rate_at_k      = 0.509804
+  recall_at_k        = 0.194989
+  micro_recall_at_k  = 0.071760
+  mrr                = 0.192882
+  ndcg_at_k          = 0.134161
+  total_hits/relevant = 340/4738
+  multi_member_cases = 408
+  group_size_hist    = {"1": 2836, "2": 1902}
+canonical:
+  queries            = 408
+  zero_target_cases  = 0
+  top1_hit_rate      = 0.132353
+  hit_rate_at_k      = 0.485294
+  recall_at_k        = 0.338650
+  micro_recall_at_k  = 0.163512
+  mrr                = 0.192342
+  ndcg_at_k          = 0.196895
+  total_hits/relevant = 311/1902
+  multi_member_cases = 0
+  group_size_hist    = {"1": 1902}
+
+Pairwise Changes
+---------------
+raw_turn_vs_source_family:
+  shared_queries     = 408
+  hit_flip_count     = 29
+  top1_flip_count    = 54
+  recall_changed     = 41
+  mrr_changed        = 198
+  ndcg_changed       = 198
+  example q1: Have I implemented the language detection microservice using franc v6.1.0 before?
+  example q2: Have I completed the translation microservice that supports 12 languages with 98% accuracy using the DeepL API v2?
+  example q10: What is the TTL value set for caching recent translations in my Redis implementation?
+raw_turn_vs_canonical:
+  shared_queries     = 408
+  hit_flip_count     = 39
+  top1_flip_count    = 54
+  recall_changed     = 177
+  mrr_changed        = 208
+  ndcg_changed       = 208
+  example q1: Have I implemented the language detection microservice using franc v6.1.0 before?
+  example q2: Have I completed the translation microservice that supports 12 languages with 98% accuracy using the DeepL API v2?
+  example q10: What is the TTL value set for caching recent translations in my Redis implementation?
+source_family_vs_canonical:
+  shared_queries     = 408
+  hit_flip_count     = 10
+  top1_flip_count    = 0
+  recall_changed     = 172
+  mrr_changed        = 10
+  ndcg_changed       = 176
+  example q1: Have I implemented the language detection microservice using franc v6.1.0 before?
+  example q10: What is the TTL value set for caching recent translations in my Redis implementation?
+  example q11: Considering my use of franc v6.1.0 in a Node.js backend with PostgreSQL, Redis caching, and a translation queue to handle rate limits, how can I optimize my system to reduce API latency below current levels while maintaining high cache hit rates and avoiding rate limit errors?

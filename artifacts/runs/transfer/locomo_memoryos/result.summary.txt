@@ -1,0 +1,110 @@
+dataset_name          : locomo_memoryos
+run_dir               : C:\Users\sugam\Documents\research\papers\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\eval\results\target_sensitivity_memoryos\20260315T210604Z_locomo10_full
+queries_total         : 1977
+queries_completed     : 1977
+tenant_count          : 10
+catalog_memories      : 6213
+returned_kind_counts  : {"raw_turn": 61817, "session_summary": 56803}
+ingest_seconds        : 436.28
+query_seconds         : 16.53
+rescore_seconds       : 0.22
+trace.jsonl           : C:\Users\sugam\Documents\research\papers\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\eval\results\target_sensitivity_memoryos\20260315T210604Z_locomo10_full\trace.jsonl
+run.sqlite            : C:\Users\sugam\Documents\research\papers\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\eval\results\target_sensitivity_memoryos\20260315T210604Z_locomo10_full\run.sqlite
+index_map.json        : C:\Users\sugam\Documents\research\papers\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\eval\results\target_sensitivity_memoryos\20260315T210604Z_locomo10_full\index_map.json
+target_rescore.json   : C:\Users\sugam\Documents\research\papers\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\eval\results\target_sensitivity_memoryos\20260315T210604Z_locomo10_full\target_rescore.json
+target_rescore.summary: C:\Users\sugam\Documents\research\papers\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\eval\results\target_sensitivity_memoryos\20260315T210604Z_locomo10_full\target_rescore.summary.txt
+
+== target_rescore.summary ==
+Target Sensitivity Rescore Summary
+==================================
+Trace JSONL          : C:\Users\sugam\Documents\research\papers\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\eval\results\target_sensitivity_memoryos\20260315T210604Z_locomo10_full\trace.jsonl
+SQLite DB            : C:\Users\sugam\Documents\research\papers\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\eval\results\target_sensitivity_memoryos\20260315T210604Z_locomo10_full\run.sqlite
+Source prefix        : eval_row_
+Requested top_k      : 60
+Observed rank depth  : min=60 max=60
+Preview only         : no
+Truncated hit rows   : 0
+
+Catalog Coverage
+----------------
+Indexes with any IDs : 5882
+Indexes with raw IDs : 5882
+Indexes with canon IDs: 5882
+
+Observed Returned Kinds
+-----------------------
+Kind counts          : {"raw_turn": 61817, "session_summary": 56803}
+Cases with raw_turn  : 1977
+Cases with non-raw   : 1977
+
+Per-Target Metrics
+------------------
+raw_turn:
+  queries            = 1977
+  zero_target_cases  = 0
+  top1_hit_rate      = 0.286292
+  hit_rate_at_k      = 0.821952
+  recall_at_k        = 0.770457
+  micro_recall_at_k  = 0.706595
+  mrr                = 0.363914
+  ndcg_at_k          = 0.433940
+  total_hits/relevant = 1982/2805
+  multi_member_cases = 0
+  group_size_hist    = {"1": 2805}
+source_family:
+  queries            = 1977
+  zero_target_cases  = 0
+  top1_hit_rate      = 0.286292
+  hit_rate_at_k      = 0.996459
+  recall_at_k        = 0.993748
+  micro_recall_at_k  = 0.990731
+  mrr                = 0.480752
+  ndcg_at_k          = 0.579437
+  total_hits/relevant = 2779/2805
+  multi_member_cases = 1977
+  group_size_hist    = {"2": 2805}
+canonical:
+  queries            = 1977
+  zero_target_cases  = 0
+  top1_hit_rate      = 0.000000
+  hit_rate_at_k      = 0.992919
+  recall_at_k        = 0.989685
+  micro_recall_at_k  = 0.986809
+  mrr                = 0.264661
+  ndcg_at_k          = 0.409111
+  total_hits/relevant = 2768/2805
+  multi_member_cases = 0
+  group_size_hist    = {"1": 2805}
+
+Pairwise Changes
+---------------
+raw_turn_vs_source_family:
+  shared_queries     = 1977
+  hit_flip_count     = 345
+  top1_flip_count    = 0
+  recall_changed     = 548
+  mrr_changed        = 1100
+  ndcg_changed       = 1236
+  example q2: When did Melanie paint a sunrise?
+  example q3: What fields would Caroline be likely to pursue in her educaton?
+  example q4: What did Caroline research?
+raw_turn_vs_canonical:
+  shared_queries     = 1977
+  hit_flip_count     = 352
+  top1_flip_count    = 566
+  recall_changed     = 558
+  mrr_changed        = 1970
+  ndcg_changed       = 1970
+  example q1: When did Caroline go to the LGBTQ support group?
+  example q2: When did Melanie paint a sunrise?
+  example q3: What fields would Caroline be likely to pursue in her educaton?
+source_family_vs_canonical:
+  shared_queries     = 1977
+  hit_flip_count     = 7
+  top1_flip_count    = 566
+  recall_changed     = 11
+  mrr_changed        = 870
+  ndcg_changed       = 925
+  example q1: When did Caroline go to the LGBTQ support group?
+  example q3: What fields would Caroline be likely to pursue in her educaton?
+  example q7: When is Melanie planning on going camping?

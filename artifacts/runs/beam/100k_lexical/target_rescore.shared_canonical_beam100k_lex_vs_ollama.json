@@ -1,0 +1,1608 @@
+{
+  "generated_at_utc": "2026-03-23T02:27:13.718230+00:00",
+  "trace_jsonl": "C:\\Users\\sugam\\Documents\\research\\papers\\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\\eval\\results\\target_sensitivity_beam\\20260322T_beam100k_lexical_full\\trace.shared_canonical_beam100k_lex_vs_ollama.jsonl",
+  "requested_top_k": 60,
+  "observed_ranking_depth_min": 60,
+  "observed_ranking_depth_max": 60,
+  "observed_ranking_depth_constant": true,
+  "preview_only": false,
+  "truncated_hit_rows": 0,
+  "returned_kind_counts_observed": {
+    "observation": 8832,
+    "raw_turn": 5868
+  },
+  "cases_with_observed_raw_turn": 229,
+  "cases_with_observed_non_raw": 245,
+  "targets": {
+    "raw_turn": {
+      "queries": 245,
+      "zero_target_cases": 0,
+      "top1_hit_rate": 0.0,
+      "hit_rate_at_k": 0.6775510204081633,
+      "recall_at_k": 0.37126019671938054,
+      "mrr": 0.09908813375459315,
+      "ndcg_at_k": 0.14275164439390786,
+      "micro_recall_at_k": 0.26125137211855104,
+      "total_hits": 238,
+      "total_relevant": 911,
+      "multi_member_cases": 0,
+      "group_size_histogram": {
+        "1": 911
+      }
+    },
+    "source_family": {
+      "queries": 245,
+      "zero_target_cases": 0,
+      "top1_hit_rate": 0.23265306122448978,
+      "hit_rate_at_k": 0.8,
+      "recall_at_k": 0.4805118973996528,
+      "mrr": 0.3031265252412961,
+      "ndcg_at_k": 0.2797255665411827,
+      "micro_recall_at_k": 0.30954994511525796,
+      "total_hits": 282,
+      "total_relevant": 911,
+      "multi_member_cases": 245,
+      "group_size_histogram": {
+        "1": 359,
+        "2": 552
+      }
+    },
+    "canonical": {
+      "queries": 245,
+      "zero_target_cases": 0,
+      "top1_hit_rate": 0.23265306122448978,
+      "hit_rate_at_k": 0.7836734693877551,
+      "recall_at_k": 0.6276320051830255,
+      "mrr": 0.30278884327096106,
+      "ndcg_at_k": 0.34627874327061875,
+      "micro_recall_at_k": 0.4782608695652174,
+      "total_hits": 264,
+      "total_relevant": 552,
+      "multi_member_cases": 0,
+      "group_size_histogram": {
+        "1": 552
+      }
+    }
+  },
+  "pairwise": {
+    "raw_turn_vs_source_family": {
+      "shared_queries": 245,
+      "hit_flip_count": 30,
+      "top1_flip_count": 57,
+      "recall_changed_count": 38,
+      "mrr_changed_count": 192,
+      "ndcg_changed_count": 192,
+      "examples": [
+        {
+          "query_index": 1,
+          "query": "Have I worked with Flask routes and handled HTTP requests in this project?",
+          "left_mode": "raw_turn",
+          "right_mode": "source_family",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 2.0,
+            "recall": 0.5,
+            "mrr": 0.017857142857142856,
+            "ndcg": 0.10511893611511204
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 2.0,
+            "recall": 0.5,
+            "mrr": 0.01818181818181818,
+            "ndcg": 0.10558114683788161
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1
+            ],
+            "source_family": [
+              2,
+              1
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 3,
+          "query": "Can you list the order in which I brought up different aspects of developing my personal budget tracker throughout our conversations, in order? Mention ONLY and ONLY three items.",
+          "left_mode": "raw_turn",
+          "right_mode": "source_family",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 2.0,
+            "relevant": 3.0,
+            "recall": 0.6666666666666666,
+            "mrr": 0.16666666666666666,
+            "ndcg": 0.30281242839865
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 2.0,
+            "relevant": 3.0,
+            "recall": 0.6666666666666666,
+            "mrr": 0.2,
+            "ndcg": 0.3228087653971817
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1,
+              1
+            ],
+            "source_family": [
+              2,
+              1,
+              2
+            ],
+            "canonical": [
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 4,
+          "query": "Can you walk me through the order in which I brought up different aspects of my app development and deployment across our conversations? Mention ONLY and ONLY five items.",
+          "left_mode": "raw_turn",
+          "right_mode": "source_family",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 4.0,
+            "recall": 0.25,
+            "mrr": 0.07142857142857142,
+            "ndcg": 0.09992090652113537
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 4.0,
+            "recall": 0.25,
+            "mrr": 0.07692307692307693,
+            "ndcg": 0.10253313861822189
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "source_family": [
+              1,
+              1,
+              2,
+              1
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 5,
+          "query": "When does my first sprint end?",
+          "left_mode": "raw_turn",
+          "right_mode": "source_family",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.125,
+            "ndcg": 0.31546487678572877
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.14285714285714285,
+            "ndcg": 0.3333333333333333
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              2
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 6,
+          "query": "How did I organize the tasks over the course of the sprint to ensure both backend and frontend aspects of the features were completed on time?",
+          "left_mode": "raw_turn",
+          "right_mode": "source_family",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 2.0,
+            "relevant": 2.0,
+            "recall": 1.0,
+            "mrr": 0.25,
+            "ndcg": 0.4084084369553121
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 2.0,
+            "relevant": 2.0,
+            "recall": 1.0,
+            "mrr": 0.3333333333333333,
+            "ndcg": 0.4536139370491393
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1
+            ],
+            "source_family": [
+              2,
+              2
+            ],
+            "canonical": [
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 11,
+          "query": "How many new columns did I want to add to the transactions table across my requests?",
+          "left_mode": "raw_turn",
+          "right_mode": "source_family",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 3.0,
+            "relevant": 3.0,
+            "recall": 1.0,
+            "mrr": 0.017543859649122806,
+            "ndcg": 0.23868181722065718
+          },
+          "right_metrics": {
+            "top1": 1.0,
+            "hit_at_k": 1.0,
+            "hits": 3.0,
+            "relevant": 3.0,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 0.6288340030996552
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1,
+              1
+            ],
+            "source_family": [
+              2,
+              2,
+              1
+            ],
+            "canonical": [
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 12,
+          "query": "How many different user roles and security features am I trying to implement across my sessions?",
+          "left_mode": "raw_turn",
+          "right_mode": "source_family",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 2.0,
+            "relevant": 3.0,
+            "recall": 0.6666666666666666,
+            "mrr": 0.05555555555555555,
+            "ndcg": 0.21731319922088765
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 2.0,
+            "relevant": 3.0,
+            "recall": 0.6666666666666666,
+            "mrr": 0.058823529411764705,
+            "ndcg": 0.22111976189650118
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1,
+              1
+            ],
+            "source_family": [
+              2,
+              2,
+              2
+            ],
+            "canonical": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 13,
+          "query": "I'm planning to add user login, income and expense tracking, and some basic analytics to my Flask app. What libraries or tools would you suggest I use to implement these features?",
+          "left_mode": "raw_turn",
+          "right_mode": "source_family",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.03125,
+            "ndcg": 0.19823986317056053
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.03225806451612903,
+            "ndcg": 0.2
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              2
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 14,
+          "query": "I'm looking to improve the security features of my app. What steps would you suggest I take?",
+          "left_mode": "raw_turn",
+          "right_mode": "source_family",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 0.0,
+            "hits": 0.0,
+            "relevant": 1.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "ndcg": 0.0
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.25,
+            "ndcg": 0.43067655807339306
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              2
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 15,
+          "query": "Can you provide a comprehensive summary of how my budget tracker project has progressed, including the key features implemented, the development timeline, security enhancements, and documentation efforts?",
+          "left_mode": "raw_turn",
+          "right_mode": "source_family",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 2.0,
+            "relevant": 10.0,
+            "recall": 0.2,
+            "mrr": 0.07142857142857142,
+            "ndcg": 0.1037284359633355
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 2.0,
+            "relevant": 10.0,
+            "recall": 0.2,
+            "mrr": 0.07692307692307693,
+            "ndcg": 0.10580995894399327
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "source_family": [
+              2,
+              2,
+              1,
+              1,
+              2,
+              1,
+              2,
+              2,
+              2,
+              1
+            ],
+            "canonical": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 16,
+          "query": "Can you give me a comprehensive summary of how I handled the security and database challenges in my budget tracker app across our discussions?",
+          "left_mode": "raw_turn",
+          "right_mode": "source_family",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 11.0,
+            "recall": 0.09090909090909091,
+            "mrr": 0.029411764705882353,
+            "ndcg": 0.04042694236789676
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 11.0,
+            "recall": 0.09090909090909091,
+            "mrr": 0.030303030303030304,
+            "ndcg": 0.040759261617270684
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "source_family": [
+              2,
+              2,
+              1,
+              2,
+              1,
+              1,
+              2,
+              2,
+              1,
+              2,
+              2
+            ],
+            "canonical": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 18,
+          "query": "How many days were there between the end of my first sprint and the deadline for completing the analytics features in sprint 2?",
+          "left_mode": "raw_turn",
+          "right_mode": "source_family",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 2.0,
+            "recall": 0.5,
+            "mrr": 0.08333333333333333,
+            "ndcg": 0.16569576576522954
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 2.0,
+            "recall": 0.5,
+            "mrr": 0.09090909090909091,
+            "ndcg": 0.1710330840677181
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1
+            ],
+            "source_family": [
+              2,
+              1
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        }
+      ]
+    },
+    "raw_turn_vs_canonical": {
+      "shared_queries": 245,
+      "hit_flip_count": 34,
+      "top1_flip_count": 57,
+      "recall_changed_count": 144,
+      "mrr_changed_count": 196,
+      "ndcg_changed_count": 196,
+      "examples": [
+        {
+          "query_index": 1,
+          "query": "Have I worked with Flask routes and handled HTTP requests in this project?",
+          "left_mode": "raw_turn",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 2.0,
+            "recall": 0.5,
+            "mrr": 0.017857142857142856,
+            "ndcg": 0.10511893611511204
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.01818181818181818,
+            "ndcg": 0.17219543379409813
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1
+            ],
+            "source_family": [
+              2,
+              1
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 3,
+          "query": "Can you list the order in which I brought up different aspects of developing my personal budget tracker throughout our conversations, in order? Mention ONLY and ONLY three items.",
+          "left_mode": "raw_turn",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 2.0,
+            "relevant": 3.0,
+            "recall": 0.6666666666666666,
+            "mrr": 0.16666666666666666,
+            "ndcg": 0.30281242839865
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 2.0,
+            "relevant": 2.0,
+            "recall": 1.0,
+            "mrr": 0.2,
+            "ndcg": 0.42177340954886444
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1,
+              1
+            ],
+            "source_family": [
+              2,
+              1,
+              2
+            ],
+            "canonical": [
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 4,
+          "query": "Can you walk me through the order in which I brought up different aspects of my app development and deployment across our conversations? Mention ONLY and ONLY five items.",
+          "left_mode": "raw_turn",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 4.0,
+            "recall": 0.25,
+            "mrr": 0.07142857142857142,
+            "ndcg": 0.09992090652113537
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.07692307692307693,
+            "ndcg": 0.26264953503719357
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "source_family": [
+              1,
+              1,
+              2,
+              1
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 5,
+          "query": "When does my first sprint end?",
+          "left_mode": "raw_turn",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.125,
+            "ndcg": 0.31546487678572877
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.14285714285714285,
+            "ndcg": 0.3333333333333333
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              2
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 6,
+          "query": "How did I organize the tasks over the course of the sprint to ensure both backend and frontend aspects of the features were completed on time?",
+          "left_mode": "raw_turn",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 2.0,
+            "relevant": 2.0,
+            "recall": 1.0,
+            "mrr": 0.25,
+            "ndcg": 0.4084084369553121
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 2.0,
+            "relevant": 2.0,
+            "recall": 1.0,
+            "mrr": 0.3333333333333333,
+            "ndcg": 0.4536139370491393
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1
+            ],
+            "source_family": [
+              2,
+              2
+            ],
+            "canonical": [
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 10,
+          "query": "How many commits have been merged into the main branch of my Git repository?",
+          "left_mode": "raw_turn",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 2.0,
+            "relevant": 2.0,
+            "recall": 1.0,
+            "mrr": 0.023809523809523808,
+            "ndcg": 0.2253058927017975
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 0.0,
+            "hits": 0.0,
+            "relevant": 1.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "ndcg": 0.0
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1
+            ],
+            "source_family": [
+              2,
+              1
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 11,
+          "query": "How many new columns did I want to add to the transactions table across my requests?",
+          "left_mode": "raw_turn",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 3.0,
+            "relevant": 3.0,
+            "recall": 1.0,
+            "mrr": 0.017543859649122806,
+            "ndcg": 0.23868181722065718
+          },
+          "right_metrics": {
+            "top1": 1.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 2.0,
+            "recall": 0.5,
+            "mrr": 1.0,
+            "ndcg": 0.6131471927654584
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1,
+              1
+            ],
+            "source_family": [
+              2,
+              2,
+              1
+            ],
+            "canonical": [
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 12,
+          "query": "How many different user roles and security features am I trying to implement across my sessions?",
+          "left_mode": "raw_turn",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 2.0,
+            "relevant": 3.0,
+            "recall": 0.6666666666666666,
+            "mrr": 0.05555555555555555,
+            "ndcg": 0.21731319922088765
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 2.0,
+            "relevant": 3.0,
+            "recall": 0.6666666666666666,
+            "mrr": 0.058823529411764705,
+            "ndcg": 0.22111976189650118
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1,
+              1
+            ],
+            "source_family": [
+              2,
+              2,
+              2
+            ],
+            "canonical": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 13,
+          "query": "I'm planning to add user login, income and expense tracking, and some basic analytics to my Flask app. What libraries or tools would you suggest I use to implement these features?",
+          "left_mode": "raw_turn",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.03125,
+            "ndcg": 0.19823986317056053
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.03225806451612903,
+            "ndcg": 0.2
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              2
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 14,
+          "query": "I'm looking to improve the security features of my app. What steps would you suggest I take?",
+          "left_mode": "raw_turn",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 0.0,
+            "hits": 0.0,
+            "relevant": 1.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "ndcg": 0.0
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.25,
+            "ndcg": 0.43067655807339306
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1
+            ],
+            "source_family": [
+              2
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 15,
+          "query": "Can you provide a comprehensive summary of how my budget tracker project has progressed, including the key features implemented, the development timeline, security enhancements, and documentation efforts?",
+          "left_mode": "raw_turn",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 2.0,
+            "relevant": 10.0,
+            "recall": 0.2,
+            "mrr": 0.07142857142857142,
+            "ndcg": 0.1037284359633355
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 2.0,
+            "relevant": 6.0,
+            "recall": 0.3333333333333333,
+            "mrr": 0.07692307692307693,
+            "ndcg": 0.14547726835586772
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "source_family": [
+              2,
+              2,
+              1,
+              1,
+              2,
+              1,
+              2,
+              2,
+              2,
+              1
+            ],
+            "canonical": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 16,
+          "query": "Can you give me a comprehensive summary of how I handled the security and database challenges in my budget tracker app across our discussions?",
+          "left_mode": "raw_turn",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 11.0,
+            "recall": 0.09090909090909091,
+            "mrr": 0.029411764705882353,
+            "ndcg": 0.04042694236789676
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 7.0,
+            "recall": 0.14285714285714285,
+            "mrr": 0.030303030303030304,
+            "ndcg": 0.054030140659805756
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "source_family": [
+              2,
+              2,
+              1,
+              2,
+              1,
+              1,
+              2,
+              2,
+              1,
+              2,
+              2
+            ],
+            "canonical": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        }
+      ]
+    },
+    "source_family_vs_canonical": {
+      "shared_queries": 245,
+      "hit_flip_count": 4,
+      "top1_flip_count": 0,
+      "recall_changed_count": 119,
+      "mrr_changed_count": 4,
+      "ndcg_changed_count": 127,
+      "examples": [
+        {
+          "query_index": 1,
+          "query": "Have I worked with Flask routes and handled HTTP requests in this project?",
+          "left_mode": "source_family",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 2.0,
+            "recall": 0.5,
+            "mrr": 0.01818181818181818,
+            "ndcg": 0.10558114683788161
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.01818181818181818,
+            "ndcg": 0.17219543379409813
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1
+            ],
+            "source_family": [
+              2,
+              1
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 3,
+          "query": "Can you list the order in which I brought up different aspects of developing my personal budget tracker throughout our conversations, in order? Mention ONLY and ONLY three items.",
+          "left_mode": "source_family",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 2.0,
+            "relevant": 3.0,
+            "recall": 0.6666666666666666,
+            "mrr": 0.2,
+            "ndcg": 0.3228087653971817
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 2.0,
+            "relevant": 2.0,
+            "recall": 1.0,
+            "mrr": 0.2,
+            "ndcg": 0.42177340954886444
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1,
+              1
+            ],
+            "source_family": [
+              2,
+              1,
+              2
+            ],
+            "canonical": [
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 4,
+          "query": "Can you walk me through the order in which I brought up different aspects of my app development and deployment across our conversations? Mention ONLY and ONLY five items.",
+          "left_mode": "source_family",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 4.0,
+            "recall": 0.25,
+            "mrr": 0.07692307692307693,
+            "ndcg": 0.10253313861822189
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.07692307692307693,
+            "ndcg": 0.26264953503719357
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "source_family": [
+              1,
+              1,
+              2,
+              1
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 10,
+          "query": "How many commits have been merged into the main branch of my Git repository?",
+          "left_mode": "source_family",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 2.0,
+            "relevant": 2.0,
+            "recall": 1.0,
+            "mrr": 0.023809523809523808,
+            "ndcg": 0.2253058927017975
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 0.0,
+            "hits": 0.0,
+            "relevant": 1.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "ndcg": 0.0
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1
+            ],
+            "source_family": [
+              2,
+              1
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 11,
+          "query": "How many new columns did I want to add to the transactions table across my requests?",
+          "left_mode": "source_family",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 1.0,
+            "hit_at_k": 1.0,
+            "hits": 3.0,
+            "relevant": 3.0,
+            "recall": 1.0,
+            "mrr": 1.0,
+            "ndcg": 0.6288340030996552
+          },
+          "right_metrics": {
+            "top1": 1.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 2.0,
+            "recall": 0.5,
+            "mrr": 1.0,
+            "ndcg": 0.6131471927654584
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1,
+              1
+            ],
+            "source_family": [
+              2,
+              2,
+              1
+            ],
+            "canonical": [
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 15,
+          "query": "Can you provide a comprehensive summary of how my budget tracker project has progressed, including the key features implemented, the development timeline, security enhancements, and documentation efforts?",
+          "left_mode": "source_family",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 2.0,
+            "relevant": 10.0,
+            "recall": 0.2,
+            "mrr": 0.07692307692307693,
+            "ndcg": 0.10580995894399327
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 2.0,
+            "relevant": 6.0,
+            "recall": 0.3333333333333333,
+            "mrr": 0.07692307692307693,
+            "ndcg": 0.14547726835586772
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "source_family": [
+              2,
+              2,
+              1,
+              1,
+              2,
+              1,
+              2,
+              2,
+              2,
+              1
+            ],
+            "canonical": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 16,
+          "query": "Can you give me a comprehensive summary of how I handled the security and database challenges in my budget tracker app across our discussions?",
+          "left_mode": "source_family",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 11.0,
+            "recall": 0.09090909090909091,
+            "mrr": 0.030303030303030304,
+            "ndcg": 0.040759261617270684
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 7.0,
+            "recall": 0.14285714285714285,
+            "mrr": 0.030303030303030304,
+            "ndcg": 0.054030140659805756
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "source_family": [
+              2,
+              2,
+              1,
+              2,
+              1,
+              1,
+              2,
+              2,
+              1,
+              2,
+              2
+            ],
+            "canonical": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 18,
+          "query": "How many days were there between the end of my first sprint and the deadline for completing the analytics features in sprint 2?",
+          "left_mode": "source_family",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 2.0,
+            "recall": 0.5,
+            "mrr": 0.09090909090909091,
+            "ndcg": 0.1710330840677181
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.09090909090909091,
+            "ndcg": 0.27894294565112987
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1
+            ],
+            "source_family": [
+              2,
+              1
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 19,
+          "query": "Have I obtained an API key for this project?",
+          "left_mode": "source_family",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 2.0,
+            "relevant": 4.0,
+            "recall": 0.5,
+            "mrr": 0.022222222222222223,
+            "ndcg": 0.13882930613164038
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.022222222222222223,
+            "ndcg": 0.1810425967800402
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1,
+              1,
+              1
+            ],
+            "source_family": [
+              2,
+              1,
+              1,
+              1
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 20,
+          "query": "Have I ever fixed any bugs related to the autocomplete feature in my project?",
+          "left_mode": "source_family",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 2.0,
+            "recall": 0.5,
+            "mrr": 0.018518518518518517,
+            "ndcg": 0.10605588012990935
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 0.0,
+            "hits": 0.0,
+            "relevant": 1.0,
+            "recall": 0.0,
+            "mrr": 0.0,
+            "ndcg": 0.0
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1
+            ],
+            "source_family": [
+              1,
+              2
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 21,
+          "query": "Can you list the order in which I brought up different aspects of implementing the city autocomplete feature across our conversations, in order? Mention ONLY and ONLY five items.",
+          "left_mode": "source_family",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 2.0,
+            "relevant": 5.0,
+            "recall": 0.4,
+            "mrr": 0.07692307692307693,
+            "ndcg": 0.14649799275498918
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 2.0,
+            "relevant": 3.0,
+            "recall": 0.6666666666666666,
+            "mrr": 0.07692307692307693,
+            "ndcg": 0.20270182154622132
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "source_family": [
+              2,
+              1,
+              1,
+              2,
+              2
+            ],
+            "canonical": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        {
+          "query_index": 27,
+          "query": "What is the daily call quota for the API key used in my application?",
+          "left_mode": "source_family",
+          "right_mode": "canonical",
+          "left_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 2.0,
+            "recall": 0.5,
+            "mrr": 0.07142857142857142,
+            "ndcg": 0.15693994437792994
+          },
+          "right_metrics": {
+            "top1": 0.0,
+            "hit_at_k": 1.0,
+            "hits": 1.0,
+            "relevant": 1.0,
+            "recall": 1.0,
+            "mrr": 0.07142857142857142,
+            "ndcg": 0.2559580248098155
+          },
+          "group_sizes": {
+            "raw_turn": [
+              1,
+              1
+            ],
+            "source_family": [
+              2,
+              1
+            ],
+            "canonical": [
+              1
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "db": "C:\\Users\\sugam\\Documents\\research\\papers\\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\\eval\\results\\target_sensitivity_beam\\20260322T_beam100k_lexical_full\\run.sqlite",
+  "source_prefix": "eval_row_"
+}

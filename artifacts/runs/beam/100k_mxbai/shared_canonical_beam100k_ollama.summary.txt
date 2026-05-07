@@ -1,0 +1,18 @@
+Shared Canonical-Covered Subset Analysis
+=======================================
+Group label          : beam100k_ollama
+Runs analyzed        : 1
+Shared subset queries: 245
+
+Runs
+----
+20260323T021844Z_beam100k_ollama_mxbai_full_w4:
+  run_dir            = C:\Users\sugam\Documents\research\papers\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\eval\results\target_sensitivity_beam\20260323T021844Z_beam100k_ollama_mxbai_full_w4
+  subset_trace       = C:\Users\sugam\Documents\research\papers\store-aware-retrieval-evaluation-for-transformed-conversational-memory-stores\eval\results\target_sensitivity_beam\20260323T021844Z_beam100k_ollama_mxbai_full_w4\trace.shared_canonical_beam100k_ollama.jsonl
+  kept_queries       = 245
+  raw_turn: queries=245 zero_targets=0 recall=0.392453 mrr=0.118517 ndcg=0.161704
+  source_family: queries=245 zero_targets=0 recall=0.528372 mrr=0.337383 ndcg=0.313528
+  canonical: queries=245 zero_targets=0 recall=0.700311 mrr=0.337209 ndcg=0.389753
+
+Pairwise nDCG Order
+-------------------
